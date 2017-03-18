@@ -3,13 +3,23 @@ require_once ('konfiguration.php');
 $db_link = mysqli_connect (
                      MYSQL_HOST, 
                      MYSQL_BENUTZER, 
-                     MYSQL_KENNWORT, 
-                     MYSQL_DATENBANK
-                    );
+                     MYSQL_KENNWORT                     					 
+					);
 					
-					// zuweisen der MySQL-Anweisung einer Variablen
-$sql = 'CREATE DATABASE file-system-references';
+/** if ($db_link)
+{
+	echo 'Verbindung erfolgreich: ';
+	print_r($db_link);
+}
+else
+{
+	die('keine Verbindung möglich: ' .mysqli_error());
+} */
+		
+// zuweisen der MySQL-Anweisung einer Variablen
+$sql = 'DROP DATABASE IF EXISTS filesystemreferences';
+$sql1 = 'CREATE DATABASE filesystemreferences';
  
-$result = mysqli_query($db_link, $sql)
-  or die("Anfrage fehlgeschlagen: " . mysql_error());
+$result = mysqli_query($db_link, $sql);
+$result = mysqli_query($db_link, $sql1);
 ?>
