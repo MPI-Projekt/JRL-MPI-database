@@ -7,7 +7,7 @@
 	$path = 'FZ/'.$_FILES['datei']['name'];
 	$filename = 'name';
 	$filesize = filesize($path);
-	// Rest kommt von Jakob
+	// Der Rest kommt von Jakob
 ?>
 <html>
 	<script>
