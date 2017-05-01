@@ -11,6 +11,6 @@
 ?>
 <html>
 	<script>
-		window.open("eingabe.php","_self")
+		window.open("eingabe.html","_self")
 	</script>
 </html>
