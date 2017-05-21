@@ -1,15 +1,4 @@
 <?php
-	
-	if (isset($_FILES['datei']['tmp_name'])) {
-		move_uploaded_file($_FILES['datei']['tmp_name'], 'FZ/'.$_FILES['datei']['name']);
-	 }
-	$file = $_FILES['datei']['name'];
-	$path = 'FZ/'.$_FILES['datei']['name'];
-	$filename = 'name';
-	$filesize = filesize($path);
-	// Der Rest kommt von Jakob
-	
-	
 	require_once ('konfiguration.php');
     $db_link = mysqli_connect (
                      MYSQL_HOST, 
@@ -17,18 +6,36 @@
                      MYSQL_KENNWORT, 
                      MYSQL_DATENBANK
                     );
+	
+	if (isset($_FILES['datei']['tmp_name'])) {
+		move_uploaded_file($_FILES['datei']['tmp_name'], 'FZ/'.$_FILES['datei']['name']); //Upload noch fehlerhaft
+	 }
+	$file = $_FILES['datei']['name'];
+	$path = 'FZ/'.$_FILES['datei']['name'];
+	$filename = 'name';
+	$filesize = filesize($path);
+	// Der Rest kommt von Jakob 
+	//Jakob hat ;-P
+	//letztes Änderungsdatum muss noch mitgegeben werden
+	
+	
+	//id?
+	
+	
+	
 
 	$sql = "
 	         INSERT INTO `files`
   ( 
-  `name`, `size`, `reference`, `datum`
+    `id`, `name`, `size`, `reference`, `datum`
   )
   VALUES
   (
-  " + $filename + ", " + $filesize + ", " + $path + "
+   001, '" . $filename . "', " . $filesize . ", '" . $path . "', '00-00-00 00:00:00' 
   );";
+  $commands[] = $sql;
   
-  $db_erg1 = mysqli_query($db_link, $sql);
+  $db_erg = mysqli_query($db_link, $sql);
 	
 ?>
 <html>
