@@ -14,6 +14,7 @@
 	$path = 'FZ/'.$_FILES['datei']['name'];
 	$filename = 'name';
 	$filesize = filesize($path);
+ 	$date = ("F d Y H:i:s.", filemtime($filename));
 	// Der Rest kommt von Jakob 
 	//Jakob hat ;-P
 	//letztes Änderungsdatum muss noch mitgegeben werden
@@ -31,7 +32,7 @@
   )
   VALUES
   (
-   001, '" . $filename . "', " . $filesize . ", '" . $path . "', '00-00-00 00:00:00' 
+   001, '" . $filename . "', " . $filesize . ", '" . $path . "',". $date"
   );";
   $commands[] = $sql;
   
