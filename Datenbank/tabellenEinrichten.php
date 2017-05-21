@@ -14,7 +14,7 @@ $sql = "
     `name` VARCHAR( 150 ) NOT NULL ,
     `size` DOUBLE NOT NULL ,
     `reference` VARCHAR( 200) NOT NULL ,
-    `datum` TIMESTAMP NOT NULL ,
+    `datum` VARCHAR(40) NOT NULL ,
     `description` VARCHAR( 100 ) NULL
     ) ENGINE = MYISAM ;
     ";
