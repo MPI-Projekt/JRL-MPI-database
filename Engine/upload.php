@@ -14,7 +14,7 @@
 	$path = 'FZ/'.$_FILES['datei']['name'];
 	$filename = 'name';
 	$filesize = filesize($path);
- 	$date = ("F d Y H:i:s.", filemtime($filename));
+ 	$date = . date("F d Y H:i:s.", filemtime($filename));
 	// Der Rest kommt von Jakob 
 	//Jakob hat ;-P
 	//letztes Änderungsdatum muss noch mitgegeben werden
