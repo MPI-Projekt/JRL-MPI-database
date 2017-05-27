@@ -1,5 +1,34 @@
 <html>
+	<meta charset="utf-8">
 	<body bgcolor="#F5F5F5" text="#000000">
-		<u><font size="6"><p align="center">Abfrage</p></font></u>
+		<u><font size="6"><p align="center">Abfrage</p></font></u><br><br>
+		Im Folgenden können Sie Suchkriterien angeben, um Ihre Dateien zu finden.<br>
+		Alle Angaben sind optional.<br><br>
+		<form action="">
+			<label for="Dateiname">Dateiname:</label><br>
+			<input type="text" id="dateiname" name="dateiname" value="" >
+			<br><br>
+			<label for="Dateityp">Dateityp:</label><br>
+			<input type="text" id="dateityp" name="dateityp" value="">
+			<br><br>
+			Geben Sie nun an, ob die gesuchte Datei größer, kleiner oder gleich groß, wie der eingegebene Wert sein soll!
+			<br>
+			<label for="groesser">Größer als:</label>
+			<input type="radio" name="groesse" id="groesser" value="groesser">
+			<br>
+			<label for="gleich">Gleich:</label>
+			<input type="radio" name="groesse" id="gleich" value="gleich">
+			<br>
+			<label for="kleiner">Kleiner als:</label>
+			<input type="radio" name="groesse" id="kleiner" value="kleiner">
+			<br><br>
+			<label for="Dateigroesse">Dateigröße in Megabyte</label><br>
+			<input type="text" id="dateigroesse" name="dateigroesse" value="">
+			<br><br>
+			<label for="Beschreibung">Beschreibung:</label><br>
+			<input type="text" id="beschreibung" name="beschreibung" value="">
+			<br><br>
+			<button type="submit">Suchen</button>
+		</form>
 	</body>
 </html>
