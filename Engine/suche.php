@@ -11,7 +11,7 @@ require_once ('konfiguration.php');
 
  if($dateiname != "" && $dateigroesse != ""){
 	 if($groesse == "groesser"){
-		$sql = "SELECT " .$reference. " FROM `files` WHERE `name` LIKE " .$dateiname.  " AND `size` > " .$dateigroesse. ";"
+		$sql = "SELECT " .$reference. " FROM `files` WHERE `name` LIKE " .$dateiname.  " AND `size` > " .$dateigroesse. ";";
 	 }
  }
  
@@ -19,8 +19,8 @@ require_once ('konfiguration.php');
  $db_erg = mysqli_query($db_link, $sql);
  
  echo '<table border="1">';
-while ($zeile = mysqli_fetch_array( $db_erg, MYSQL_ASSOC))
-{
+while ($zeile = mysqli_fetch_array( $db_erg, MYSQL_ASSOC)){
+
   echo "<tr>";
   echo "<td>". $zeile['reference'] . "</td>";
   echo "</tr>";
