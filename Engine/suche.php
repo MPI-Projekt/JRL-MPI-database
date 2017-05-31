@@ -27,3 +27,9 @@ while ($zeile = mysqli_fetch_array( $db_erg, MYSQL_ASSOC)){
 }
 echo "</table>";
 ?>
+
+<html>
+	<script>
+		window.open("ergebnis.html","_self")
+	</script>
+</html>
