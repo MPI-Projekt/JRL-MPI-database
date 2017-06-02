@@ -5,28 +5,50 @@
 		Im Folgenden können Sie Suchkriterien angeben, um Ihre Dateien zu finden.<br>
 		Alle Angaben sind optional.<br><br>
 		<form action="suche.php">
-			<label for="Dateiname">Dateiname:</label><br>
-			<input type="text" id="dateiname" name="dateiname" value="" >
-			<br><br>
-			<label for="Dateityp">Dateityp:</label><br>
-			<input type="text" id="dateityp" name="dateityp" value="">
-			<br><br>
-			Geben Sie nun an, ob die gesuchte Datei größer, kleiner oder gleich groß, wie der eingegebene Wert sein soll!
-			<br>
-			<label for="groesser">Größer als:</label>
-			<input type="radio" name="groesse" id="groesser" value="groesser">
-			<br>
-			<label for="gleich">Gleich:</label>
-			<input type="radio" name="groesse" id="gleich" value="gleich">
-			<br>
-			<label for="kleiner">Kleiner als:</label>
-			<input type="radio" name="groesse" id="kleiner" value="kleiner">
-			<br><br>
-			<label for="Dateigroesse">Dateigröße in Megabyte</label><br>
-			<input type="text" id="dateigroesse" name="dateigroesse" value="">
-			<br><br>
-			<label for="Beschreibung">Beschreibung:</label><br>
-			<input type="text" id="beschreibung" name="beschreibung" value="">
+			<table><col width="200">
+				<tr>
+					<td>
+						<label for="Dateiname">Dateiname:</label>
+					</td>
+					<td>
+						<input type="text" id="dateiname" name="dateiname" value="" >
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="Dateityp">Dateityp:</label>
+					</td>
+					<td>
+						<input type="text" id="dateityp" name="dateityp" value="">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Die gesuchte Datei ist...<br>
+						<label for="groesser"></label>
+						<input type="radio" name="groesse" id="groesser" value="groesser"> Größer als
+						<br>
+						<label for="gleich"></label>
+						<input type="radio" name="groesse" id="gleich" value="gleich"> Gleich
+						<br>
+						<label for="kleiner"></label>
+						<input type="radio" name="groesse" id="kleiner" value="kleiner"> Kleiner als
+					</td>
+					<td>
+						<label for="Dateigroesse">Dateigröße in Megabyte</label><br>
+						<input type="text" id="dateigroesse" name="dateigroesse" value="">
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<label for="Beschreibung">Beschreibung:</label>
+					</td>
+					<td>
+					<input type="text" id="beschreibung" name="beschreibung" value="">
+					</td>
+				</tr>
+			</table>
+						
 			<br><br>
 			<input type="reset" onclick="alert('Ihre Eingaben wurden zur&uuml;ckgesetzt.')">
 			<button type="submit">Suchen</button>
