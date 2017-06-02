@@ -1,4 +1,7 @@
 <html>
+	<head>
+		<link rel="icon" type="image/gif" href="bilder/loading.gif">
+	</head>
 	<body bgcolor="#F5F5F5" />
 </html>
 
