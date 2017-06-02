@@ -1,3 +1,8 @@
+<html>
+	<body bgcolor="#F5F5F5" />
+</html>
+
+
 <?php
 
 require_once ('konfiguration.php');
