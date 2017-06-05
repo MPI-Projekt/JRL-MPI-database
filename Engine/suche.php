@@ -1,9 +1,9 @@
 <html>
-	<head>
-		<link rel="icon" type="image/gif" href="bilder/loading.gif">
-	</head>
-	<body bgcolor="#F5F5F5" />
+	<script>
+		window.open("ergebnis.html","_self")
+	</script>
 </html>
+
 
 
 <?php
@@ -35,7 +35,6 @@ while ($zeile = mysqli_fetch_array( $db_erg, MYSQL_ASSOC)){
 }
 echo "</table>";
 ?>
-
 <html>
 	<script>
 		window.open("ergebnis.html","_self")
