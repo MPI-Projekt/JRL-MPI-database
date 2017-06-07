@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<title>
+		   Willkommen
+		</title>
+			<link rel="icon" type="image/gif" href="bilder/loading.gif"> <!-- Animation funktioniert nicht mit allen Browsern-->
+	    </head>
+	    <body bgcolor="#F5F5F5" text="#000000">
+			<br />
+			<font face="Comic Sans MS" size="7">
+				  <p align="center">
+					 <u>
+					    Willkommen
+				     </u>
+				  </p>
+			 </font>
+		     <br />
+			 <br />
+			 <br />
+			 <br />
+			 <br />
+			 <br />
+			
+			<script>
+				function registration(){
+				 if(pw1 != pw2){
+				//Fehlermeldung
+				window.open("leer.html","_self");
+				System.out.println("1");
+				return "1";
+				}
+				window.open("leer.html","_self");
+				System.out.println("2");
+				return "2";
+				
+				open("registration.php","_self");
+			}
+			</script>
+		     <form name="formular" method="post">
+				<label for="benutzername">
+					Benutzername:
+				</label>
+				<br><br>
+				<input type="text" id="benutzername" name="benutzername" required>
+				<br><br>
+				<label for="pw1">
+					Passwort:
+				</label>
+				<br><br>
+				<input type="password" id="pw1" name="pw1" required>
+				<br><br>
+				<label for="pw2">
+					Passwort wiederholen:
+				</label>
+				<br><br>
+				<input type="password" id="pw2" name="pw2" required>
+				<br><br>
+				<input type="submit" value="Registrieren" action="JavaScript:registration()"/>
+			 </form>
+		</body>
+</html>
