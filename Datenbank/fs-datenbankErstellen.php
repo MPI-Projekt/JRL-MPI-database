@@ -6,9 +6,7 @@ $db_link = mysqli_connect (
                      MYSQL_KENNWORT                     					 
 					);
 					
-$sql = 'DROP DATABASE IF EXISTS filesystemreferences';
-$sql1 = 'CREATE DATABASE filesystemreferences';
+$sql = 'CREATE DATABASE ' .MYSQL_DATENBANK. 'filesystemreferences';
  
 $result = mysqli_query($db_link, $sql);
-$result = mysqli_query($db_link, $sql1);
 ?>
