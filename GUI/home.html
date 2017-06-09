@@ -3,7 +3,7 @@
 		<title>
 			Willkommen
 		</title>
-			<link rel="icon" type="image/gif" href="bilder/loading.gif"> <!-- Animation funktioniert nicht mit allen Browsern-->
+		<link rel="icon" type="image/gif" href="bilder/loading.gif"> <!-- Animation funktioniert nicht mit allen Browsern-->
 	</head>
 	<body bgcolor="#F5F5F5" text="#000000"><br>
 		<font face="Comic Sans MS" size="7">
@@ -16,16 +16,15 @@
 		<form action="anmeldung.php" method="post" enctype="multipart/fotm-data">
 			<table>
 				<tr>
-					<td>
-						<label for="benutzername">
-							Benutzername:
-						</label>
+					<td width="120">
+						<label for="benutzername">Benutzername:</label>
+						<br><br>
+						<label for="pw">Passwort:</label>
+					</td>
+					<td width="220">
 						<input type="text" id="benutzername" name="benutzername" value="" required>
 						<br><br>
-						<label for="pw">
-							Passwort:
-						</label>
-						<input type="password" id="pw" name="pw" value="" required><br><br>
+						<input type="password" id="pw" name="pw" value="" required>
 					</td>
 					<td>
 						<input type="image" src="bilder/anmelden.png" width="30" alt="Anmelden">
@@ -40,4 +39,3 @@
 		</a>
 	</body>
 </html>
-
