@@ -1,5 +1,5 @@
 <?php
-require('ind');
+require('ind.php');
 $db = new mysqli(
                      MYSQL_HOST, 
                      MYSQL_BENUTZER, 
