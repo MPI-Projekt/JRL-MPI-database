@@ -1,6 +1,6 @@
 <?php
- require_once ('konfiguration.php');
-$db_link = mysqli_connect (
+ require('konfiguration.php');
+$db = new mysqli(
                      MYSQL_HOST, 
                      MYSQL_BENUTZER, 
                      MYSQL_KENNWORT, 
@@ -8,7 +8,7 @@ $db_link = mysqli_connect (
                     );
 					
 
-$sql = "
+$erg = $db->query("
     CREATE TABLE `files` (
     `id` INT( 10 ) NOT NULL AUTO_INCREMENT PRIMARY KEY ,
     `name` VARCHAR( 150 ) NOT NULL ,
@@ -17,9 +17,6 @@ $sql = "
     `reference` VARCHAR( 200) NOT NULL ,
     `datum` VARCHAR(40) NOT NULL ,
     `description` VARCHAR( 100 ) NULL
-    ) ENGINE = MYISAM ;
+    ) ENGINE = MYISAM 
     ";
-  
-
-$db_erg = mysqli_query($db_link, $sql);
 ?>

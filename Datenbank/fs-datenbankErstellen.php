@@ -1,12 +1,10 @@
 <?php
 require_once ('konfiguration.php');
-$db_link = mysqli_connect (
+$db = new mysqli(
                      MYSQL_HOST, 
                      MYSQL_BENUTZER, 
-                     MYSQL_KENNWORT                     					 
+                     MYSQL_KENNWORT                        			 
 					);
 					
-$sql = 'CREATE DATABASE ' .MYSQL_DATENBANK. 'filesystemreferences';
- 
-$result = mysqli_query($db_link, $sql);
-?>
+$erg = $db->query("CREATE DATABASE ". MYSQL_DATENBANK);
+ ?>
