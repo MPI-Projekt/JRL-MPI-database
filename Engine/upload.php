@@ -1,19 +1,13 @@
-<html>
-	<head>
-		<link rel="icon" type="image/gif" href="bilder/loading.gif">
-	</head>
-	<body bgcolor="#F5F5F5" />
-</html>
-
-
 <?php
-	require_once ('konfiguration.php');
-    $db_link = mysqli_connect (
+	require('konfiguration.php');
+    $db = new mysqli(
                      MYSQL_HOST, 
                      MYSQL_BENUTZER, 
                      MYSQL_KENNWORT, 
                      MYSQL_DATENBANK
                     );
+	
+	
 	
 	if (isset($_FILES['datei']['tmp_name'])) {
 		move_uploaded_file($_FILES['datei']['tmp_name'], 'FZ/'.$_FILES['datei']['name']); //Upload noch fehlerhaft - J.
@@ -23,6 +17,7 @@
 	$filename = 'name'; //?? - J.
 	$filesize = filesize($path);
 	$date = date("F d Y H:i:s.", filemtime($filename)); //Datum noch falsch -J.
+	$description = $_POST["bemerkung"];
 	// Der Rest kommt von Jakob 
 	//Jakob hat ;-P
 	
@@ -33,19 +28,15 @@
 	
 	
 
-	$sql = "
+	$erg = $db->query("
 	         INSERT INTO `files`
   ( 
-    `id`, `name`, `size`, `reference`, `datum`
+    `id`, `name`, `size`, `reference`, `datum`, `description`
   )
   VALUES
   (
-   001, '" . $filename . "', " . $filesize . ", '" . $path . "', '" . $date ."' 
-  );";
-  $commands[] = $sql;
-  
-  $db_erg = mysqli_query($db_link, $sql);
-	
+   001, '" . $filename . "', " . $filesize . ", '" . $path . "', '" . $date . "', '" .$bemerkung. "
+  )";
 ?>
 <html>
 	<script>
