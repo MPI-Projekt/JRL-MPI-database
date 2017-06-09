@@ -1,12 +1,23 @@
 <html>
 	<head>
 		<title>
-			Home
+			Willkommen
 		</title>
 	</head>
 	<frameset rows="4%,*" border="0">
-		<frame src="error.html" noresize="noresize">
+		<frame src="errorcheck()" noresize="noresize">
 		<frame src="registration.html" noresize="noresize">
 	</frameset>
+	<body>
+		<script>
+			function errorcheck(){
+				$error = document.cookie;
+				if($error == 'error=passwort'){
+					window.open("errorPasswoerterverschieden.html","_self")
+				} else if($error == 'error=benutzername'){
+					window.open("errorBenutzernamevergeben.html","_self")
+				}
+			}
+		</script>
+	</body>
 <html>
-
