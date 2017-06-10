@@ -8,17 +8,4 @@
 		<frame src="errorcheck.html" noresize="noresize">
 		<frame src="registration.html" noresize="noresize">
 	</frameset>
-	<body bgcolor="#F5F5F5" text="#000000">
-		<a href="javascript:void(0)" onclick="errorcheck();">Bitte hier klicken um die Fehlermeldung anzuzeigen!</a>
-		<script>
-			function errorcheck(){
-				$error = document.cookie;
-				if($error == 'error=passwort'){
-					window.open("errorPasswoerterverschieden.html","_self")
-				} else if($error == 'error=benutzername'){
-					window.open("errorBenutzernamevergeben.html","_self")
-				}
-			}
-		</script>
-	</body>
 <html>
