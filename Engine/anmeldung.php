@@ -1,38 +1,32 @@
 <?php
+session_start();	
 require('ind.php');
 $db = new mysqli(
                      MYSQL_HOST, 
                      MYSQL_BENUTZER, 
                      MYSQL_KENNWORT, 
-					 user
+					 'user'
                      );
 
 if($db->connect_errno){
-require('user-datenbankErstellen.php');
-$db = new mysqli(
-                     MYSQL_HOST, 
-                     MYSQL_BENUTZER, 
-                     MYSQL_KENNWORT, 
-					 user
-                     );
-}
-
-$benutzername = $_POST["benutzername"];	
-$passwort = $_POST["passwort"];
-
-
-$erg = $db->query("Select database WHERE name LIKE " .$benutzername. " AND password LIKE " .$passwort);
-if($erg->num_rows){
-$array = $erg->fetch_assoc();
-$database = $array['database'];
-include('konfiguration.php');
+ header('location: home.html?id=1339');
 }
 else{
-<html>
+$benutzername = $_POST["benutzername"];	
+$passwort = $_POST["pw"];
 
-<script>
-  window.open("logindatenfehlerhaft.html","_self")
-</script>
-</html>	
+
+$erg = $db->query("SELECT `database` FROM `user` WHERE `name` LIKE '".$benutzername."' AND `password` LIKE '".$passwort."'");
+if($erg->num_rows){
+
+
+$array = $erg->fetch_assoc();
+$_SESSION[ 'database' ] = $array['database'];
+
+header('location: eingabeV2.html');
+}
+else{
+header('location: home.html?id=1339');
+}
 }
 ?>
