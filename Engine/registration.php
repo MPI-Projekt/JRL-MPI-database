@@ -1,5 +1,5 @@
 <?php
-require('ind.php');
+require_once('ind.php');
 $db = new mysqli(
                      MYSQL_HOST, 
                      MYSQL_BENUTZER, 
@@ -8,7 +8,7 @@ $db = new mysqli(
 					 );
 if($db->connect_errno){
 	require('user-datenbankErstellen.php');
-	require('user-Einrichten.php');
+	require('user-Einrichten.php');//hier gibt's noch Probleme, nicht wundern -J.
 	
 	$db = new mysqli(
                      MYSQL_HOST, 
@@ -23,18 +23,16 @@ $pw2 = $_POST["pw2"];
 $benutzername = $_POST["benutzername"];	
 
 if($pw1 != $pw2){
-	setcookie("error", 'passwort');
-	include("registrationfehlerhaft.html");
+	header('location: registration.html?error=passwort');
 }
 else{
-$erg1 = $db->query("SELECT name FROM user WHERE name LIKE ".$benutzername);
-	if($erg1 != null){
-		setcookie("error", 'benutzername');
-		include("registrationfehlerhaft.html");
-	}
-	else{
-		$erg2 = $db->query("INSERT INTO user (name, password, database) VALUES ('" . $benutzername . "' , '" . $pw1 . "' , 'fs-" . $benutzername . "')");
-		include("home.html");
+$erg1 = $db->query("SELECT name FROM user WHERE name LIKE ".$benutzername);//same, wortwörtlich -J.
+if($erg1->num_rows){
+	header('location: registration.html?error=benutzername');
+}
+else{
+$erg2 = $db->query("INSERT INTO user (name, password, database) VALUES ('" . $benutzername . "' , '" . $pw1 . "' , 'fs-" . $benutzername . "')");
+	header('location: home.html');
 	}
 }	
 ?>
