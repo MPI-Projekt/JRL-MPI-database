@@ -3,7 +3,8 @@ require('ind.php');
 $db = new mysqli(
                      MYSQL_HOST, 
                      MYSQL_BENUTZER, 
-                     MYSQL_KENNWORT, 
+                     MYSQL_KENNWORT,
+					 'user'
                      );
 					
 
@@ -14,4 +15,5 @@ $erg = $db->query("
 	`database` VARCHAR( 150 ) NOT NULL
     ) ENGINE = MYISAM 
     ");
+
 ?>

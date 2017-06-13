@@ -7,4 +7,5 @@ $db = new mysqli(
 					);
 					
 $erg = $db->query("CREATE DATABASE user");
+
 ?>
