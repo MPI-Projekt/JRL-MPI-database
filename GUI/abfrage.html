@@ -19,7 +19,12 @@
 						<label for="dateityp">Dateityp:</label>
 					</td>
 					<td>
-						<select name="dateityp" id="dateityp" style="width:200px">
+						<script>
+							function get(){
+								$dateityp = document.getElementById("dateityp").value;
+							}
+						</script>
+						<select name="dateityp" id="dateityp" style="width:200px" onChange="get()">
 							<option value="" selected>Treffen Sie ihre Auswahl</option>
 							<option value="audio">Audiodaten</option>
 							<option value="image">Grafiken</option>
