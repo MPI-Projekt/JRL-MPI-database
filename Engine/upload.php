@@ -16,13 +16,12 @@ $folder = 'upload/';
 $filename = pathinfo($_FILES['datei']['tmp_name'], PATHINFO_FILENAME);
 $extension = strtolower(pathinfo($_FILES['datei']['tmp_name'], PATHINFO_EXTENSION));
 $filesize = $_FILES['datei']['size'];
+$filesize = $filesize*1000000;
 $path = $folder.$filename.'.'.$extension;
 $datum = date("F d Y H:i:s.", filemtime($filename));
-
-echo ''.$_POST['dateityp'];
-
 $dateityp = $_POST['dateityp'];
 $beschreibung = $_POST['beschreibung'];
+$type = $_FILES['datei']['typ'];
 
 
 
