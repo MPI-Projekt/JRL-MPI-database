@@ -5,15 +5,16 @@
 		</title>
 		<link rel="icon" type="image/gif" href="bilder/loading.gif"> <!-- Animation funktioniert nicht mit allen Browsern-->
 	</head>
-	<body bgcolor="#F5F5F5" text="#000000"><br>
+	<body bgcolor="#F5F5F5" text="#000000" align="center"><br>
 		<font face="Comic Sans MS" size="7">
-			<p align="center">
+			<p>
 				<u>
 					Willkommen
 				</u>
 			</p>
-		</font><br><br><br><br>
-		 <script>
+		</font>
+		<br><br><br><br>
+		<script>
 			 HTTP_GET_VARS=new Array();
 			 strGET=document.location.search.substr(1,document.location.search.length);
 			 if(strGET!=''){
@@ -42,10 +43,10 @@
 			 document.write("</font>");
 			 }
 			 }
-		</script>	 
+		</script>
 		<br><br>
-		<form action="anmeldung.php" method="post" enctype="multipart/fotm-data">
-			<table>
+		<form action="anmeldung.php" method="post">
+			<table align="center">
 				<tr>
 					<td width="120">
 						<label for="benutzername">Benutzername:</label>
@@ -58,7 +59,7 @@
 						<input type="password" id="pw" name="pw" value="" required>
 					</td>
 					<td>
-						<input type="image" src="bilder/anmelden.png" width="30" alt="Anmelden">
+						<input type="image" src="bilder/anmelden.jpg" width="50" alt="Anmelden">
 					</td>
 				</tr>
 			</table>
