@@ -14,7 +14,38 @@
 				     </u>
 				  </p>
 			 </font>
-			 <br><br><br><br><br><br>
+			 <br><br><br><br> 
+		     <script>
+			 HTTP_GET_VARS=new Array();
+			 strGET=document.location.search.substr(1,document.location.search.length);
+			 if(strGET!=''){
+			 gArr=strGET.split('&');
+			 for(i=0;i<gArr.length;++i){
+			 v='';vArr=gArr[i].split('=');
+		     if(vArr.length>1){v=vArr[1];}
+				HTTP_GET_VARS[unescape(vArr[0])]=unescape(v);
+				}
+			 }
+ 
+			 function GET(v){
+				if(!HTTP_GET_VARS[v]){return 'undefined';}
+				return HTTP_GET_VARS[v];
+			 }
+			 
+			 if(GET('e') != 'undefined'){
+			 if(GET('e') == '1289'){
+			 document.write("<font color='#FF0000'>");
+			 document.write("Dieser Benutzername ist bereits vergeben.");
+			 document.write("</font>");
+			 }
+			 else if(GET('e') == '1288'){
+			 document.write("<font color='#FF0000'>");
+			 document.write('Die eingegebenen Passw&oumlrter stimmen nicht &uumlberein.');
+			 document.write("</font>");
+			 }
+			 }
+			 </script>
+			 <br><br>
 		     <form action="registration.php" method="post">
 				<label for="benutzername">
 					Benutzername:
@@ -36,36 +67,5 @@
 				<br><br>
 				<button type="submit">Registrieren</button>
 			 </form>
-			 
-		     <script>
-			 HTTP_GET_VARS=new Array();
-			 strGET=document.location.search.substr(1,document.location.search.length);
-			 if(strGET!=''){
-			 gArr=strGET.split('&');
-			 for(i=0;i<gArr.length;++i){
-			 v='';vArr=gArr[i].split('=');
-		     if(vArr.length>1){v=vArr[1];}
-				HTTP_GET_VARS[unescape(vArr[0])]=unescape(v);
-				}
-			 }
- 
-			 function GET(v){
-				if(!HTTP_GET_VARS[v]){return 'undefined';}
-				return HTTP_GET_VARS[v];
-			 }
-			 
-			 if(GET('error') != 'undefined'){
-			 if(GET('error') == 'benutzername'){
-			 document.write("<font color='#FF0000'>");
-			 document.write("Dieser Benutzername ist bereits vergeben.");
-			 document.write("</font>");
-			 }
-			 else if(GET('error') == 'passwort'){
-			 document.write("<font color='#FF0000'>");
-			 document.write('Die eingegebenen Passw&oumlrter stimmen nicht &uumlberein.');
-			 document.write("</font>");
-			 }
-			 }
-			 </script>
 		</body>
 </html>
