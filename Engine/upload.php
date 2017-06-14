@@ -1,45 +1,41 @@
-<?php
-	require('konfiguration.php');
-    $db = new mysqli(
-                     MYSQL_HOST, 
-                     MYSQL_BENUTZER, 
-                     MYSQL_KENNWORT, 
-                     MYSQL_DATENBANK
-                    );
-	
-	
-	
-	if (isset($_FILES['datei']['tmp_name'])) {
-		move_uploaded_file($_FILES['datei']['tmp_name'], 'FZ/'.$_FILES['datei']['name']); //Upload noch fehlerhaft - J.
-	 }
-	$file = $_FILES['datei']['name'];
-	$path = 'FZ/'.$_FILES['datei']['name'];
-	$filename = 'name'; //?? - J.
-	$filesize = filesize($path);
-	$date = date("F d Y H:i:s.", filemtime($filename)); //Datum noch falsch -J.
-	$description = $_POST["bemerkung"];
-	// Der Rest kommt von Jakob 
-	//Jakob hat ;-P
-	
-	
-	
-	//id?, wie? und überhaupt? -J.
-	
-	
-	
+<html>
+	<head>
+		<link rel="icon" type="image/gif" href="bilder/loading.gif">
+	</head>
+	<body bgcolor="#F5F5F5" />
+</html>
 
-	$erg = $db->query("
-	         INSERT INTO `files`
-  ( 
-    `id`, `name`, `size`, `reference`, `datum`, `description`
-  )
-  VALUES
-  (
-   001, '" . $filename . "', " . $filesize . ", '" . $path . "', '" . $date . "', '" .$bemerkung. "
-  )";
+<?php
+require ('konfiguration.php');
+$db = new mysqli(MYSQL_HOST, MYSQL_BENUTZER, MYSQL_KENNWORT, MYSQL_DATENBANK);
+
+	if (isset($_FILES['datei']['tmp_name'])) {
+		move_uploaded_file($_FILES['datei']['tmp_name'], 'upload/'.$_FILES['datei']['name']);
+	 }
+$folder = 'upload/';
+$filename = pathinfo($_FILES['datei']['tmp_name'], PATHINFO_FILENAME);
+$extension = strtolower(pathinfo($_FILES['datei']['tmp_name'], PATHINFO_EXTENSION));
+$filesize = $_FILES['datei']['size'];
+$path = $folder.$filename.'.'.$extension;
+$datum = date("F d Y H:i:s.", filemtime($filename));
+
+echo ''.$_POST['dateityp'];
+
+$dateityp = $_POST['dateityp'];
+$beschreibung = $_POST['beschreibung'];
+
+
+
+if($_POST['beschreibung'] != ""){
+$erg = $db->query("INSERT INTO `files` (`name`, `type`,`date`,`reference`,`size`,`description`) VALUES ('".$filename."', '" .$dateityp. "', '" .$datum."','" .$path."',".$filesize.",'".$beschreibung.")" );	 
+}
+else{
+	$erg = $db->query("INSERT INTO `files` (`name`, `type`,`date`,`reference`,`size`) VALUES ('".$filename."', '" .$dateityp. "', '" .$datum."','" .$path."',".$filesize.")" );	 
+}
+
 ?>
 <html>
 	<script>
-		window.open("eingabe.html","_self")
+		//window.open("eingabe.html","_self")
 	</script>
 </html>
