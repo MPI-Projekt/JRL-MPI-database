@@ -1,0 +1,49 @@
+
+#frickl {
+	background: rgba(255, 255, 255, 0.75);
+	bottom: 0;
+	display: block;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 30;
+}
+
+#frickl > iframe {
+	background: white;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	box-shadow: 0 0 10px 0 black;
+	left: 20px;
+	position: absolute;
+	top: 40px;
+}
+
+#frickl > div {
+	background: #4089aa;
+	border: 1px solid #d6e7ee;
+	border-radius: 15px;
+	box-shadow: 0 0 10px 0 black;
+	color: #d6e7ee;
+	cursor: pointer;
+	font-size: 30px;
+	font-weight: bold;
+	height: 30px;
+	line-height: 28px;
+	margin: 0;
+	opacity: 0.8;
+	padding: 0;
+	position: fixed;
+	right: 10px;
+	text-align: center;
+	top: 5px;
+	width: 30px;
+}
+
+#frickl > div:hover {
+	border-color: white;
+	color: white;
+	opacity: 1;
+}
+
