@@ -232,6 +232,7 @@ HTML ist die Abkürzung für "Hypertext Markup Language", was zu deutsch "Hypert
 Eine hilfreiche Technik, die auch bei uns ihren Einsatz gefunden hat, heißt Frames. Diese Technik wurde 1996 von Netscape eingeführt. Mit ihr kann man mehrere Dateien gleichzeitig auf dem Bildschirm anzeigen lassen.\cite{HTML/Frames} Sie wurde jedoch im Oktober 2014 mit HTML5\cite{HTML5} aus dem Standard entfernt, da sie entscheidende Nachteile aufweist. Aufgrund des Verwendungszweckes unserer Webseite benutzen wir Frames, obwohl empfohlen wird, Server-seitig andere Techniken zum Auslagern von Teilen der Seite zu benutzen.\cite{HTML/Frames} Die stärksten Argumente waren, die simple Handhabung und die guten Gestaltungsmöglichkeiten mit dieser Technik.
 
 \subsubsection{Formulare}
+\label{sec:Formulare}
 Formulare sind ein Element von HTML [\ref{sec:HTML}], das es ermöglicht Daten zu erfassen und über das Hypertext Transfer Protocol per XMLHttpRequest, HTTP-GET oder HTTP-POST zur Verarbeitung an einen Server zu senden.\cite{Webformular} In unserem Programm kam letzteres zum Einsatz. Man kann in HTML zwar Formulare definieren und erstellen, für eine Verarbeitung und Auswertung der Eingaben ist jedoch eine andere Programmiersprache, wie zum Beispiel Javascript [\ref{sec:JavaScript}] oder PHP [\ref{sec:PHP}] nötig.\cite{HTML/Formulare/Form} In unserem Fall haben wir Formulare in Form von Anmeldeformularen, Suchfiltern und auch als Möglichkeit zum Hochladen von Dateien eingesetzt.
 
 \subsubsection{JavaScript}
@@ -271,17 +272,13 @@ Bei der Entwicklung unseres Programms kamen die Editoren und integrierten Entwic
 
 \subsection{GitHub}
 \emph{Jakob}\\
-Durch die Arbeit mit GitHub, wird das gemeinsame, nicht zwingend parallele, Arbeiten möglich.
-GitHub verwaltet die Quellcodes, welche die Benutzer hochladen so, dass
-alle, die über den Zugriff auf das Projekt verfügen,.... -Lars
+Durch die Arbeit mit GitHub, wird das gemeinsame, nicht zwingend parallele, Arbeiten möglich. GitHub verwaltet die Quellcodes, welche die Benutzer hochladen so, dass jeder, der über Zugriff auf das Projekt verfügt, dieses weiter führen kann. -Lars
 
 \subsection{Dropzone}
 \emph{Lars}\\
-Durch Zufall bin ich auf Dropzone gestoßen.
-Dieses \textcolor{blue}{[Framework??]} bietet viele Möglichkeiten, 
-das Eingabefeld schöner zu gestalten.
-Jedoch haben wir uns aufgrund ihrer Komplexität, welche sich leider erst
-nach und nach herauskristallisierte, gegen Dropzone entschieden. -Lars
+Ursprünglich beschreibt der Begriff \"Dropzone\" einen geheimen Speicherort für maschinell gestohlene Daten, wie zum Beispiel Passwörter und Kontodaten.\cite{wiki/Dropzone} \\
+In unserem Fall jedoch ist die Dropzone ein Script, welches in JavaScript [\ref{sec:JavaScript}] geschrieben wurde. Dieses dient zur einfachen Gestaltung des Datei-Uploads mittels HTML. Es soll die optische Anpassung des Eingabefelds vereinfachen. 
+Aufgrund ihrer Komplexität, welche sich leider erst nach und nach herauskristallisierte, haben wir uns schlussendlich gegen die Dropzone und für einen herkömmlichen Datei-Upload mittels HTML-Formular [\ref{sec:Formulare}] entschieden.
 
 \subsection{Java-Servlet}
 \emph{Jakob}\\
@@ -349,14 +346,15 @@ In diesem Kapitel wird nun unser Projekt dargestellt, indem zunächst das Progra
 
 \subsection{File-System-Management-System}
 \emph{Lars}\\
-Darstellung Ergebnis....
+Darstellung Ergebnis...
 
 \subsection{GUI}
 \emph{Lars}\\
-Darstellung GUI....
+Darstellung GUI...
 
 \subsection{Engine I: Interface und File-System}
-Darstellung Interface und File-System....
+\emph{Robin}\\
+Darstellung Interface und File-System...
 
 \subsection{Engine II: Interface und Datenbank}
 \emph{Jakob}\\
@@ -446,6 +444,10 @@ Zugriff: 16.06.2017
 
 \bibitem{Medienbruch}
 \url{https://de.wikipedia.org/wiki/Medienbruch}, \\
+Zugriff: 16.06.2017
+
+\bibitem{wiki/Dropzone}
+\url{https://de.wikipedia.org/wiki/Dropzone}, \\
 Zugriff: 16.06.2017
 
 
