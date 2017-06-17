@@ -244,7 +244,7 @@ In unserem Fall stellt HTML die Grundlage für die optische Gestaltung des GUIs 
 
 \subsubsection{Frames}
 Eine hilfreiche Technik, die auch bei uns ihren Einsatz gefunden hat, heißt Frames. Diese Technik wurde 1996 von Netscape eingeführt. Mit ihr kann man mehrere Dateien gleichzeitig auf dem Bildschirm anzeigen lassen.\cite{HTML/Frames} Sie wurde jedoch im Oktober 2014 mit HTML5\cite{HTML5} aus dem Standard entfernt, da sie entscheidende Nachteile aufweist. Aufgrund des Verwendungszweckes unserer Webseite benutzen wir Frames, obwohl empfohlen wird, Server-seitig andere Techniken zum Auslagern von Teilen der Seite zu benutzen.\cite{HTML/Frames} Die stärksten Argumente waren, die simple Handhabung und die guten Gestaltungsmöglichkeiten mit dieser Technik. \\
-Im Folgenden Beispiel wird ein Frameset dargestellt, bei dem der Bildschirm, mit dem Attribut \glqq rows\grqq{} in zwei Zeilen aufgeteilt wird, wobei die obere 20\% der Pixel einnimmt und die untere den Rest, also 80\%. Alternativ kann man den Bildschirm auch in Spalten aufteilen, dies geschieht mit dem Attribut \glqq cols\grqq.
+Im Folgenden Beispiel wird ein sogenanntes Frameset dargestellt, bei dem der Bildschirm, mit dem Attribut \glqq rows\grqq{} in zwei Zeilen aufgeteilt wird, wobei die obere 20\% der Pixel einnimmt und die untere den Rest, also 80\%. Alternativ kann man den Bildschirm auch in Spalten aufteilen, dies geschieht mit dem Attribut \glqq cols\grqq.
 
 \vspace{1em}
 \begin{lstlisting}[caption= Beispiel für Frames in HTML, label=lst:HTML]
@@ -304,7 +304,7 @@ Durch die Arbeit mit GitHub, wird das gemeinsame, nicht zwingend parallele, Arbe
 \subsection{Dropzone}
 \emph{Lars}\\
 Ursprünglich beschreibt der Begriff \glqq Dropzone\grqq{} einen geheimen Speicherort für maschinell gestohlene Daten, wie zum Beispiel Passwörter und Kontodaten.\cite{wiki/Dropzone} \\
-In unserem Fall jedoch ist die Dropzone ein Script, welches in JavaScript [\ref{sec:JavaScript}] geschrieben wurde. Dieses dient zur einfachen Gestaltung des Datei-Uploads mittels HTML. Es soll die optische Anpassung des Eingabefelds vereinfachen. 
+In unserem Fall ist die Dropzone jedoch ein Script, welches in JavaScript [\ref{sec:JavaScript}] geschrieben wurde. Dieses dient zur einfachen Gestaltung des Datei-Uploads mittels HTML. Es soll die optische Anpassung des Eingabefelds vereinfachen. 
 Aufgrund ihrer Komplexität, welche sich leider erst nach und nach herauskristallisierte, haben wir uns schlussendlich gegen die Dropzone und für einen herkömmlichen Datei-Upload mittels HTML-Formular [\ref{sec:Formulare}] entschieden.
 
 \subsection{Java-Servlet}
