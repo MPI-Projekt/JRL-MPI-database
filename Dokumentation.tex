@@ -191,7 +191,10 @@ Bei der Planung und der Herangehensweise an unser Projekt sind wir vermehrt auf 
 
 \subsection{ursprüngliche Vorstellung und Konsequenzen}
 \emph{Lars}\\
-Unsere Unerfahrenheit in der Projektarbeit hat uns zu einem überstürzten und unüberlegten Projekteinstieg getrieben, bei dem wir uns in Themen eingearbeitet haben, ohne uns einen genauen Plan zu erstellen. Zu spät haben wir gemerkt, dass unsere bisherige Arbeit weder zielführend, noch in irgendeiner Weise sinnvoll war, weshalb wir uns zusammengesetzt und intensiv beraten haben. Aus dieser Beratung entstand zum ersten Mal ein halbwegs realistischer Plan bezüglich des Aufbaus unseres Programms und der Aufteilung der verschiedenen Arbeitsschritte.
+Unsere Unerfahrenheit in der Projektarbeit hat uns zu einem überstürzten und unüberlegten Projekteinstieg getrieben, bei dem wir uns in Themen eingearbeitet haben, ohne uns einen genauen Plan zu erstellen. Zu spät haben wir gemerkt, dass unsere bisherige Arbeit weder zielführend, noch in irgendeiner Weise sinnvoll war, weshalb wir uns zusammengesetzt und intensiv beraten haben. Aus dieser Beratung entstand zum ersten Mal ein und realistischer Plan bezüglich des Aufbaus unseres Programms. Auch die Aufteilung der verschiedenen Arbeitsschritte zwischen den  drei Gruppenmitgliedern fand hier spezifisch statt.
+
+\subsubsection{Aufteilung}
+\label{sec:Aufteilung}
 
 \vspace{1em}
 \begin{minipage}{\linewidth}
@@ -202,9 +205,121 @@ Unsere Unerfahrenheit in der Projektarbeit hat uns zu einem überstürzten und u
 \end{minipage}
 \vspace{1em}
 
-In Abbildung \ref{fig:plan1} wird die Aufteilung der verschiedenen Aufgaben dargestellt. Der Client (oben) wird von Lars, die Datenbank mit SQL (rechts) wird von Jakob und der Server(Mitte), sowie die Verwaltung des File-Systems(links) wird von Robin programmiert und betreut.
+In Abbildung \ref{fig:plan1} wird die Aufteilung der verschiedenen Aufgaben dargestellt. Der Client [\ref{sec:Client / GUI}], welcher von Lars programmiert werden sollte, umfasst allgemein gesagt dass GUI, also die Benutzeroberfläche, und dessen Kommunikation mit dem Server. Dieser wiederum soll von Robin eingerichtet und so gestaltet werden, dass er Anfragen kategorisiert und je nach Art der Anfrage das Datei-System beziehungsweise die Datenbank anspricht. Die soeben erwähnte Datenbank wird von Jakob erstellt und soll zunächst nur die Referenzen zu den Dateien im Datei-System abspeichern und verwalten.\\
 
-%Bilder einbinden von der Planung!
+\subsubsection{Client / GUI}
+\label{sec:Client / GUI}
+
+Die Tabelle \ref{tab:PlanungClient} ist die digitalisierte Version des Tafelbilds, welches bei der oben beschriebenen, intensiven Beratung entstanden ist. Grün steht dabei dafür, dass diese Kriterien automatisch erkannt werden sollen, rot markierte sollen erfragt werden und das blau markierte Kriterium ist eine optionale Angabe. Hierbei ist zu beachten, dass bei der Suche alle Angaben optional sind, sodass man, wenn man eine Suche ohne Kriterien startet, alle vorhandenen Dateien als Ergebnis ausgegeben bekommt.
+
+\vspace{1em}
+\begin{table}[!h]
+	\centering
+	\begin{tabular}{|p{3.3cm}|p{3.3cm}|p{3.3cm}|p{3.3cm}|}
+		\hline
+			\begin{center}
+				\textbf{Ablage}
+			\end{center}
+			&
+			\begin{center}
+				\textbf{Suchen}
+			\end{center}
+			&
+			\begin{center}
+				\textbf{Löschen}
+			\end{center}
+			&
+			\begin{center}
+				\textbf{Ändern}
+			\end{center}
+		\\
+		\hline
+			\begin{itemize}[]
+				\item[-]\textcolor{ForestGreen}{Typ}
+				\item[-]\textcolor{ForestGreen}{Größe}
+				\item[-]\textcolor{red}{Datei}
+				\item[-]\textcolor{red}{Name}
+				\item[-]\textcolor{red}{Datum}
+				\item[-]\textcolor{blue}{zusätzliche Info}
+			\end{itemize}
+			&
+			\begin{itemize}[]
+				\item[]Kriterien:
+				\item[-]\textcolor{red}{Name}
+				\item[-]\textcolor{red}{Inhalt}
+				\item[-]\textcolor{red}{Typ}
+				\item[-]\textcolor{red}{Datum}
+				\item[-]\textcolor{red}{Ort}
+			\end{itemize}
+			&
+			\begin{itemize}[]
+				\item[-]verbunden mit Suche
+				\item[-]senden eines Löschbefehls
+			\end{itemize}
+			&
+			\begin{itemize}[]
+				\item[]Beinhaltet:
+				\item[-]Suche
+				\item[-]Ändern
+				\item[-]Ablage
+			\end{itemize}
+			\\
+		\hline
+	\end{tabular}
+	\caption{Planung des GUIs und dessen Funktionen}
+	\label{tab:PlanungClient}
+\end{table}
+
+\subsubsection{Server}
+\label{sec:Server}
+Auch die Aufgaben des Servers wurden in unserem Tafelbild aufgeführt. Diese werden in Tabelle \ref{tab:PlanungServer} dargestellt.
+
+\vspace{1em}
+\begin{table}[!h]
+	\centering
+	Aufgaben des Servers in Verbindung mit...\\
+	\begin{tabular}{|p{4cm}|p{4cm}|p{4cm}|}
+		\hline
+			\begin{center}
+				\textbf{Client}
+			\end{center}
+			&
+			\begin{center}
+				\textbf{Datei-System}
+			\end{center}
+			&
+			\begin{center}
+				\textbf{Datenbank}
+			\end{center}
+		\\
+		\hline
+			\begin{itemize}[]
+				\item[-]Auswerten der Metadaten bei der Ablage
+				\item[-]Auswerten von Suchkriterien
+				\item[-]Senden von Dateien bei der Suche
+			\end{itemize}
+			&
+			\begin{itemize}[]
+				\item[-]Ablage
+				\item[-]Abruf
+				\item[-]Löschen
+			\end{itemize}
+			&
+			\begin{itemize}[]
+				\item[-]Erstellen der Datenbank, falls keine vorhanden ist
+				\item[-]Referenzen senden und erhalten
+				\item[-]Einträge löschen
+			\end{itemize}
+		\\
+		\hline
+	\end{tabular}
+	\caption{Planung des Servers}
+	\label{tab:PlanungServer}
+\end{table}
+
+\subsubsection{Datenbank}
+\label{sec:Datenbank}
+Die Datenbank, so nahmen wir es uns vor, soll Dateien aufnehmen und den Abfragen entsprechend antworten. Beinhalten sollte sie zunächst nur den Dateinamen, sowie weitere Attribute, welche in Tabelle [\ref{tab:PlanungClient}] aufgeführt sind. Zusätzlich soll zu jeder Datei noch der jeweilige  Pfad gespeichert werden, sodass ein Zugriff auf die Datei gewährleistet werden kann.
 
 \subsection{verspätete Planung}
 \emph{Jakob}\\
@@ -309,7 +424,7 @@ Das Folgende Beispiel beinhaltet eine Tabelle mit zwei Zeilen und zwei Spalten. 
 
 \subsubsection{Formulare}
 \label{sec:Formulare}
-Formulare sind ein Element von HTML [\ref{sec:HTML}], das es ermöglicht Daten zu erfassen und über das Hypertext Transfer Protocol per XMLHttpRequest, HTTP-GET oder HTTP-POST zur Verarbeitung an einen Server zu senden.\cite{Webformular} In unserem Programm kam letzteres zum Einsatz. Man kann in HTML zwar Formulare definieren und erstellen, für eine Verarbeitung und Auswertung der Eingaben ist jedoch eine andere Programmiersprache, wie zum Beispiel Javascript [\ref{sec:JavaScript}] oder PHP [\ref{sec:PHP}] nötig.\cite{HTML/Formulare/Form} \\
+Formulare sind ein Element von HTML, [\ref{sec:HTML}] das es ermöglicht Daten zu erfassen und über das Hypertext Transfer Protocol per XMLHttpRequest, HTTP-GET oder HTTP-POST zur Verarbeitung an einen Server zu senden.\cite{Webformular} In unserem Programm kam letzteres zum Einsatz. Man kann in HTML zwar Formulare definieren und erstellen, für eine Verarbeitung und Auswertung der Eingaben ist jedoch eine andere Programmiersprache, wie zum Beispiel Javascript [\ref{sec:JavaScript}] oder PHP [\ref{sec:PHP}] nötig.\cite{HTML/Formulare/Form} \\
 In unserem Fall haben wir Formulare in Form von Anmeldeformularen, Suchfiltern und auch als Möglichkeit zum Hochladen von Dateien eingesetzt.\\
 In dem folgenden Beispiel ist die Implementation eines Formulars in HTML dargestellt. Zu sehen ist ein Formular, welches ein Label, also den Text \glqq Suchgbegriff\grqq{} enthält. Die Zugehörigkeit des darauf folgenden Eingabefelds zum Label wird durch das Attribut \glqq name\grqq{} festgelegt. Das zweite \glqq input\grqq{} Statement erstellt den Bestätigungsknopf, den man drücken muss, um das Formular abzusenden. Beim Absenden des Formulars wird die Datei oder die Internetseite aufgerufen, die im Kopf des Formulars unter dem Attribut \glqq action\grqq{} steht.
 
@@ -643,7 +758,7 @@ Hiermit versichere ich, dass ich meine Dokumentation selbständig verfasst und k
 %	\item Nur
 %	\item ein
 %	\item Beispiel.
-%%\end{compactitem}
+%\end{compactitem}
 %
 %
 %
