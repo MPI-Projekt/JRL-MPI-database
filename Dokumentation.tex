@@ -224,10 +224,40 @@ Im zweiten Kapitel dieser Dokumentation wird genauer auf die Themen eingegangen,
 \subsection{HTML}
 \label{sec:HTML}
 \emph{Lars}\\
-HTML ist die Abkürzung für "Hypertext Markup Language", was zu deutsch "Hypertext-Auszeichnungssprache" heißt. Es ist eine Programmiersprache, mit der man den Aufbau von Internetseiten bestimmt. Solche HTML-Dokumente stellen die Grundlage für das World Wide Web dar und werden von Browsern dargestellt.\cite{HTML}\cite{Hypertext_Markup_Language} Sie bestehen in der Regel aus drei Teilen.\cite{HTML/Dokumentstruktur_und_Aufbau} Der erste Teil ist die Dokumenttyp-Deklaration. In ihr werden Angaben zur verwendeten HTML-Version gegeben. Im "head", welcher den zweiten Teil darstellt, werden unsichtbare Kopfdaten, zum Beispiel der Titel der Seite oder andere, für den menschlichen Betrachter der Webseite zunächst nicht sichtbare, Informationen zur korrekten Darstellung des sichtbaren Teils der Webseite, angegeben.\cite{HTML/Kopfdaten} Anzuzeigende Inhalte werden in den "body", den dritten Teil, geschrieben. Hier werden also sämtliche Texte, Verweise, Grafiken und so weiter eingefügt, die auf der Webseite sichtbar sein sollen.\cite{HTML/Dokumentstruktur_und_Aufbau}
+HTML ist die Abkürzung für \glqq Hypertext Markup Language\grqq, was zu deutsch \glqq Hypertext-Auszeichnungssprache\grqq{} heißt. Es ist eine Programmiersprache, mit der man den Aufbau von Internetseiten bestimmt. Solche HTML-Dokumente stellen die Grundlage für das World Wide Web dar und werden von Browsern dargestellt.\cite{HTML}\cite{Hypertext_Markup_Language} Sie bestehen in der Regel aus drei Teilen.\cite{HTML/Dokumentstruktur_und_Aufbau} 
+
+\vspace{1em}
+\begin{lstlisting}[caption= Beispiel für ein einfaches HTML-Dokument, label=lst:HTML]
+<html>
+	<head>
+		<meta charset="UTF-8">		
+		<title> Titel</title>
+	</head>
+	<body>
+		Sichtbarer Text auf der Webseite.
+	</body>
+</html>
+\end{lstlisting}
+
+Der erste Teil ist die Dokumenttyp-Deklaration. In ihr werden Angaben zur verwendeten HTML-Version gegeben. Im \glqq head\grqq , welcher den zweiten Teil darstellt, werden  Kopfdaten, wie zum Beispiel der Titel der Seite oder andere, für den menschlichen Betrachter der Webseite zunächst nicht sichtbare, Informationen zur korrekten Darstellung des sichtbaren Teils der Webseite, angegeben.\cite{HTML/Kopfdaten} Anzuzeigende Inhalte werden in den \glqq body\grqq{}, den dritten Teil, geschrieben. Hier werden also sämtliche Texte, Verweise, Grafiken und so weiter eingefügt, die auf der Webseite sichtbar sein sollen.\cite{HTML/Dokumentstruktur_und_Aufbau} \\
+In unserem Fall stellt HTML die Grundlage für die optische Gestaltung des GUIs dar.
 
 \subsubsection{Frames}
-Eine hilfreiche Technik, die auch bei uns ihren Einsatz gefunden hat, heißt Frames. Diese Technik wurde 1996 von Netscape eingeführt. Mit ihr kann man mehrere Dateien gleichzeitig auf dem Bildschirm anzeigen lassen.\cite{HTML/Frames} Sie wurde jedoch im Oktober 2014 mit HTML5\cite{HTML5} aus dem Standard entfernt, da sie entscheidende Nachteile aufweist. Aufgrund des Verwendungszweckes unserer Webseite benutzen wir Frames, obwohl empfohlen wird, Server-seitig andere Techniken zum Auslagern von Teilen der Seite zu benutzen.\cite{HTML/Frames} Die stärksten Argumente waren, die simple Handhabung und die guten Gestaltungsmöglichkeiten mit dieser Technik.
+Eine hilfreiche Technik, die auch bei uns ihren Einsatz gefunden hat, heißt Frames. Diese Technik wurde 1996 von Netscape eingeführt. Mit ihr kann man mehrere Dateien gleichzeitig auf dem Bildschirm anzeigen lassen.\cite{HTML/Frames} Sie wurde jedoch im Oktober 2014 mit HTML5\cite{HTML5} aus dem Standard entfernt, da sie entscheidende Nachteile aufweist. Aufgrund des Verwendungszweckes unserer Webseite benutzen wir Frames, obwohl empfohlen wird, Server-seitig andere Techniken zum Auslagern von Teilen der Seite zu benutzen.\cite{HTML/Frames} Die stärksten Argumente waren, die simple Handhabung und die guten Gestaltungsmöglichkeiten mit dieser Technik. \\
+Im Folgenden Beispiel wird ein einfaches Frameset dargestellt, bei dem der Bildschirm, mit dem Attribut \glqq rows\grqq{} in zwei Zeilen aufgeteilt wird, wobei die obere 20\% der Pixel einnimmt und die untere den Rest, also 80\%. Alternativ kann man den Bildschirm auch in Spalten aufteilen, dies geschieht mit dem Attribut \glqq cols\grqq.
+
+\vspace{1em}
+\begin{lstlisting}[caption= Beispiel für Frames in HTML, label=lst:HTML]
+<html>
+	<head>
+		<title>Titel</title>
+	</head>
+	<frameset rows="20%,*" border="1">
+		<frame src="Quelle1.html">
+		<frame src="Quelle2.html">
+	</frameset>
+</html>
+\end{lstlisting}
 
 \subsubsection{Formulare}
 \label{sec:Formulare}
@@ -246,11 +276,10 @@ Bei JavaScript handelt es sich um eine interpretierende Programmier- beziehungsw
 \emph{Lars}\\
 ...
 
-\pagebreak
 \subsection{Editoren und integrierte Entwicklungsumgebungen}
 \emph{Lars}\\
 Editoren werden zum Schreiben von Texten, wie zum Quellcodes, benutzt. gute Editoren helfen das Programmieren zu vereinfachen, indem sie gewisse Schlüsselwörter, sowie Befehle, farblich hervorheben, eine Autovervollständigung, eine Such- und Ersetzfunktion und indem sie den Quellcode automatisch einrücken, sowie eine Schnittstelle für Plugins darstellen.\cite{Texteditor} \\
-Neben Editoren gibt es auch integrierte Entwicklungsumgebungen. Diese bestehen aus einer Sammlung an Computerprogrammen, mit denen es möglich ist Software ohne die Verwendung vieler einzelner Programme zu entwickeln. Durch sie werden nicht nur Tippfehler verhindert, sondern auch Arbeitsschritte und somit Zewit bei der Softwareentwicklung geplant.\cite{Integrierte_Entwicklungsumgebung}\cite{Medienbruch}
+Neben Editoren gibt es auch integrierte Entwicklungsumgebungen. Diese bestehen aus einer Sammlung an Computerprogrammen, mit denen es möglich ist Software ohne die Verwendung vieler einzelner Programme zu entwickeln. Durch sie werden nicht nur Tippfehler verhindert, sondern auch Arbeitsschritte und somit Zeit bei der Softwareentwicklung gespart.\cite{Integrierte_Entwicklungsumgebung}\cite{Medienbruch}
 Bei der Entwicklung unseres Programms kamen die Editoren und integrierten Entwicklungsumgebungen Eclipse [\ref{sec:Eclipse}] (genau genommen Eclipse Neon IDE), Notepad++ [\ref{sec:Notepad++}] und Texmaker [\ref{sec:Texmaker}] zum Einsatz.
 
 \subsubsection{Eclipse}
@@ -339,10 +368,10 @@ Um eine Datenbank in unser Projekt zweckmäßig einzurichten, musste ich mich in
 % ----------------------------------------------------------------------------------------------------------
 \section{Projekt}
 \emph{Lars}\\
-In diesem Kapitel wird nun unser Projekt dargestellt, indem zunächst das Programm im Gesamten beschrieben wird. Daraufhin wird die Arbeit von Lars am GUI, die Arbeit von Robin am Interface und File-System und zuletzt die Arbeit von Jakob am Interface und an der Datenbank dargestellt. 
+In diesem Kapitel wird nun unser Projekt dargestellt, indem zunächst das Programm im Gesamten beschrieben wird. Daraufhin wird die Arbeit von Lars am GUI, die Arbeit von Robin am Interface und Datei-System und zuletzt die Arbeit von Jakob am Interface und an der Datenbank dargestellt. 
 ...
 
-\subsection{File-System-Management-System}
+\subsection{Datei-Verwaltungs-Programm}
 \emph{Lars}\\
 Darstellung Ergebnis...
 
@@ -350,7 +379,7 @@ Darstellung Ergebnis...
 \emph{Lars}\\
 Darstellung GUI...
 
-\subsection{Engine I: Interface und File-System}
+\subsection{Engine I: Interface und Datei-System}
 \emph{Robin}\\
 Darstellung Interface und File-System...
 
