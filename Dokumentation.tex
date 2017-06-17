@@ -241,7 +241,7 @@ HTML ist die Abkürzung für \glqq Hypertext Markup Language\grqq, was zu deutsc
 </html>
 \end{lstlisting}
 
-Der erste Teil ist die Dokumenttyp-Deklaration. In ihr werden Angaben zur verwendeten HTML-Version gegeben. Im \glqq head\grqq , welcher den zweiten Teil darstellt, werden  Kopfdaten, wie zum Beispiel der Titel der Seite oder andere, für den menschlichen Betrachter der Webseite zunächst nicht sichtbare, Informationen zur korrekten Darstellung des sichtbaren Teils der Webseite, angegeben.\cite{HTML/Kopfdaten} Anzuzeigende Inhalte werden in den \glqq body\grqq{}, den dritten Teil, geschrieben. Hier werden also sämtliche Texte, Verweise, Grafiken und so weiter eingefügt, die auf der Webseite sichtbar sein sollen.\cite{HTML/Dokumentstruktur_und_Aufbau} \\
+Der erste Teil eines üblichen HTML-Dokuments ist die Dokumenttyp-Deklaration. In ihr werden Angaben zur verwendeten HTML-Version gegeben. Im \glqq head\grqq , welcher den zweiten Teil darstellt, werden  Kopfdaten, wie zum Beispiel der Titel der Seite oder andere, für den menschlichen Betrachter der Webseite zunächst nicht sichtbare, Informationen zur korrekten Darstellung des sichtbaren Teils der Webseite, angegeben.\cite{HTML/Kopfdaten} Anzuzeigende Inhalte werden in den \glqq body\grqq{}, den dritten Teil, geschrieben. Hier werden also sämtliche Texte, Verweise, Grafiken und so weiter eingefügt, die auf der Webseite sichtbar sein sollen.\cite{HTML/Dokumentstruktur_und_Aufbau} \\
 In unserem Fall stellt HTML die Grundlage für die optische Gestaltung des GUIs dar.
 
 \subsubsection{Frames}
@@ -262,9 +262,65 @@ Im Folgenden Beispiel wird ein sogenanntes Frameset dargestellt, bei dem der Bil
 </html>
 \end{lstlisting}
 
+\subsubsection{Tabellen}
+\label{sec:Tabellen}
+Tabellen in HTML [\ref{sec:HTML}] bieten gute, einfache und vielseitige Möglichkeiten, Internetseiten zu strukturieren. Sie wurden im Januar 1997 mit HTML 3.2 ins Standardrepertoire von HTML aufgenommen.\cite{Hypertext_Markup_Language} \\
+Das Folgende Beispiel beinhaltet eine Tabelle mit zwei Zeilen und zwei Spalten. Tabellen in HTML werden Reihe für Reihe definiert. Eine Reihe beginnt mit <tr> und wird mit </tr> beendet. Auf die selbe Art werden auch Tabelleneinträge, also die Spalten in den Zeilen, definiert.
+
+\vspace{1em}
+\begin{lstlisting}[caption= Beispiel für Tabellen in HTML, label=lst:HTML]
+<html>
+	<head>
+		<meta charset="UTF-8">		
+		<title> Titel</title>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<td>
+					Oben links
+				</td>
+				<td>
+					Oben rechts
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Unten links
+				</td>
+				<td>
+					Unten rechts
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
+\end{lstlisting}
+
 \subsubsection{Formulare}
 \label{sec:Formulare}
-Formulare sind ein Element von HTML [\ref{sec:HTML}], das es ermöglicht Daten zu erfassen und über das Hypertext Transfer Protocol per XMLHttpRequest, HTTP-GET oder HTTP-POST zur Verarbeitung an einen Server zu senden.\cite{Webformular} In unserem Programm kam letzteres zum Einsatz. Man kann in HTML zwar Formulare definieren und erstellen, für eine Verarbeitung und Auswertung der Eingaben ist jedoch eine andere Programmiersprache, wie zum Beispiel Javascript [\ref{sec:JavaScript}] oder PHP [\ref{sec:PHP}] nötig.\cite{HTML/Formulare/Form} In unserem Fall haben wir Formulare in Form von Anmeldeformularen, Suchfiltern und auch als Möglichkeit zum Hochladen von Dateien eingesetzt.
+Formulare sind ein Element von HTML [\ref{sec:HTML}], das es ermöglicht Daten zu erfassen und über das Hypertext Transfer Protocol per XMLHttpRequest, HTTP-GET oder HTTP-POST zur Verarbeitung an einen Server zu senden.\cite{Webformular} In unserem Programm kam letzteres zum Einsatz. Man kann in HTML zwar Formulare definieren und erstellen, für eine Verarbeitung und Auswertung der Eingaben ist jedoch eine andere Programmiersprache, wie zum Beispiel Javascript [\ref{sec:JavaScript}] oder PHP [\ref{sec:PHP}] nötig.\cite{HTML/Formulare/Form} \\
+In unserem Fall haben wir Formulare in Form von Anmeldeformularen, Suchfiltern und auch als Möglichkeit zum Hochladen von Dateien eingesetzt.\\
+In dem folgenden Beispiel ist die Implementation eines Formulars in HTML dargestellt. Zu sehen ist ein Formular, welches ein Label, also den Text \glqq Suchgbegriff\grqq , für das darauf folgende Eingabefeld, wessen Zugehörigkeit zum Label durch das Attribut \glqq name\grqq{} gekennzeichnet wird, enthält. Das zweite \glqq input\grqq{} Statement erstellt den Bestätigungsknopf, den man drücken muss, um das Formular abzusenden. Beim Absenden des Formulars wird die Datei oder die Internetseite aufgerufen, die im Kopf des Formulars unter dem Attribut \glqq action\grqq{} steht.
+
+\vspace{1em}
+\begin{lstlisting}[caption= Beispiel für Formulare in HTML, label=lst:HTML]
+<html>
+	<head>
+		<title>
+			Titel
+		</title>
+	</head>
+	<body>
+		<form action="action.php">
+ 			 <label for="begriff">Suchbegriff</label>
+	 		 <input type="text" name="begriff">
+	 		 
+	 		 <input type="submit" name="Submit" value="Suchen">
+		</form>
+	</body>
+</html>
+\end{lstlisting}
 
 \subsubsection{JavaScript}
 \label{sec:JavaScript}
