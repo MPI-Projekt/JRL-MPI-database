@@ -1,4 +1,5 @@
 # JRL-MPI-database
-A Project from some german students to save a 
-#structured and organized work with your filesystem
+der develope branch = Test-Umgebung
+# bitte alles zunächst in diesen branch
+# außer die Umgebung
 
