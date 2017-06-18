@@ -467,15 +467,17 @@ Bei JavaScript handelt es sich um eine interpretierende Programmier- beziehungsw
 PHP (Hypertext Preprocessor, ursprünglich: Personal Home Page) ist eine Skriptsprache welche huptsöchlich zur erstellung dynamischer Webseiten und Webanwendungen genutzte wird. Und damit eine Art Erweiterung von HTML. Der Syntax von PHP ist dem von C und Perl angelent. PHP zeichnet sich durch Internet-Protokolleinbindung und Datenbankunterstützung. \cite{PHP}
 ...
 
-\subsection{Apache}
+\subsection{Apache HTTP Server}
 \label{sec:Apache}
 \emph{Lars}\\
-...
+Bei dem Apache HTTP Server handelt es sich um den seit 1996 verbreitetsten Webserver der Welt. Er war das Gründungsprojekt der Apache Software Foundation und wurde im April 1995 veröffentlicht. Ursprünglich ist er eine gepatchte Erweiterung des bereits etablierten NCSA HTTP Servers. Im März 2000, also knapp 5 Jahre nach der Veröffentlichung der ersten Version wurde Apache 2.0 veröffentlicht. Es wurden sowohl die Stabilität, als auch die Geschwindigkeit verbessert. Die aktuellste Version, welche auch von den Entwicklern zur Benutzung empfohlen wird, ist die Version 2.4.25, welche am 20.06.2016 veröffentlicht wurde.\cite{wiki/Apache_HTTP_Server}\cite{apache.org}\\
+Allgemein haben Webserver, sowie auch der Apache HTTP Server, die Hauptaufgabe, statische Dateien an Clients, wie zum Beispiel Webbrowser, zu übertragen. \cite{Webserver}\\
+Auch der Apache HTTP Server, der in unserem Programm zum Einsatz kommt muss solche Dateien, hauptsächlich HTML- und PHP-Dokumente, [\ref{sec:HTML}][\ref{sec:PHP}] verwalten und entsprechend zur Verfügung stellen. Wir benutzen den Apache HTTP Server, in Verbindung mit XAMPP, [\ref{sec:XAMPP}] da dieses die Installation, Konfiguration und Verwaltung des Servers erheblich vereinfacht.
 
 \subsection{Editoren und integrierte Entwicklungsumgebungen}
 \label{sec:Editoren}
 \emph{Lars}\\
-Editoren werden zum Schreiben von Texten, wie zum Quellcodes, benutzt. gute Editoren helfen das Programmieren zu vereinfachen, indem sie gewisse Schlüsselwörter, sowie Befehle, farblich hervorheben, eine Autovervollständigung, eine Such- und Ersetzfunktion und indem sie den Quellcode automatisch einrücken, sowie eine Schnittstelle für Plugins darstellen.\cite{Texteditor} \\
+Editoren werden zum Schreiben von Texten, wie zum Quellcodes, benutzt. gute Editoren helfen das Programmieren zu vereinfachen, indem sie gewisse Schlüsselwörter, sowie Befehle, farblich hervorheben, eine Autovervollständigung, eine Such- und Ersetzfunktion und indem sie den Quellcode automatisch einrücken. Zusätzlich stellen sie eine Schnittstelle für Plugins dar.\cite{Texteditor} \\
 Neben Editoren gibt es auch integrierte Entwicklungsumgebungen. Diese bestehen aus einer Sammlung an Computerprogrammen, mit denen es möglich ist Software ohne die Verwendung vieler einzelner Programme zu entwickeln. Durch sie werden nicht nur Tippfehler verhindert, sondern auch Arbeitsschritte und somit Zeit bei der Softwareentwicklung gespart.\cite{Integrierte_Entwicklungsumgebung}\cite{Medienbruch}
 Bei der Entwicklung unseres Programms kamen die Editoren und integrierten Entwicklungsumgebungen Eclipse [\ref{sec:Eclipse}] (genau genommen Eclipse Neon IDE), Notepad++ [\ref{sec:Notepad++}] und Texmaker [\ref{sec:Texmaker}] zum Einsatz.
 
@@ -774,7 +776,10 @@ Seit Beginn des Projekts im September 2016 sind neun Monate vergangen und das Pr
 \label{GUI}
 \emph{Lars}\\
 GUI ist die Abkürzung für \glqq Graphical User Interface\grqq , was zu Deutsch \glqq Graphische Benutzeroberfläche\grqq{} bedeutet. Als GUI wird also das bezeichnet, was der Benutzer von einem Programm sieht. \\
-In unserem Fall muss sich der Benutzer, nachdem er das Programm gestartet hat, zunächst anmelden. Das sich öffnende Anmeldefenster kann man in Abbildung \ref{fig:GUIAnmelden} sehen. Falls er kein Benutzerkonto besitzt kann er sich auch registrieren. \\
+
+\subsubsection{Benutzererfahrung}
+\label{Benutzererfahrung}
+Bei der Verwendung unseres Programms muss sich der Benutzer zunächst anmelden. Das sich öffnende Anmeldefenster kann man in Abbildung \ref{fig:GUIAnmelden} sehen. Falls der Benutzer noch kein Benutzerkonto besitzt kann er sich auch ein solches erstellen. Nach einer Erfolgreichen Anmeldung wird der Benutzer auf die Hauptseite (siehe Abbildung \ref{fig:GUIHauptseite}), den Kern des Programms, weiter geleitet. Hier kann er auf der linke Seite Dateien hochladen, indem er sie entweder per Auswahlfenster öffnet oder per Drag and Drop dem Eingabefeld übergibt. Optional können den hochzuladenden Dateien Beschreibungen hinzufügt werden. Auf der rechten Seite kann der Benutzer seine Dateien, die er bereits hochgeladen hat verwalten. Dazu ist zum Zeitpunkt der Verfassung dieses Texts nur eine Suchfunktion vorhanden. Es werden noch eine Such-, Lösch- und Änderungsfunktion folgen.\\
 
 \vspace{1em}
 \begin{minipage}{\linewidth}
@@ -793,8 +798,35 @@ In unserem Fall muss sich der Benutzer, nachdem er das Programm gestartet hat, z
 \end{minipage}
 \\
 
-Nach einer Erfolgreichen Anmeldung wird der Benutzer auf die Hauptseite (siehe Abbildung \ref{fig:GUIHauptseite}), den Kern des Programms, weiter geleitet. Hier kann er auf der linke Seite Dateien hochladen, indem er sie entweder per Auswahlfenster öffnet oder per Drag and Drop dem Eingabefeld übergibt. Optional können den hochzuladenden Dateien Beschreibungen hinzufügt werden. Auf der rechten Seite kann der Benutzer seine Dateien, die er bereits hochgeladen hat verwalten. Dazu ist zum Zeitpunkt der Verfassung dieses Texts nur eine Suchfunktion vorhanden. Es werden noch eine Such-, Lösch- und Änderungsfunktion folgen.
+\subsubsection{Realisierung der Hauptseite}
+\label{RealisierungHauptseite}
+Angefangen hat alles mit einem simplen Quellcode, zum Hochladen einer Datei per HTML. Dieser ist im Folgenden Dargestellt. (Listing \ref{lst:ersterUpload}) Er bestand lediglich aus einer Aufforderung, die Datei, welche der Benutzer hochladen möchte einzufügen, einem Eingabefeld und einem Knopf mit dem Namen \glqq Senden\grqq . Aus diesem Code lernten wir, besonders Ich, wie das Hochladen von Dateien per HTML funktioniert. 
 
+\vspace{1em}
+\begin{lstlisting}[caption=Erste Version des Datei-Uploads, label=lst:ersterUpload]
+<html>
+	<head>
+		<title>
+			Dateiupload
+		</title>
+	</head>
+	<body>
+		Bitte f&uumlgen Sie die Datei ein, die Sie hochladen m&oumlchten!
+		<form method="post" action="upload.php" enctype="multipart/form-data">
+		Datei:
+			<input type="hidden" name="MAX_FILE_SIZE" value="100000">
+			<input type="file" name="datei" size="40" maxlength="100000">
+			<input type="submit" name="Submit" value="Senden">
+		</form>
+	</body>
+</html>
+\end{lstlisting}
+
+Nach Sammlung von Inspiration auf der Internetseite \url{https://jqueryui.com} wurde die Hauptseite [\ref{fig:GUIHauptseite}] entworfen und programmiert. Zunächst war die Idee, unterhalb der Eingabe und Abfrage das Suchergebnis ausgeben zu lassen. Dies stellte sich aber als eher unpraktisch heraus, weshalb wir beschlossen, das Frame [\ref{sec:Frames}], was zuvor nur die Abfrage enthielt, nun auch das Suchergebnis ausgeben zu lassen. Der Plan war nun also grob gesagt, mithilfe des Formulars [\ref{sec:Formulare}], das die Suchabfrage aufnimmt, auf ein PHP-Dokument [\ref{sec:PHP}] zu verweisen, welches schlussendlich das HTML-Dokument[\ref{sec:HTML}] mit dem Ergebnis aufruft. \\
+
+\subsubsection{Realisierung der Anmeldung}
+\label{RealisierungAnmeldung}
+Mit der Zeit entstand die Idee der Gestaltung eines Anmeldeverfahrens. Dieses sollte aus einem Benutzernamen und einem Passwort bestehen. Als die Anmeldung funktionierte fiel uns auf, dass natürlich auch eine Registrierung notwendig sein wird. Auch sie besteht aus einem Feld, zur Eingabe eines Benutzernamens. Jedoch beinhaltet die Registrierung zwei Felder für die Eingabe des Passworts, um zu gewährleisten, dass sich der Benutzer dass richtige Passwort auch tatsächlich merkt oder zumindest notiert. Der Nachteil beim einmaligen Eintippen des Passworts bei der Registrierung ist, dass der Benutzer sich eventuell vertippen kann, sich also ein falsches Passwort merkt beziehungsweise notiert und somit später keinen Zugriff mehr auf seine Dateien erhält.
 
 \subsection{Engine I: Interface und Datei-System}
 \emph{Robin}\\
