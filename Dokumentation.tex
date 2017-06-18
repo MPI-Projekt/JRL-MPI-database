@@ -347,11 +347,13 @@ Im zweiten Kapitel dieser Dokumentation wird genauer auf die Themen eingegangen,
 
 \subsection{\LaTeX{}}
 \label{sec:LaTeX}
+LaTeX ist ein softwarepaket, welches die Benutzung des Textsatzsystems TeX vereinfacht. LaTeX wurde Anfang der 1980er von dem Programierer, Mathematiker und Informatiker Leslie Lamport entwickelt.\cite{LaTeX}\cite{Lamport}
 \emph{Robin}\\
 ...
 
 \subsection{XAMPP}
 \label{sec:XEMPP}
+Xampp ist ein Softwarepaket bestehend aus Freeware. Xampp vereinfacht das Instelliernen und das Konfigurieren von einem Apache Webservers mit z.B. SQLite und PHP. Außerdem sind in Xampp noch Werkzeuge wie z.B. FileZilla und phpMyAdmin vorhanden. Xampp ist nnicht für den Einsatz bei öffenliche Server gedacht, sondern dient lediglich für Entwickler, die ein schnelles und kompaktes Testsystem haben wollen, da eine starke Einschränkung der Sicherheit gibt.\cite{XAMPP}
 \emph{Robin}\\
 ...
 
@@ -460,6 +462,7 @@ Bei JavaScript handelt es sich um eine interpretierende Programmier- beziehungsw
 
 \subsection{PHP}
 \label{sec:PHP}
+PHP (Hypertext Preprocessor, ursprünglich: Personal Home Page) ist eine Skriptsprache welche huptsöchlich zur erstellung dynamischer Webseiten und Webanwendungen genutzte wird. Und damit eine Art Erweiterung von HTML. Der Syntax von PHP ist dem von C und Perl angelent. PHP zeichnet sich durch Internet-Protokolleinbindung und Datenbankunterstützung. \cite{PHP}
 \emph{Robin}\\
 ...
 
@@ -477,16 +480,19 @@ Bei der Entwicklung unseres Programms kamen die Editoren und integrierten Entwic
 
 \subsubsection{Eclipse}
 \label{sec:Eclipse}
+Eclipse ist eine Freeware und dient als Programierwerkzeug zur Entwicklung diverser Software. Früher wurde Eclipse als integrierte Entwicklungsumgebung (IDE) für Java genutzt. Mittlerweile wird eclipse wegen seiner Erweiterbarkeit auch für viele andere diverse Entwicklungsaufgaben genutzt. Eclipse ist der Nachfolger von IBM Visual Age for Java 4.0. Seit dem 7. Novermber 2001 ist der Quellcode für Eclipse freigegeben. \cite{Eclipse}
 \emph{Robin}\\
 ...
 
 \subsubsection{Notepad ++}
 \label{sec:Notepad++}
+Notepad ++ ist eine Freeware und ein Texteditor für Windows. In Notepad++ kann man mit vielen verschiedenen Programiersprachen schreiben, es werden auch deren Syntax und Struktur hervorgehoben. Notepad++ selbst ist in C++ geschrieben. \cite{Notepad}
 \emph{Robin}\\
 ...
 
 \subsubsection{Texmaker}
 \label{sec:Texmaker}
+TeXmaker ist ein Unicode-Texteditor für das Erstellen von LaTeX-Dokumenten. Dieser Editor richtet sich insbesondere an LaTeX-Anfänger, da durch Assistenten die Erstellung von Dokumenten vereinfacht wird. \cite{Texmaker}
 \emph{Robin}\\
 ...
 
@@ -688,8 +694,10 @@ Darstellung Ergebnis...
 Darstellung GUI...
 
 \subsection{Engine I: Interface und Datei-System}
+Dieser Teil der Engine ist für den Upload zuständig. Die "upload.php"-Datei bekommt die hochzuladene Datei durch eine POST-Methode von der "eingabe.html"-Datei. Die Uplaod datei ließt nun die benötigten Daten aus der Datei heraus wie z.B. Name, Größe, Datei-Typ und Erstellung-/Änderungsdatum. Diese Informationen werden dann zusammen mit dem neuen Pfand in der Datenbank abgespeichert. Danach wird die "eingabe.html"-Datei wieder aufgerufen um wieder auf den vorherigen Frame zu kommen.
+Zunächt war geplant, die "upload.php"-Datei in die "eingabe.html" zu integrieren, doch später habe ich mich dazu entschieden, den Upload extern zu machen, da es so einfacher zu schreiben ist und übersichtlicher in der Datei selbst.
 \emph{Robin}\\
-Darstellung Interface und File-System...
+
 
 \subsection{Engine II: Interface und Datenbank}
 \emph{Jakob}\\
