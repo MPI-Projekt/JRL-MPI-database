@@ -641,22 +641,103 @@ Außerdem hat sich PHP für uns alle ein wenig leichter erschlossen, als die Arb
 \subsection{JSON}
 \label{sec:JSON}
 \emph{Jakob}\\
-Ein weiteres Thema, in welches ich mich eingearbeitet habe war die Erstellung und das Auslesen von Dateien
-des Formates JSON mit Eclipse.
-...
+JSON (= JavaScript Object Notation) ist ein Dateiformat, welches von Programmiersprachen unabhängig ist, weshalb es häufig zum Datenaustausch zwischen verschiedenen Programmiersprachen verwendet wird [Vgl. \cite{json}].
 
-\subsubsection{Erstellen}
-...
+Die Grundlage dieses Formats besteht in 2 Strukturen:
 
-\subsubsection{Auslesen}
-...
+\subsubsection{JSON-Objekt}
+\label{sec:JSON-Objekt}
+Die erste dieser beiden Strukturen ist das JSON-Objekt, welches dazu dient Zeichenketten Weten zuzuordnen.
+Dies kann man sich wie folgt vorstellen:
 
-\subsubsection{Vorteile}
-...
 
-\subsubsection{Nachteile}
-...
+\vspace{1em}
+\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[width=0.9\linewidth]{Bilder/json-object.png}
+	\captionof{figure}[JSON-Objekt]{JSON-Objekt\footnotemark }
+	\label{fig:json-objekt}
+\end{minipage}
+\footnotetext{Quelle: \url{http://www.json.org/object.gif}}
 
+Bei der Deklaration eines JSON-Objektes muss lediglich ein Name/Wert-Paar, durch einen \glqq :\grqq{} (Doppelpunkt) getrennt, in die geschweiften Klammern geschrieben werden, um ein Objekt zu deklarieren.
+Dabei ist die maximale Anzahl an Name/Wert-Paaren jedoch unbegrenzt. Einem JSON-Objekt können beliebig viele solcher Paare, durch Kommata getrennt, beigegeben werden [Vgl. \cite{json}].
+
+So sähe der Quellcode eines JSON-Objektes beispielsweise wie folgt aus:
+\\
+\vspace{1em}
+\begin{lstlisting}[caption=Lars.json, label=lst:json-objekt]
+{
+	"Name" : "Lars",
+	"Alter" : 17
+}
+\end{lstlisting}
+Hier wird in der Datei \glqq Lars.json\grqq{} ein JSON-Objekt erstellt, welches folgende Name/Wert-Paare beschreibt:
+Name = Lars und Alter = 17.
+
+Durch diese einfache Deklaration lässt sich ein JSON-Objekt auch problemlos in anderen Programmiersprachen erstellen, wie hier beispielsweise in JavaScript:
+\\
+\vspace{1em}
+\begin{lstlisting}[caption=JSON-Objekt in JavaScript, label=lst:json-objekt1]
+<script>
+	var obj = { "Name" : "Lars, "Alter" : 17 };
+	var jsonObj = JSON.stringify(obj);
+</script>
+\end{lstlisting}
+
+oder hier in Java:
+\\
+\vspace{1em}
+\begin{lstlisting}[caption=JSON-Objekt in Java, label=lst:json-objekt2]
+import org.json.*;
+
+public void jsonErstellen(){
+	JSONObject obj = new JSONObject();
+	obj.put("Name", "Lars");
+	obj.put("Alter", 17);
+}
+\end{lstlisting}
+
+Und hier wird die Stärke von JSON deutlich, welche in der Kompatibilität mit sämtlichen Programmiersprachen liegt, wodurch der Datentransfer zwischen diesen deutlich erleichtert wird.
+
+\subsubsection{JSON-Array}
+\label{sec:JSON-Array}
+Die zweite Struktur, die JSON unterstützt ist das JSON-Array.
+Diese dient, wie für ein Array üblich, der Abspeicherung von Werten, wobei auch eine Verschachtelung mit JSON-Objekten und anderen JSON-Arrays möglich ist [Vgl. \cite{json}].
+Dies lässt sich ähnlich visualisieren:
+
+\vspace{1em}
+\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[width=0.9\linewidth]{Bilder/json-array.png}
+	\captionof{figure}[JSON-Array]{JSON-Array\footnotemark }
+	\label{fig:json-array}
+\end{minipage}
+\footnotetext{Quelle: \url{http://www.json.org/array.gif}}
+
+Die Deklaration eines Arrays in JSON sähe beispielsweise so aus:
+\\
+\vspace{1em}
+\begin{lstlisting}[caption=Klasse.json, label=lst:json-array]
+[
+	{
+		"Name" : "Lars",
+		"Alter" : 17
+	}
+,
+	{
+ 		"Name" : "Robin",
+ 		"Alter" : 17
+	}
+]
+\end{lstlisting}
+
+Und natürlich ist es auch problemlos möglich ein JSON-Array in anderen Programmiersprachen zu deklarieren, jedoch möchte ich an dieser Stelle auf Beispiele verzichten.
+
+\subsubsection{Nutzung in unserem Projekt}
+Trotz des einfachen Umgangs mit JSON haben wir uns gegen die Arbeit mit diesem Dateiformat entschieden, was der einfachen Tatsache geschuldet ist, dass wir ein webbasiertes Programm mit einer klassischen CGI-Schnittstelle programmieren wollten, weshalb unsere forcierten Programmiersprachen HTML und PHP waren.
+Nun hätten wir zwar den Datentransfer zwischen diesen Sprachen auch mit JSON bewerkstelligen können, jedoch ist der Datentransfer zwischen HTML und PHP sowieso durch die Post- und Get-Methoden beider Sprachen [Vgl. [\ref{sec:Formulare}] und [\ref{sec:PHP}]] sehr einfach, weshalb wir an der Stelle diesen Weg eingeschlagen haben.
+Jedoch hätten wir JSON benutzt, wenn es unsere Absicht gewesen wäre, die Dateien in der MYSQL-Datenbank abzulegen und nicht nur die Referenz zu der Datei, aber auf dieses Thema wollen wir erst in Kapitel 3 ausführlich eingehen [siehe [\ref{sec:EngineII}]].
 \subsection{MYSQL}
 \label{sec:MYSQL}
 \emph{Jakob}\\
