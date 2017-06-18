@@ -771,8 +771,30 @@ In diesem Kapitel wird nun unser Projekt dargestellt, indem zunächst das Progra
 Seit Beginn des Projekts im September 2016 sind neun Monate vergangen und das Programm umfasst nun ein Anmeldungsverfahren inklusive Registrationsmöglichkeit, die Möglichkeit Dateien hoch zu laden und nach diesen zu suchen. Im Hintergrund arbeitet ein Server, der sämtliche Anfragen des GUIs annimmt und entsprechend weiter leitet. Zusätzlich verfügt unser Programm über eine Datenbank, welche die Pfade zu den Dateien, sowie ihre Details, also zum Beispiel die Größe und den Dateityp, speichert.
 
 \subsection{GUI}
+\label{GUI}
 \emph{Lars}\\
-Darstellung GUI...
+GUI ist die Abkürzung für \glqq Graphical User Interface\grqq , was zu Deutsch \glqq Graphische Benutzeroberfläche\grqq{} bedeutet. Als GUI wird also das bezeichnet, was der Benutzer von einem Programm sieht. \\
+In unserem Fall muss sich der Benutzer, nachdem er das Programm gestartet hat, zunächst anmelden. Das sich öffnende Anmeldefenster kann man in Abbildung \ref{fig:GUIAnmelden} sehen. Falls er kein Benutzerkonto besitzt kann er sich auch registrieren. \\
+
+\vspace{1em}
+\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[width=0.7\linewidth]{Bilder/GUIAnmelden.png}
+	\captionof{figure}[Aufbau der Anmeldung]{Aufbau der Anmeldung}
+	\label{fig:GUIAnmelden}
+\end{minipage}
+
+\vspace{1em}
+\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[width=0.7\linewidth]{Bilder/GUIHauptseite.png}
+	\captionof{figure}[Aufbau der Hauptseite]{Aufbau der Hauptseite}
+	\label{fig:GUIHauptseite}
+\end{minipage}
+\\
+
+Nach einer Erfolgreichen Anmeldung wird der Benutzer auf die Hauptseite (siehe Abbildung \ref{fig:GUIHauptseite}), den Kern des Programms, weiter geleitet. Hier kann er auf der linke Seite Dateien hochladen, indem er sie entweder per Auswahlfenster öffnet oder per Drag and Drop dem Eingabefeld übergibt. Optional können den hochzuladenden Dateien Beschreibungen hinzufügt werden. Auf der rechten Seite kann der Benutzer seine Dateien, die er bereits hochgeladen hat verwalten. Dazu ist zum Zeitpunkt der Verfassung dieses Texts nur eine Suchfunktion vorhanden. Es werden noch eine Such-, Lösch- und Änderungsfunktion folgen.
+
 
 \subsection{Engine I: Interface und Datei-System}
 \emph{Robin}\\
