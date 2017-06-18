@@ -20,9 +20,7 @@
 \usepackage{titlesec}
 \usepackage{parskip}
 \usepackage[right]{eurosym}
-%\usepackage{url}
-%\usepackage{wrapfig}
-%\usepackage[backend=biber, citestyle=authoryear]{biblatex}
+
 
 \usepackage[subfigure,titles]{tocloft}
 \usepackage[pdfpagelabels=true]{hyperref}
@@ -45,9 +43,6 @@
 	pdfnewwindow=true,
 	colorlinks=true,linkcolor=black,citecolor=black,filecolor=magenta,urlcolor=black}
 \pdfinfo{/CreationDate \today}
-
-%\bibliography{bibo.bib}
-%\addbibresource{bibo.bib}
 
 \begin{document}
 
@@ -113,7 +108,19 @@
 \rhead{KURZFASSUNG}
 \section{Umschreibung des Projekts}
 \emph{Jakob}
-...
+\\
+Die grundsätzliche Zielsetzung von unserem Projekt war, etwas zu programmieren, das
+wir auch selber danach noch sinnvoll nutzen können.
+Ein Projekt zu finden, dass dieses Ziel erfüllte und für uns innerhalb eines Schuljahres realisierbar gewesen wäre, gestaltete sich jedoch als schwierig, da wir zwar alle drei bereits Programmiererfahrung besaßen, diese sich jedoch auf das Programmieren einfacher Klassenstrukturen mit Rückgabewerten in der Eclipse-Konsole
+beschränkte.
+Also mussten wir, begründet auf diesen Fakt, unsere Fähigkeit ein selbständiges Programm zu schreiben, zu diesem Zeitpunkt, realistisch, als nicht vorhanden einschätzen.
+
+Dieses Eingeständnis blies uns recht schnell die Traumwolke eines Programms, welches mithilfe einer künstlichen Intelligenz Bilder auswertet, unter den Füßen weg und ließ uns den festen Boden der Tatsachen unter denselbigen spüren.
+Aus diesem Grund kamen wir zu dem Schluss, dass eine Software, die Dateien sämtlicher Dateitypen automatisch und sortiert abspeichert, als ein sinnvolles und zugleich erreichbares erstes Ziel, welches wir dann gut ausbauen könnten.
+Jedoch haben wir uns auch in diesem Punkt selber überschätzt.
+
+Wir haben zwar unser Ziel eines webbasierten Programms zur sortierten Abspeicherung von Dateien erreicht, jedoch hat alleine dieses \glqq erste Ziel\grqq{} unsere gesamte zeitliche Kapazität verschlungen, ohne uns Zeit für Erweiterungen zu lassen.
+Doch dazu mehr in der folgenden detaillierten Dokumentation unseres Kampfes mit Computern, Quellcodes und vor allem mit uns selbst.
 
 \vspace{-1,2em}
 \titlespacing{\section}{0pt}{12pt plus 4pt minus 2pt}{-6pt plus 2pt minus 2pt}
@@ -186,8 +193,8 @@
 % ----------------------------------------------------------------------------------------------------------
 \section{Kapitel: Herangehensweise}
 \emph{Jakob}\\
-Bei der Planung und der Herangehensweise an unser Projekt sind wir vermehrt auf Probleme gestoßen, welche in diesem Kapitel dargestellt werden.
-...
+Dieses Kapitel soll sich primär mit uns beschäftigen.
+Damit, wie wir an die Projektarbeit herangetreten und auch wo wir auf Probleme mit derselben gestoßen sind.
 
 \subsection{ursprüngliche Vorstellung und Konsequenzen}
 \emph{Lars}\\
@@ -498,22 +505,131 @@ Aufgrund ihrer Komplexität, welche sich leider erst nach und nach herauskristal
 \subsection{Java-Servlet}
 \label{sec:Java-Servlet}
 \emph{Jakob}\\
-Im Folgenden werde ich erläutern, wie man ein Servlet in Eclipse über einen Apache Tomcat Server erstellen kann.
+Java-Servlets sind eine Weiterentwicklung der klassischen CGI Schnittstelle und sind somit für die Erzeugung dynamischer Web-Inhalte in Java-Webanwendungen zuständig.
+Das heißt, dass die Servlet-Klasse, entsprechend der HTTP-Methode, GET oder POST [\ref{sec:Formulare}], mit ihrer doGet- bzw doPost-Methode die Anfrage bearbeitet, wobei sie die Anfragedaten und ein Objekt zur späteren Ausgabe des Ergebnisses der Bearbeitung entgegennimmt.\cite{wiki/Servlet}\\
+Wie dies mit den restlichen Vorgängen bei der Bearbeitung eines HTML-Formulars [\ref{sec:Formulare}] im Zusammenhang steht, wird in folgender Grafik anschaulich dargestellt:\\
+\\
+\vspace{1em}
+\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[width=0.9\linewidth]{Bilder/600px-Servlet.png}
+	\captionof{figure}[Java-Servlet]{Java-Servlet\footnotemark }
+	\label{fig:servlet}
+\end{minipage}
+\footnotetext{Quelle: \url{https://de.wikipedia.org/wiki/Servlet\#/media/File:Servlet.png}}
+
+Sowohl der Anfangs-, als auch der Endpunkt einer Datenverarbeitung mittels HTML-Formular [\ref{sec:Formulare}] besteht in dem Client, der mit dem Browser interagiert. Durch diese Interaktion sendet er ein Formular ab, welches daraufhin die gewünschte Aktion auslöst, dazu muss der Aktionsname jedoch zunächst von einer XML-Datei dahingehend übersetzt werden, dass die entsprechende Initialisierung der ServletKlasse zur Bearbeitung dieser Aktion angesprochen wird.
+Sobald dies geschehen ist, erhält die ServletKlasse die Anfrage vom Client, welche sie, entsprechend dem HTML-Formular, mit ihrer doPost- oder doGet-Methode bearbeitet und schickt die Antwort wiederum dem Browser, welcher diese dem Client anzeigt.
 
 \subsubsection{Einrichtung in Eclipse}
-Vorausgesetzt für eine erfolgreiche Einrichtung ist die bereits erfolgte Installation von Eclipse Neo in der Java EE Version und Apache Tomcat v 9.0. 
-Nachdem  diese erfolgt ist, ist es nun möglich in Eclipse einen neuen Server einzurichten, wobei man unter dem Ordner Apache die installierte Tomcat Version vorfindet, welche hier  als Servertyp verwendet wird.
-Nachdem dies geschehen ist, richten sie ein Dynamic Web Project ein und innerhalb desselben erstellen sie im Java Resources/src  Ordner ein neues Servlet, indem sie nun programmieren können.
+Um eine erfolgreiche Einrichtung eines Java-Servlet mit Eclipse Neo durchführen zu können muss dieses, in der Java EE Version, und Apache Tomcat v 9.0 installiert sein. 
+Wenn dies der Fall ist, ist es möglich in Eclipse einen neuen Server einzurichten, \\
+\\
+\vspace{1em}
+\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[width=0.7\linewidth]{Bilder/Eclipse-ServerErstellen.png}
+    \captionof{figure}[Server einrichten]{Server einrichten}	
+	\label{fig:eclipse1}
+\end{minipage}
+\\
+wobei unter dem Ordner Apache die installierte Tomcat Version vorzufinden ist, welche hier  als Servertyp verwendet wird.\\
+\\
+\vspace{1em}
+\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[width=0.7\linewidth]{Bilder/Eclipse-ServerErstellen1.png}
+	\captionof{figure}[Server einrichten 2]	{Server einrichten 2}
+	\label{fig:eclipse2}
+\end{minipage}
+\\
 
-Wenn nun aber die Fehlermeldung  „cannot resolve“ im Bezug auf die vorgegebenen import-Zeilen auftaucht müssen sie außerdem noch die servlet-api.jar downloaden und diese dann in den Eigenschaften ihres Dynamic Web Projects unter Java Build Path in der Kategorie Libraries mit der Funktion „Add External JARs“ hinzufügen. 
+Nachdem dies geschehen ist, muss noch ein Dynamic Web Project eingerichtet und innerhalb desselben, im Java Resources/src  Ordner ein neues Servlet erstellt werden, indem sie nun programmieren können.
+\\
+\\
+\vspace{1em}
+\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[width=0.7\linewidth]{Bilder/Eclipse-ServerErstellen2.png}
+	\captionof{figure}[Servlet erstellen]{Servlet erstellen}	
+	\label{fig:eclipse3}
+\end{minipage}
+\\
 
-...
+Wenn nun aber die Fehlermeldung  \glqq cannot be resolved\grqq{} im Bezug auf die vorgegebenen import-Zeilen auftaucht \\
+\\
+\vspace{1em}
+\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[width=0.9\linewidth]{Bilder/Eclipse-ServerErstellen3.png}
+	\captionof{figure}[Fehlermeldung]{Fehlermeldung}	
+	\label{fig:eclipse4}
+\end{minipage}
+\\
 
-\subsubsection{Vorteile}
-...
+muss außerdem noch die servlet-api.jar gedownloadet und über die Eigenschaften des Dynamic Web Projects unter Java Build Path in der Kategorie Libraries mit der Funktion „Add External JARs“ hinzufgefügt werden.\\
+\\
+\vspace{1em}
+\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[width=0.9\linewidth]{Bilder/Eclipse-ServerErstellen4.png}
+	\captionof{figure}[servlet-api.jar einbinden]{servlet-api.jar einbinden}	
+	\label{fig:eclipse5}
+\end{minipage}
+\\
+ 
 
-\subsubsection{Nachteile}
-...
+\subsubsection{Implementation}
+Die Implementation eines Java-Servlets gestaltet sich, im Vergleich zur Einrichtung eines solchen in Eclipse, eher einfach, da lediglich die doGet-Methode zu befüllen ist, während der restliche Quellcode bereits automatisch erstellt wurde.
+
+So lässt sich beispielsweise mit der Java-Klasse PrintWriter ein HTML-Script in die doGet-Methode schreiben, welches dann beim Aufrufen des Servlets ausgeführt wird:
+
+%\ref{lst:servlet-html}
+
+\vspace{1em}
+\begin{lstlisting}[caption=Servlet Beispielcode, label=lst:servlet-html]
+protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+	PrintWriter writer = response.getWriter();
+	
+		writer.println("<html>");
+		writer.println("<head>");
+		writer.println("<title>");
+		writer.println("Hello World");
+		writer.println("</title>");
+		writer.println("</head>");
+		writer.println("<body>");
+		writer.println("<h>");
+		writer.println("<b>Hello World Servlet</b>");
+		writer.println("</h>");
+		writer.println("<p>Das ist ein Text</p>");
+		writer.println("<a href = Hello_Space> hier </a>");
+		writer.println("<br>");
+		writer.println("<a href = https://www.google.de target = _blank> Google</a>");
+		writer.println("<br>");
+		writer.println("Und das auch");
+		writer.println();
+		writer.println("</body>");
+		writer.println("</html>");
+		
+		writer.close();		
+}			
+\end{lstlisting}
+
+
+\vspace{1em}
+\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[width=0.9\linewidth]{Bilder/Servlet-Beispiel.png}
+	\captionof{figure}[Servlet Beispiel]{Servlet Beispiel}	
+	\label{fig:eclipse6}
+\end{minipage}
+\\
+
+Wie man an diesem Beispiel sehen kann, ist das Servlet nun bereit und muss nur noch mit der gewünschten doGet-Methode befüllt werden.
+\subsubsection{Nutzung in unserem Projekt}
+In unserem Projekt selber haben wir nicht mit Java-Servlets gearbeitet, sondern haben uns stattdessen für die klassische CGI Schnittstelle, in Form von PHP, entschieden, da Robin bereits ein wenig Erfahrung mit PHP gesammelt hatte, während Java-Servlets absolutes Neuland für uns waren.
+Außerdem hat sich PHP für uns alle ein wenig leichter erschlossen, als die Arbeit mit den Servlets, weshalb uns PHP als der sinnvollere Weg erschien.
 
 \subsection{JSON}
 \label{sec:JSON}
@@ -603,86 +719,10 @@ Im Folgenden wird jeder von uns ein Fazit geben, indem er darstellt, was er aus 
 % Literatur
 % ----------------------------------------------------------------------------------------------------------
 
-%\addcontentsline{tocnumbered}{section}{Literaturverzeichnis}
 
-\begin{thebibliography}{999}
-
-%\bibitem[Anzeigename]{Stichwort, dass man mit \cite aufruft}
-%\url{link zur Quelle}, Zugriff: 16.06.2017
-
-\bibitem{HTML}
-\url{https://wiki.selfhtml.org/wiki/HTML}, \\
-Zugriff: 15.06.2017
-
-\bibitem{Hypertext_Markup_Language}
-\url{https://de.wikipedia.org/wiki/Hypertext\_Markup\_Language},\\
-Zugriff: 15.06.2017
-
-\bibitem{HTML/Dokumentstruktur_und_Aufbau}
-\url{https://wiki.selfhtml.org/wiki/HTML/Dokumentstruktur\_und\_Aufbau}, \\
-Zugriff: 15.06.2017
-
-\bibitem{HTML/Kopfdaten}
-\url{https://wiki.selfhtml.org/wiki/HTML/Kopfdaten}, \\
-Zugriff: 15.06.2017
-
-\bibitem{HTML/Frames}
-\url{https://wiki.selfhtml.org/wiki/HTML/Frames}, \\
-Zugriff: 15.06.2017
-
-\bibitem{HTML5}
-\url{https://de.wikipedia.org/wiki/HTML5}, \\
-Zugriff: 15.06.2017
-
-\bibitem{Webformular}
-\url{https://de.wikipedia.org/wiki/Webformular}, \\
-Zugriff: 15.06.2017
-
-\bibitem{JavaScript}
-\url{http://www.searchenterprisesoftware.de/definition/JavaScript}, \\
-Zugriff: 15.06.2017
-
-\bibitem{wiki/JavaScript}
-\url{https://de.wikipedia.org/wiki/JavaScript}, \\
-Zugriff: 15.06.2017
-
-\bibitem{JavaScript-JS}
-\url{http://www.itwissen.info/JavaScript-JavaScript-JS.html}, \\
-Zugriff: 15.06.2017
-
-\bibitem{HTML/Formulare/Form}
-\url{https://wiki.selfhtml.org/wiki/HTML/Formulare/Form}, \\
-Zugriff: 15.06.2017
-
-\bibitem{Integrierte_Entwicklungsumgebung}
-\url{https://de.wikipedia.org/wiki/Integrierte_Entwicklungsumgebung}, \\
-Zugriff: 16.06.2017
-
-\bibitem{Texteditor}
-\url{https://de.wikipedia.org/wiki/Texteditor}, \\
-Zugriff: 16.06.2017
-
-\bibitem{Medienbruch}
-\url{https://de.wikipedia.org/wiki/Medienbruch}, \\
-Zugriff: 16.06.2017
-
-\bibitem{wiki/Dropzone}
-\url{https://de.wikipedia.org/wiki/Dropzone}, \\
-Zugriff: 16.06.2017
-
-
-
-%\bibitem{}
-%\url{}, \\
-%Zugriff: 16.06.2017
-
-
-\end{thebibliography}
-%\section{Quellenverzeichnis}
-%\printbibliography
-%\renewcommand\refname{Quellenverzeichnis}
-%\bibliographystyle{alpha}
-%\bibliography{bibo}
+\renewcommand\refname{Literaturverzeichnis}
+\bibliographystyle{alpha}
+\bibliography{bibo}
 \pagebreak
 
 
