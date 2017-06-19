@@ -197,7 +197,9 @@ Damit, wie wir an die Projektarbeit herangetreten und auch wo wir auf Probleme m
 
 \subsection{ursprüngliche Vorstellung und Konsequenzen}
 \emph{Jakob}\\
-...
+Unsere Unerfahrenheit in der Projektarbeit hat uns zu einem überstürzten und unüberlegten Projekteinstieg getrieben, bei dem wir uns in Themen eingearbeitet haben, ohne uns einen genauen Plan zu erstellen.
+Dies führte zu einer eher mäßig koordinierten Arbeitsteilung, deren Teilung in absoluter Trennung bestand, wodurch bereits nach kurzer Zeit keiner mehr wusste, was seine Themen mit denen der Anderen, geschweige denn, mit unserem Projekt zu tun hatten.
+Jedoch unterdrückten wir, aus der naiven Vorstellung heraus, dass die Anderen schon wissen, was sie tun, und dass das schon alles noch Sinn ergeben wird, diese Zweifel und arbeiteten weiter, ohne uns über die Folgen dieser schlechten Kommunikation untereinander im Klaren zu sein.
 
 \subsection{verspätete Planung}
 \emph{Lars}\\
@@ -334,7 +336,10 @@ Die Datenbank, so nahmen wir es uns vor, soll Dateien aufnehmen und den Abfragen
 
 \subsection{Zusammenarbeit und Kommunikation}
 \emph{Jakob}\\
-....
+Wie bereits bei unseren Vorstellungen erwähnt [siehe [\ref{sec:Vorstellung}]], ist unsere Projektarbeit haupt- sächlich negativ durch unser Kommunikationsverhalten beeinflusst worden.
+Unser größtes Problem lag in der Organisation unserer Zusammenarbeit. Dies ist der Tatsache verschuldet gewesen, dass wir in der Schule meist nur unter strengen Regulierungen und Vorgaben arbeiten, weshalb so ein freies und selbständiges Arbeiten sehr ungewohnt für uns war und vielerorts neben den anderen Arbeiten, bei denen bei \glqq Nicht-Erfüllen\grqq{} direkte Sanktionen drohten, an Priorität zu verlieren schien.
+Aus diesem Grund war unsere Zusammenarbeit größtenteils von stark differenzierenden Arbeitshaltungen geprägt, welche sich dann auch auf die Aktivität und Harmonie unserer Kommunikation untereinander ausgeprägt haben.
+Dies begünstigte unseren fehlgeleiteten Ansatz [siehe [\ref{sec:Vorstellung}]] und führte auch in der späteren Projektarbeit immer wieder zu Einbrüchen unserer Produktivität, welche im Nachhinein als vermeidbar und gar unnötig einzustufen sind.
 
 \pagebreak
 % ----------------------------------------------------------------------------------------------------------
@@ -527,8 +532,8 @@ Wie dies mit den restlichen Vorgängen bei der Bearbeitung eines HTML-Formulars 
 \end{minipage}
 \footnotetext{Quelle: \url{https://de.wikipedia.org/wiki/Servlet\#/media/File:Servlet.png}}
 
-Sowohl der Anfangs-, als auch der Endpunkt einer Datenverarbeitung mittels HTML-Formular [\ref{sec:Formulare}] besteht in dem Client, der mit dem Browser interagiert. Durch diese Interaktion sendet er ein Formular ab, welches daraufhin die gewünschte Aktion auslöst, dazu muss der Aktionsname jedoch zunächst von einer XML-Datei dahingehend übersetzt werden, dass die entsprechende Initialisierung der ServletKlasse zur Bearbeitung dieser Aktion angesprochen wird.
-Sobald dies geschehen ist, erhält die ServletKlasse die Anfrage vom Client, welche sie, entsprechend dem HTML-Formular, mit ihrer doPost- oder doGet-Methode bearbeitet und schickt die Antwort wiederum dem Browser, welcher diese dem Client anzeigt.
+Sowohl der Anfangs-, als auch der Endpunkt einer Datenverarbeitung mittels HTML-Formular besteht in dem Client, der mit dem Browser interagiert. Durch diese Interaktion sendet er ein Formular ab, welches daraufhin die gewünschte Aktion auslöst. Dazu muss der Aktionsname jedoch zunächst von einer XML-Datei dahingehend übersetzt werden, dass die entsprechende Initialisierung der ServletKlasse zur Bearbeitung dieser Aktion angesprochen wird.
+Sobald dies geschehen ist, erhält die ServletKlasse die Anfrage vom Client, welche sie, entsprechend dem HTML-Formular, mit ihrer doPost- oder doGet-Methode bearbeitet, und schickt die Antwort wiederum dem Browser, welcher diese dem Client anzeigt.
 
 \subsubsection{Einrichtung in Eclipse}
 Um eine erfolgreiche Einrichtung eines Java-Servlet mit Eclipse Neo durchführen zu können muss dieses, in der Java EE Version, und Apache Tomcat v 9.0 installiert sein. 
@@ -538,7 +543,7 @@ Wenn dies der Fall ist, ist es möglich in Eclipse einen neuen Server einzuricht
 \begin{minipage}{\linewidth}
 	\centering
 	\includegraphics[width=0.7\linewidth]{Bilder/Eclipse-ServerErstellen.png}
-    \captionof{figure}[Server einrichten]{Server einrichten}	
+    \captionof{figure}[Server einrichten]{Server erstellen}	
 	\label{fig:eclipse1}
 \end{minipage}
 \\
@@ -548,12 +553,12 @@ wobei unter dem Ordner Apache die installierte Tomcat Version vorzufinden ist, w
 \begin{minipage}{\linewidth}
 	\centering
 	\includegraphics[width=0.7\linewidth]{Bilder/Eclipse-ServerErstellen1.png}
-	\captionof{figure}[Server einrichten 2]	{Server einrichten 2}
+	\captionof{figure}[Server einrichten 2]	{Servertyp festlegen}
 	\label{fig:eclipse2}
 \end{minipage}
 \\
 
-Nachdem dies geschehen ist, muss noch ein Dynamic Web Project eingerichtet und innerhalb desselben, im Java Resources/src  Ordner ein neues Servlet erstellt werden, indem sie nun programmieren können.
+Nachdem dies geschehen ist, muss noch ein Dynamic Web Project eingerichtet und innerhalb desselben, im \glqq Java Resources/src\grqq-  Ordner ein neues Servlet erstellt werden, indem sie nun programmieren können.
 \\
 \\
 \vspace{1em}
@@ -576,7 +581,7 @@ Wenn nun aber die Fehlermeldung  \glqq cannot be resolved\grqq{} im Bezug auf di
 \end{minipage}
 \\
 
-muss außerdem noch die servlet-api.jar gedownloadet und über die Eigenschaften des Dynamic Web Projects unter Java Build Path in der Kategorie Libraries mit der Funktion „Add External JARs“ hinzufgefügt werden.\\
+muss außerdem noch die servlet-api.jar gedownloadet und über die Eigenschaften des \glqq Dynamic Web Projects\grqq{} unter \glqq Java Build Path\grqq{} in der Kategorie \glqq Libraries\grqq{} mit der Funktion „Add External JARs“ hinzufgefügt werden.\\
 \\
 \vspace{1em}
 \begin{minipage}{\linewidth}
@@ -640,6 +645,7 @@ Wie man an diesem Beispiel sehen kann, ist das Servlet nun bereit und muss nur n
 In unserem Projekt selber haben wir nicht mit Java-Servlets gearbeitet, sondern haben uns stattdessen für die klassische CGI Schnittstelle, in Form von PHP, entschieden, da Robin bereits ein wenig Erfahrung mit PHP gesammelt hatte, während Java-Servlets absolutes Neuland für uns waren.
 Außerdem hat sich PHP für uns alle ein wenig leichter erschlossen, als die Arbeit mit den Servlets, weshalb uns PHP als der sinnvollere Weg erschien.
 
+
 \subsection{JSON}
 \label{sec:JSON}
 \emph{Jakob}\\
@@ -649,7 +655,7 @@ Die Grundlage dieses Formats besteht in 2 Strukturen:
 
 \subsubsection{JSON-Objekt}
 \label{sec:JSON-Objekt}
-Die erste dieser beiden Strukturen ist das JSON-Objekt, welches dazu dient Zeichenketten Weten zuzuordnen.
+Die erste dieser beiden Strukturen ist das JSON-Objekt, welches dazu dient Zeichenketten Werten zuzuordnen.
 Dies kann man sich wie folgt vorstellen:
 
 
@@ -705,8 +711,8 @@ Und hier wird die Stärke von JSON deutlich, welche in der Kompatibilität mit s
 \subsubsection{JSON-Array}
 \label{sec:JSON-Array}
 Die zweite Struktur, die JSON unterstützt ist das JSON-Array.
-Diese dient, wie für ein Array üblich, der Abspeicherung von Werten, wobei auch eine Verschachtelung mit JSON-Objekten und anderen JSON-Arrays möglich ist [Vgl. \cite{json}].
-Dies lässt sich ähnlich visualisieren:
+Dieses dient, wie für ein Array üblich, der Abspeicherung von Werten, wobei auch eine Verschachtelung mit JSON-Objekten und anderen JSON-Arrays möglich ist [Vgl. \cite{json}].
+Dies lässt sich ähnlich, wie das JSON-Objekt, visualisieren:
 
 \vspace{1em}
 \begin{minipage}{\linewidth}
@@ -717,7 +723,9 @@ Dies lässt sich ähnlich visualisieren:
 \end{minipage}
 \footnotetext{Quelle: \url{http://www.json.org/array.gif}}
 
-Die Deklaration eines Arrays in JSON sähe beispielsweise so aus:
+Bei der Deklaration eines JSON-Arrays in JSON sind nur zwei Unterschiede zu der eines JSON-Objekts zu beachten, welche zum einen in den äußeren Klammern, die bei einem JSON-Array nicht geschweift sondern eckig sind, und zum andern in dem Inhalt des Arrays bestehen, da in einem Array keine Name/Wert-Paare, sondern nur Werte gespeichert werden.
+
+Die Deklaration eines JSON-Arrays in JSON sähe also beispielsweise so aus:
 \\
 \vspace{1em}
 \begin{lstlisting}[caption=Klasse.json, label=lst:json-array]
@@ -738,7 +746,7 @@ Und natürlich ist es auch problemlos möglich ein JSON-Array in anderen Program
 
 \subsubsection{Nutzung in unserem Projekt}
 Trotz des einfachen Umgangs mit JSON haben wir uns gegen die Arbeit mit diesem Dateiformat entschieden, was der einfachen Tatsache geschuldet ist, dass wir ein webbasiertes Programm mit einer klassischen CGI-Schnittstelle programmieren wollten, weshalb unsere forcierten Programmiersprachen HTML und PHP waren.
-Nun hätten wir zwar den Datentransfer zwischen diesen Sprachen auch mit JSON bewerkstelligen können, jedoch ist der Datentransfer zwischen HTML und PHP sowieso durch die Post- und Get-Methoden beider Sprachen [Vgl. [\ref{sec:Formulare}] und [\ref{sec:PHP}]] sehr einfach, weshalb wir an der Stelle diesen Weg eingeschlagen haben.
+Nun hätten wir zwar den Datentransfer zwischen diesen Sprachen auch mit JSON bewerkstelligen können, jedoch ist dieser zwischen HTML und PHP sowieso durch die Post- und Get-Methoden beider Sprachen [Vgl. [\ref{sec:Formulare}] und [\ref{sec:PHP}]] sehr einfach, weshalb wir an der Stelle diesen Weg eingeschlagen haben.
 Jedoch hätten wir JSON benutzt, wenn es unsere Absicht gewesen wäre, die Dateien in der MYSQL-Datenbank abzulegen und nicht nur die Referenz zu der Datei, aber auf dieses Thema wollen wir erst in Kapitel 3 ausführlich eingehen [siehe [\ref{sec:EngineII}]].
 \subsection{MYSQL}
 \label{sec:MYSQL}
@@ -855,7 +863,13 @@ Im Folgenden wird jeder von uns ein Fazit geben, indem er darstellt, was er aus 
 
 \subsection{}
 \emph{Jakob}\\
-...
+Wie bereits eingangs mehrfach erwähnt, bestand die Schwierigkeit von unserem Projekt, meiner Meinung nach, nicht in der Thematik, sondern in der Arbeit miteinander. Dadurch, dass wir zu dritt an einem solchen Projekt, welches viel größer ist, als alles Andere, was wir bis dahin programmiert haben, gearbeitet haben, sind wir auf 2 Ebenen auf ganz neuem Terrain gewandert.
+Zum einen war natürlich die Thematik und die Art des Programmierens für uns absolut ungewohnt.
+Viel schwerwiegender war jedoch die Tatsache, dass wir bis dato noch nie so frei an einem Projekt gearbeitet haben, welches es gemeinsam zu verfolgen galt.
+Und genau in den Problemen, die daraus entstanden, sehe ich den größten und essentiellsten Lerneffekt, den wir mitnehmen sollten.
+Denn in diesem Schuljahr konnten wir einen ersten Blick in das Leben nach der Schule werfen, durften feststellen, wie es ist nicht mehr an der Hand gehalten und behütet durch die Aufgaben geführt zu werden.
+Wir mussten uns zwar erst langsam an diese Situation gewöhnen und haben letztendlich auch kein großartiges Projekt auf die Beine stellen können, jedoch bin ich froh und dankbar, dass ich diese Erfahrung des \glqq Unbehütet-Seins\grqq{} in einer behüteten Umgebung machen durfte.
+Aus diesem Grund bin ich froh mich für diesen Projektkurs entschieden zu haben und überzeugt davon, dass er uns besser auf das \glqq richtige Leben\grqq{} vorbereitet hat, als so manch anderes Fach, wenn man bereit ist sich seine Fehler einzugestehen und daraus Konsequenzen zu ziehen.
 
 \pagebreak
 % ----------------------------------------------------------------------------------------------------------
@@ -894,7 +908,26 @@ Im Folgenden wird jeder von uns ein Fazit geben, indem er darstellt, was er aus 
 	\huge\textbf{Erklärung}\\
 \end{center}
 \vspace{2em}
-Hiermit versichere ich, Jakob Fleischer, dass ich meine Dokumentation selbständig verfasst und keine anderen als die angegebenen Quellen und Hilfsmittel benutzt habe.
+Hiermit versichere ich, Jakob Fleischer, dass ich meinen Anteil an unserer Dokumentation selbständig verfasst und keine anderen, als die angegebenen Quellen und Hilfsmittel benutzt habe.
+
+\vspace{4em}
+\begin{minipage}{\linewidth}
+	\begin{tabular}{p{15em}p{15em}}
+		Datum: &  .......................................................\\
+		& \centering (Unterschrift)\\
+	\end{tabular}
+\end{minipage}
+
+
+
+\newpage
+\thispagestyle{empty}
+\begin{center}
+	\vspace*{5em}
+	\huge\textbf{Erklärung}\\
+\end{center}
+\vspace{2em}
+Hiermit versichere ich, Robin Schlaak, dass ich meinen Anteil an unserer Dokumentation selbständig verfasst und keine anderen, als die angegebenen Quellen und Hilfsmittel benutzt habe.
 
 \vspace{4em}
 \begin{minipage}{\linewidth}
@@ -911,24 +944,7 @@ Hiermit versichere ich, Jakob Fleischer, dass ich meine Dokumentation selbständ
 	\huge\textbf{Erklärung}\\
 \end{center}
 \vspace{2em}
-Hiermit versichere ich, Lars Schmalbach, dass ich meine Dokumentation selbständig verfasst und keine anderen als die angegebenen Quellen und Hilfsmittel benutzt habe.
-
-\vspace{4em}
-\begin{minipage}{\linewidth}
-	\begin{tabular}{p{15em}p{15em}}
-		Datum: &  .......................................................\\
-		& \centering (Unterschrift)\\
-	\end{tabular}
-\end{minipage}
-
-\newpage
-\thispagestyle{empty}
-\begin{center}
-	\vspace*{5em}
-	\huge\textbf{Erklärung}\\
-\end{center}
-\vspace{2em}
-Hiermit versichere ich, Robin Schlaak, dass ich meine Dokumentation selbständig verfasst und keine anderen als die angegebenen Quellen und Hilfsmittel benutzt habe.
+Hiermit versichere ich, Lars Schmalbach, dass ich meinen Anteil an unserer Dokumentation selbständig verfasst und keine anderen, als die angegebenen Quellen und Hilfsmittel benutzt habe.
 
 \vspace{4em}
 \begin{minipage}{\linewidth}
@@ -938,6 +954,7 @@ Hiermit versichere ich, Robin Schlaak, dass ich meine Dokumentation selbständig
 	\end{tabular}
 \end{minipage}
 \end{document}
+
 
 %Die Quellen befinden sich in der Datei \textit{bibo.bib}. Ein Buch- und eine Online-Quelle sind beispielhaft eingefügt. [Vgl. \cite{buch}, \cite{online}]
 %Abkürzungen lassen sich natürlich auch nutzen (\ac{OSGi}). Weiter oben im Latex-Code findet sich das %Verzeichnis.
