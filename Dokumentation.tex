@@ -1387,20 +1387,24 @@ Aus diesem Grund bin ich froh mich für diesen Projektkurs entschieden zu haben 
 % ----------------------------------------------------------------------------------------------------------
 % Anhang
 % ----------------------------------------------------------------------------------------------------------
-\pagenumbering{Roman}
-\setcounter{page}{1}
+%\pagenumbering{Roman}
+%\setcounter{page}{1}
+%
+%\lhead{Anhang \thesection}
+%\begin{appendix}
+%
+%\section*{Anhang}
+%\phantomsection
+%\addcontentsline{toc}{section}{Anhang}
+%\addtocontents{toc}{\vspace{-0.5em}}
+%
+%
+%\end{appendix}
 
-\lhead{Anhang \thesection}
-\begin{appendix}
 
-\section*{Anhang}
-\phantomsection
-\addcontentsline{toc}{section}{Anhang}
-\addtocontents{toc}{\vspace{-0.5em}}
-
-
-\end{appendix}
-
+% ----------------------------------------------------------------------------------------------------------
+% Erklärung
+% ----------------------------------------------------------------------------------------------------------
 
 \newpage
 \thispagestyle{empty}
@@ -1469,18 +1473,16 @@ Hiermit versichere ich, Lars Schmalbach, dass ich meinen Anteil an unserer Dokum
 %
 % \ref{lst:arduino}.
 %
-%\vspace{1em}
-%\begin{lstlisting}[caption=Arduino Beispielprogramm, label=lst:arduino]
-%int ledPin = 13;
-%void setup() {
-%    pinMode(ledPin, OUTPUT);
-%}
-%void loop() {
-%    digitalWrite(ledPin, HIGH);
-%    delay(500);
-%    digitalWrite(ledPin, LOW);
-%    delay(500);
-%}
+%\begin{lstlisting}[caption= Beispiel, label=lst:beispiel]
+%<html>
+%	<head>
+%		<meta charset="UTF-8">		
+%		<title> Titel</title>
+%	</head>
+%	<body>
+%		Beispieltext.
+%	</body>
+%</html>
 %\end{lstlisting}
 %
 %
@@ -1525,11 +1527,11 @@ Hiermit versichere ich, Lars Schmalbach, dass ich meinen Anteil an unserer Dokum
 %\vspace{1em}
 %\begin{minipage}{\linewidth}
 %	\centering
-%	\includegraphics[width=0.7\linewidth]{Bilder/layering-osgi.png}
-%	\captionof{figure}[OSGi Architektur]{OSGi Architektur\footnotemark }
-%	\label{fig:osgi}
+%	\includegraphics[width=0.7\linewidth]{Bilder/test.png}
+%	\captionof{figure}[Test]{Test\footnotemark }
+%	\label{fig:test}
 %\end{minipage}
-%\footnotetext{Quelle: \url{http://www.osgi.org/Technology/WhatIsOSGi}}
+%\footnotetext{Quelle: \url{www.google.de}}
 
 
 
