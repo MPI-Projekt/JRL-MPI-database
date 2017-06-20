@@ -114,7 +114,7 @@ Ein Projekt zu finden, dass dieses Ziel erfüllte und für uns innerhalb eines S
 beschränkte.
 Also mussten wir, begründet auf diesen Fakt, unsere Fähigkeit ein selbständiges Programm zu schreiben, zu diesem Zeitpunkt, realistisch, als nicht vorhanden einschätzen.
 
-Dieses Eingeständnis blies uns recht schnell die Traumwolke eines Programms, welches mithilfe einer künstlichen Intelligenz Bilder auswertet, unter den Füßen weg und ließ uns den festen Boden der Tatsachen unter denselbigen spüren.
+Dieses Eingeständnis blies uns recht schnell die Traumwolke eines Programms, welches mithilfe einer künstlichen Intelligenz Bilder auswertet, unter den Füßen weg und ließ uns den festen Boden der Tatsachen unter dem Selbigen spüren.
 Aus diesem Grund kamen wir zu dem Schluss, dass eine Software, die Dateien sämtlicher Dateitypen automatisch und sortiert abspeichert, als ein sinnvolles und zugleich erreichbares erstes Ziel, welches wir dann gut ausbauen könnten.
 Jedoch haben wir uns auch in diesem Punkt selber überschätzt.
 
@@ -197,9 +197,10 @@ Damit, wie wir an die Projektarbeit herangetreten und auch wo wir auf Probleme m
 
 \subsection{Ursprüngliche Vorstellung und Konsequenzen}
 \emph{Jakob}\\
-Unsere Unerfahrenheit in der Projektarbeit hat uns zu einem überstürzten und unüberlegten Projekteinstieg getrieben, bei dem wir uns in Themen eingearbeitet haben, ohne uns einen genauen Plan zu erstellen.
-Dies führte zu einer eher mäßig koordinierten Arbeitsteilung, deren Teilung in absoluter Trennung bestand, wodurch bereits nach kurzer Zeit keiner mehr wusste, was seine Themen mit denen der Anderen, geschweige denn, mit unserem Projekt zu tun hatten.
-Jedoch unterdrückten wir, aus der naiven Vorstellung heraus, dass die Anderen schon wissen, was sie tun, und dass das schon alles noch Sinn ergeben wird, diese Zweifel und arbeiteten weiter, ohne uns über die Folgen dieser schlechten Kommunikation untereinander im Klaren zu sein.
+Wie bereits bei unseren Vorstellungen erwähnt [siehe [\ref{sec:Vorstellung}]], ist unsere Projektarbeit haupt- sächlich negativ durch unser Kommunikationsverhalten beeinflusst worden.
+Unser größtes Problem lag in der Organisation unserer Zusammenarbeit. Dies ist der Tatsache verschuldet gewesen, dass wir in der Schule meist nur unter strengen Regulierungen und Vorgaben arbeiten, weshalb so ein freies und selbständiges Arbeiten sehr ungewohnt für uns war und vielerorts neben den anderen Arbeiten, bei denen bei \glqq Nicht-Erfüllen\grqq{} direkte Sanktionen drohten, an Priorität zu verlieren schien.
+Aus diesem Grund war unsere Zusammenarbeit größtenteils von stark differenzierenden Arbeitshaltungen geprägt, welche sich dann auch auf die Aktivität und Harmonie unserer Kommunikation untereinander ausgeprägt haben.
+Dies begünstigte unseren fehlgeleiteten Ansatz [siehe [\ref{sec:Vorstellung}]] und führte auch in der späteren Projektarbeit immer wieder zu Einbrüchen unserer Produktivität, welche im Nachhinein als vermeidbar und gar unnötig einzustufen sind.
 
 \subsection{Verspätete Planung}
 \emph{Lars}\\
@@ -528,6 +529,7 @@ Ursprünglich beschreibt der Begriff \glqq Dropzone\grqq{} einen geheimen Speich
 In unserem Fall ist die Dropzone jedoch ein Script, welches in JavaScript [\ref{sec:JavaScript}] geschrieben wurde. Dieses dient zur einfachen Gestaltung des Datei-Uploads mittels HTML. Es soll die optische Anpassung des Eingabefelds vereinfachen. \\
 Aufgrund ihrer Komplexität, die sich während unserer Arbeit heraus stellte, haben wir uns schlussendlich gegen die Dropzone und für einen herkömmlichen Datei-Upload mittels HTML-Formular [\ref{sec:Formulare}] entschieden.
 
+
 \subsection{Java-Servlet}
 \label{sec:Java-Servlet}
 \emph{Jakob}\\
@@ -758,25 +760,434 @@ Und natürlich ist es auch problemlos möglich ein JSON-Array in anderen Program
 
 \subsubsection{Nutzung in unserem Projekt}
 Trotz des einfachen Umgangs mit JSON haben wir uns gegen die Arbeit mit diesem Dateiformat entschieden, was der einfachen Tatsache geschuldet ist, dass wir ein webbasiertes Programm mit einer klassischen CGI-Schnittstelle programmieren wollten, weshalb unsere forcierten Programmiersprachen HTML und PHP waren.
-Nun hätten wir zwar den Datentransfer zwischen diesen Sprachen auch mit JSON bewerkstelligen können, jedoch ist dieser zwischen HTML und PHP sowieso durch die Post- und Get-Methoden beider Sprachen [Vgl. [\ref{sec:Formulare}] und [\ref{sec:PHP}]] sehr einfach, weshalb wir an der Stelle diesen Weg eingeschlagen haben.
+Nun hätten wir zwar den Datentransfer zwischen diesen Sprachen auch mit JSON bewerkstelligen können, jedoch ist dieser zwischen HTML und PHP sowieso durch die Post- und Get-Methoden beider Sprachen [Vgl. [\ref{sec:Formulare}] und [\ref{sec:Get/Post-PHP}]] sehr einfach, weshalb wir an der Stelle diesen Weg eingeschlagen haben.
 Jedoch hätten wir JSON benutzt, wenn es unsere Absicht gewesen wäre, die Dateien in der MYSQL-Datenbank abzulegen und nicht nur die Referenz zu der Datei, aber auf dieses Thema wollen wir erst in Kapitel 3 ausführlich eingehen [siehe [\ref{sec:EngineII}]].
-\subsection{MYSQL}
-\label{sec:MYSQL}
+
+\subsection{SQL}
+\label{sec:SQL}
 \emph{Jakob}\\
-Nachdem obige Thematiken angesichts unseres erneuerten Projektplans irrelevant geworden waren, habe ich mich 
-mit MYSQL beschäftigt.
-...
+SQL (= Structured Query Language, d.h. Strukturierte Abfrage-Sprache) ist eine sogenannte \glqq Datenbanksprache\grqq{} und somit für die Definition von Datenstrukturen in relationalen Datenbanken zuständig [Vgl. \cite{wiki/SQL}].
+Das heißt, das über SQL die Einrichtung und die Verwaltung einer Datenbank, wie zum Beispiel einer MySQL-Datenbank, möglich ist.
+\subsubsection{MySQL}
+\label{sec:SQLMySQL}
+MySQL ist ein Datenbanksystem, das ohne jede grafische Oberfläche, ausschließlich durch die Sprache SQL definiert und verändert werden kann [Vgl. \cite{omkt}].
 
-\subsubsection{Vorteile}
-...
+Eine solche MySQL-Datenbank besteht hauptsächlich aus sogenannten \glqq Schemas\grqq{}, welche die eigentliche Datenbank, im umgangssprachlichen Sinne, in Form von, durch sie gruppierte, \glqq Tabellen\grqq{}, darstellt und ebenjene \glqq Tabellen\grqq{}, in welchen die gewünschten Daten abgespeichert werden können.
 
-\subsubsection{Datenbank-Entwurf}
-Im Folgenden möchte ich auf das Entwerfen einer MYSQL-Datenbank eingehen.
-...
+\subsubsection{Datenbankentwurf}
+Da eine solche Datenbank\footnotemark{} dazu da ist effektiv Daten abzuspeichern, sodass diese auch leicht abrufbar sind, ist eine genaue Planung einer solchen Datenbank ein wichtiger Bestandteil der Erstellung einer solchen.
+
+\footnotetext{Da MySQL das am weitesten verbreitete Datenbanksystem ist, werde ich im Folgenden auch ausschließlich darauf eingehen, wenn ich von Datenbanken schreibe}
+
+Dazu dienlich sind die sogenannten \glqq ER-Diagramme\grqq{}, welche eine visuelle Planung einer MySQL-Datenbank ermöglichen, da diese selber keine grafische Oberfläche besitzt. [siehe [\ref{sec:SQLMySQL}]].
+
+\vspace{1em}
+\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[width=1.0\linewidth]{Bilder/erdplus-diagram.png}
+	\captionof{figure}[ER Diagramm]{ER Diagramm}
+	\label{fig:erdiagramm}
+\end{minipage}
+
+In Abbildung \ref{fig:erdiagramm} 
+kann man gut erkennen, dass ER-Diagramme genauso simpel zu handhaben sind wie die Sprache SQL.
+Sie stellen lediglich die Struktur eines Schemas in Form der Tabellen zueinander dar, indem die Einträge der Tabellen, sogenannte Entitäten, als Rechtecke,  [Vgl. Abbildung \ref{fig:erdiagrammentitaet}], 
+
+\vspace{1em}
+\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[width=0.6\linewidth]{Bilder/erd-entitaet.png}
+	\captionof{figure}[ER Diagramm Entitaet]{ER Diagramm Entitaet}
+	\label{fig:erdiagrammentitaet}
+\end{minipage}
+
+und ihre Beziehungen zueinander, als Rauten, [Vgl. Abbildung \ref{fig:erdiagrammbeziehung}],
+
+\vspace{1em}
+\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[width=0.7\linewidth]{Bilder/erd-beziehung.png}
+	\captionof{figure}[ER Diagramm Beziehung]{ER Diagramm Beziehung}
+	\label{fig:erdiagrammbeziehung}
+\end{minipage}
+
+visualisiert werden.
+
+Zusätzlich zu dieser Struktur können noch Angaben über die Attribute jeder Entität (= Spalten der jeweiligen Tabelle)
+
+\vspace{1em}
+\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[width=0.6\linewidth]{Bilder/erd-attribut.png}
+	\captionof{figure}[ER Diagramm Attribut]{ER Diagramm Attribut}
+	\label{fig:erdiagrammattribut}
+\end{minipage}
+ 
+
+und über die Kardinalität der Beziehung zweier Entitäten zueinander gemacht werden.
+
+\vspace{1em}
+\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[width=0.2\linewidth]{Bilder/erd-kardinalitaet1.png}
+	\includegraphics[width=0.2\linewidth]{Bilder/erd-kardinalitaet2.png}
+	\captionof{figure}[ER Diagramm Kardinalitaeten]{ER Diagramm Kardinalitaeten}
+	\label{fig:erdiagrammkardinalitaeten}
+\end{minipage}
+
+
+Dabei findet sich die Kardinalität in Form von den Ziffern \glqq 1\grqq{} und \glqq n\grqq{} beziehungsweise \glqq m\grqq{} [Vgl. Abbildung \ref{fig:erdiagrammkardinalitaeten}]
+, wobei \glqq 1\grqq{} für genau eine und \glqq n\grqq{}/\glqq m\grqq{} für eine unbestimmte Anzahl an möglichen Entitäten in der betrachteten Beziehung steht.
+So findet sich in dem gewählten Beispiel Schule [siehe Abbildung \ref{fig:erdiagramm}]
+die Beziehung \glqq geht in\grqq{} zwischen Schüler und Klasse. Wobei eine Klasse natürlich mehrere Schüler umfasst, während ein Schüler immer nur eine Klasse besuchen kann, wodurch diese \glqq 1:n-Kardinalität\grqq{} zustande kommt.
+
+Und diese Kardinalitäten spielen in der späteren Implementierung eine große Rolle, wozu ich aber im nächsten Abschnitt kommen möchte.
+
+
+
+\subsubsection{SQL-Statements}
+Der Schlüssel für die Verwaltung einer solchen Datenbank sind die \glqq Statements\grqq{} von SQL, welche einzeilige Befehle und Abfragen darstellen. 
+
+\footnotetext{Da MySQL das am weitesten verbreitete Datenbanksystem ist, werde ich im Folgenden auch ausschließlich darauf eingehen, wenn ich von Datenbanken schreibe}
+
+Diese Statements lassen sich in drei Kategorien einteilen:
+\paragraph{DDL}
+
+Unter der Abkürzung DDL versteht man Statements, die dazu dienen das Datenbankschema zu definieren [Vgl. \cite{wiki/SQL}].
+Dazu gehören die \glqq Create-\grqq{} und \glqq Drop-Befehle\grqq{}, die für das Erstellen und Löschen von Schemas und Tabellen in diesen zuständig sind.
+
+Die Syntax dieser Befehle ist, wie die der gesamten Sprache SQL sehr simpel und einzeilig gehalten.
+So sähe ein \glqq Create-Befehl\grqq{} zur Erstellung des Schemas \glqq schule\grqq{}, welches wir vorher in dem ER-Diagramm geplant hatten [siehe [\ref{sec:SQL-Entwurf}]], wie folgt aus:
+\\
+\vspace{1em}
+\begin{lstlisting}[caption=SQL Create Schema, label=lst:sql-create-schema]
+CREATE DATABASE schule;
+\end{lstlisting}
+
+und der \glqq Drop-Befehl\grqq{} zum Löschen derselben folgt der gleichen Syntax:
+\\
+\vspace{1em}
+\begin{lstlisting}[caption= SQL Drop Schema, label=lst:sql-drop-schema]
+DROP DATABASE schule;
+\end{lstlisting}
+
+Nachdem wir das Schema erfolgreich erstellt und nicht gelöscht haben können wir es nun mit den passenden Tabellen füllen.\\
+Vorausgesetzt für das erfolgreiche Erstellen einer Tabelle ist zunächst, dass man sich mit einem, in der angesprochenen Datenbank vorhandenen Schema, verbunden hat, wie dies zum Beispiel mit PHP funktioniert lege ich in dem dazugehörigen Abschnitt dar [siehe [\ref{sec:SQL-PHP}]]. 
+Wenn dies geschehen ist, dann ist das Erstellen einer solchen Tabelle ebenfalls über ein \glqq Create-Statement\grqq{} realisierbar jedoch sieht dieses bei einer Tabelle etwas komplexer aus, da in dem Statement die Namen und Datentypen der sogenannten \glqq columns\grqq{} (zu Deutsch: Spalten), wie auch der \glqq primary key\grqq{}, das ist das einzigartige Erkennungsmerkmal einer jeden Zeile der entsprechenden Tabelle, definiert werden müssen.\\
+ 
+
+So könnte der Befehl zur Erstellung der Tabelle \glqq schueler\grqq{}, aus unserem ER-Diagramm [siehe [\ref{sec:SQL-Entwurf}]], in der SQL-Syntax zum Beispiel wie folgt aussehen:
+\\
+\vspace{1em}
+\begin{lstlisting}[caption= SQL Create Table, label=lst:sql-create-table]
+CREATE TABLE schueler (
+name VARCHAR(40) NOT NULL, 
+klassenname VARCHAR(2) NOT NULL, 
+alter INT(2) NOT NULL,
+PRIMARY KEY (name)
+);
+\end{lstlisting}
+
+Mit diesem Befehl würde nun folgende Tabelle erzeugt werden:
+
+\vspace{1em}
+\begin{table}[!h]
+	\centering
+	\begin{tabular}{|l|l|l|}
+		\hline
+		\textbf{name} & \textbf{klassenname} & \textbf{alter}\\
+		\hline
+		... & ... & ...\\
+		
+	\end{tabular}
+	\caption{SQL Schueler}
+	\label{tab:sql-schueler}
+\end{table}
+
+Wobei die Inhalte der Spalte \glqq Name\grqq{} den Primary Key, also das Erkennungsmerkmal, in Form einer Zeichenkette mit der maximalen Zeichenanzahl von 40 darstellt, die Spalte \glqq klasse\grqq{} ebenfalls Inhalte des Datentyps VarChar (= Zeichenkette) speichert, jedoch dürfen diese nur maximal eine Länge von zwei Zeichen erreichen.
+Lediglich die Spalte \glqq Alter\grqq{} grenzt sich im Datentyp von den Anderen ab, da das Alter logischerweise in Form eines Integers gespeichert wird, der hier auf zwei Zeichen beschränkt ist, da ein Schüler selten ein dreistelliges Alter besitzt. Eine zu erwähnende Besonderheit, die sich alle drei Spalten hier teilen ist jedoch, dass sie nicht leer sein dürfen, was durch den Befehl \glqq NOT NULL\grqq{} erreicht wird.
+
+An dieser Stelle sollten wir uns jedoch an unser Er-Diagramm erinnern [siehe [\ref{sec:SQL-Entwurf}]] und uns die Beziehungen der Entität Schüler nochmal anschauen.
+Und da wird deutlich, dass das Attribut \glqq klassenname\grqq{} in der Entität \glqq schueler\grqq{} nicht nur eine Zeichenkette, sondern ein Verweis auf eine Entität \glqq klasse\grqq{} ist.
+Und, um das umzusetzen, müssen wir uns eines sogenannten \glqq Foreign Key\grqq{}(= Fremdschlüssel) bedienen.
+Dies können wir ganz einfach, vorausgesetzt wir haben bereits eine solche Tabelle \glqq klasse\grqq{} erstellt:
+
+\vspace{1em}
+\begin{table}[!h]
+	\centering
+	\begin{tabular}{|l|l|l|}
+		\hline
+		\textbf{bezeichnung} & \textbf{klassenlehrer} & \textbf{raum}\\
+		\hline
+		... & ... & ...\\
+		
+	\end{tabular}
+	\caption{SQL Klasse}
+	\label{tab:sql-klasse}
+\end{table}
+
+Wobei das Attribut \glqq bezeichnung\grqq{} der Primärschlüssel ist.
+Denn, wenn dies der Fall ist können wir unser \glqq Create-Statement\grqq{} der Tabelle \glqq schueler\grqq{} einfach dahingehend ändern, dass das Attribut \glqq klasse\grqq{} als Fremdschlüssel erkannt wird, sodass er auch aktualisiert wird, wenn Änderungen an der Entität vorgenommen werden, auf die er verweist.
+Diese Prävention erreicht man mit einem \glqq Constraint-Befehl\grqq{} erreicht:
+\\
+\vspace{1em}
+\begin{lstlisting}[caption= SQL Create Table + Constrait, label=lst:sql-create-table-constrait]
+CREATE TABLE schueler (
+name VARCHAR(40) NOT NULL, 
+klassenname VARCHAR(2) NOT NULL, 
+alter INT(2) NOT NULL, 
+PRIMARY KEY (name),
+KEY klasse2 (klassenname),
+CONSTRAINT klasse2 FOREIGN KEY (klassenname)
+	REFERENCES klasse (bezeichnung) 
+		ON DELETE CASCADE ON UPDATE NO ACTION
+);
+\end{lstlisting}
+
+Mit diesem Befehl wird zwar im Prinzip die gleiche Tabelle erzeugt, wie im ersten Beispiel, jedoch beugt diese Methode mit dem \glqq Constraint-Befehl\grqq{} Anomalien vor, indem er dafür sorgt, dass der Fremdschlüssel gelöscht wird, wenn die Entität, die das Ziel dieser Referenz war, entfernt wird (siehe \glqq ON DELETE CASCADE\grqq{}).
+
+Das Löschen einer Tabelle zeigt sich nun, im Gegensatz zum Erstellen einer solchen, ohne jede Besonderheit, syntaktisch genauso, wie auch das Löschen eines \glqq schemas\grqq{}:
+\\
+\vspace{1em}
+\begin{lstlisting}[caption= SQL Drop Table, label=lst:sql-drop-table]
+DROP TABLE schueler;
+\end{lstlisting}
+So würde das \glqq Drop-Statement\grqq{}, welches in Listing \ref{lst:sql-drop-table} dargestellt wird, die Tabelle \glqq schueler\grqq{} löschen.
+
+\paragraph{DML}
+
+Die Abkürzung DML beschreibt, im Gegensatz zu der, eben erläuterten, Abkürzung DDL, die Arbeit mit bereits erstellten Tabellen.
+Womit sie den zentralen Teil der Datenspeicherung in einer solchen Datenbank darstellen, da ihnen die Aufgabe zufällt Daten abzulegen, zu suchen und zu löschen [Vgl. \cite{wiki/SQL}].
+
+Dies realisiert SQL mit 3 zentralen Befehlen:
+\glqq Insert Into\grqq, \glqq Select From\grqq{} und \glqq Delete From\grqq.
+
+Diese Befehle sind ebenjenen Aufgaben zugeordnet, welche ihr Name umschreibt, woraus zu schließen ist, dass der \glqq Insert-Befehl\grqq{} zum Einfügen, der \glqq Select-Befehl\grqq{} zur Abfrage und der \glqq Delete-Befehl\grqq{} zur Löschung von Daten ist.
+
+Zunächst müssen also Datensätze, sogenannte \glqq Entitäten\grqq{} in die Tabellen \glqq schueler\grqq{} und \glqq klasse\grqq{} gelangen, was mit dem \glqq Insert-Befehl\grqq{} wie folgt möglich ist:
+\\
+\vspace{1em}
+\begin{lstlisting}[caption= SQL Insert Into Table, label=lst:sql-insert-into-table]
+INSERT INTO klasse
+	(bezeichnung, klassenlehrer, raum)
+		VALUES
+			("5b", "Herr Bachran", "209");
+\end{lstlisting}
+ 
+
+
+\vspace{1em}
+\begin{lstlisting}[caption= SQL Insert Into Table 2, label=lst:sql-insert-into-table2]
+INSERT INTO schueler
+	(name, klassenname, alter)
+		VALUES
+			("Lars", "5b", 17);
+\end{lstlisting}
+ 
+Nun haben wir jeweils einen Datensatz in die vorher erstellten Tabellen eingefügt, welche nun wie folgt aussehen:
+\vspace{1em}
+\begin{table}[!h]
+	\centering
+	\begin{tabular}{|l|l|l|}
+		\hline
+		\textbf{bezeichnung} & \textbf{klassenlehrer} & \textbf{raum}\\
+		\hline
+		5b & Herr Bachran & 209\\
+		
+	\end{tabular}
+	\caption{SQL Klasse mit Datensatz}
+	\label{tab:sql-klasse2}
+\end{table}
+\vspace{1em}
+\begin{table}[!h]
+	\centering
+	\begin{tabular}{|l|l|l|}
+		\hline
+		\textbf{name} & \textbf{klassenname} & \textbf{alter}\\
+		\hline
+		Lars & 5b & 17\\
+		
+	\end{tabular}
+	\caption{SQL Schueler mit Datensatz}
+	\label{tab:sql-schueler2}
+\end{table}
+
+Um auf diese Datensätze zugreifen zu können, kann man sich nun des \glqq Select-Statements\grqq{} bedienen, welches sich, wie die anderen Statements auch, vom syntaktischen Aufbau an der englischen Grammatik orientiert.
+Um also den Namen von dem Schüler \glqq Lars\grqq, welcher in der Tabelle \glqq schueler\grqq{} abgelegt wurde, ausgegeben zu bekommen, kann man sich folgendem \glqq Select-Statements\grqq{} bedienen:
+
+
+\vspace{1em}
+\begin{lstlisting}[caption= SQL Select Name, label=lst:sql-select-name]
+SELECT name FROM schueler;
+\end{lstlisting}
+
+Wenn jedoch die Tabelle \glqq schueler\grqq{} wie folgt aussehen würde:
+
+\vspace{1em}
+\begin{table}[!h]
+	\centering
+	\begin{tabular}{|l|l|l|}
+		\hline
+		\textbf{name} & \textbf{klassenname} & \textbf{alter}\\
+		\hline
+		Lars & 5b & 17\\
+		\hline
+		Robin & 7c & 17\\
+		
+	\end{tabular}
+	\caption{SQL Schueler mit Datensätzen}
+	\label{tab:sql-schueler3}
+\end{table}
+
+Sprich, mehr, als nur einen Datensatz besitzen würde, müssten wir unsere Abfrage weiter eingrenzen, um das selbe Ergebnis zu erhalten, was durch die Erweiterung des \glqq Select-Statements\grqq{} durch den Befehl \glqq Where\grqq{} umsetzbar ist.
+
+
+\vspace{1em}
+\begin{lstlisting}[caption= SQL Select Name + Where, label=lst:sql-select-name-where]
+SELECT name FROM schueler WHERE klassenname LIKE '5b' AND alter Like 17;
+\end{lstlisting}
+
+Wie man im Listing \ref{lst:sql-select-name-where} erkennen kann leitet der \glqq Where-Befehl\grqq{} lediglich eine Reihe von Bedingungen ein, welche von dem Abfrage-Ergebnis erfüllt werden müssen.
+Auf diese Weise lässt sich der \glqq Select-Befehl\grqq{} mit den verschiedensten Befehlen erweitern.
+Eine ausführliche Auflistung aller möglichen Erweiterungen findet sich hier:
+
+https://de.wikibooks.org/wiki/Einf%C3%BChrung_in_SQL:_Ausf%C3%BChrliche_SELECT-Struktur 
+
+Wenn wir nun aber einen Datensatz aus der Tabelle entfernen wollen, können wir uns des  \glqq Delete-Befehls\grqq{} bedienen.
+Da jedoch vor jedem Löschvorgang zunächst der zu löschende Datensatz gefunden werden muss, ist es nur logisch, dass der  \glqq Delete-Befehl\grqq{}, genauso, wie eben bei dem  \glqq Select-Befehl\grqq{} dargestellt, durch sämtliche Suchkriterien erweiterbar ist, wodurch er im Prinzip eine Kopplung aus einer Abfrage und einem Löschvorgang ist.
+
+Um dies nun an einem Beispiel zu demonstrieren werde ich einfach mal die \glqq 5b\grqq{} aus folgender Tabelle \glqq klasse\grqq{} entfernen:\\
+\vspace{1em}
+\begin{table}[!h]
+	\centering
+	\begin{tabular}{|l|l|l|}
+		\hline
+		\textbf{bezeichnung} & \textbf{klassenlehrer} & \textbf{raum}\\
+		\hline
+		5b & Herr Bachran & 209\\
+		\hline
+		7c & Herr Scholl & 231\\
+		
+	\end{tabular}
+	\caption{SQL Klasse mit Datensätzen}
+	\label{tab:sql-klasse2}
+\end{table}
+
+Der dazu dienliche SQL-Befehl, sähe also wie folgt aus:
+
+
+\vspace{1em}
+\begin{lstlisting}[caption= SQL Select Name + Where, label=lst:sql-select-name-where]
+DELETE FROM klasse WHERE bezeichnung LIKE '5b';
+\end{lstlisting}
+
+Nachdem dieser Befehl ausgeführt wurde sehen unsere beiden Tabellen dann so aus:
+
+\vspace{1em}
+\begin{table}[!h]
+	\centering
+	\begin{tabular}{|l|l|l|}
+		\hline
+		\textbf{bezeichnung} & \textbf{klassenlehrer} & \textbf{raum}\\
+		\hline
+		7c & Herr Scholl & 231\\
+		
+	\end{tabular}
+	\caption{SQL Klasse mit Datensatz nach Delete}
+	\label{tab:sql-klasse3}
+\end{table}
+
+\vspace{1em}
+\begin{table}[!h]
+	\centering
+	\begin{tabular}{|l|l|l|}
+		\hline
+		\textbf{name} & \textbf{klassenname} & \textbf{alter}\\
+		\hline
+		Robin & 7c & 17\\
+		
+	\end{tabular}
+	\caption{SQL Schueler mit Datensatz nach Delete}
+	\label{tab:sql-schueler4}
+\end{table}
+
+An der Stelle sollte uns nun auffallen, dass neben der Klasse 5b auch der Schüler Lars gelöscht worden ist, obwohl wir dies gar nicht veranlasst haben.
+Dies ist auf den \glqq Constraint-Befehl\grqq{} zurückzuführen, den wir bei der Definition der Tabelle \glqq schueler\grqq{} verfasst haben.
+Dieser beinhaltete nämlich die Bedingung, dass der Fremdschlüssel ebenfalls gelöscht wird, wenn das Ziel dessen REferenz entfernt wird und da er \glqq Not Null\grqq{} sein darf, wurde der gesamte Datensatz Lars gelöscht.
+
+\paragraph{DCL} 
+Die \glqq Data Control Language\grqq{} ist für die Rechteverwaltung innerhalb einer Datenbank zuständig [Vgl. \cite{wiki/SQL}].
+Da sie aber in unserem Projekt nicht verwendet worden ist und auch nicht direkt mit der Organisation von Datensätzen in einer Datenbank zusammenhängt, möchte ich es an dieser Stelle bei dieser kurzen Erwähnung belassen.  
+
 
 \subsubsection{Verwaltung einer Datenbank mit PHP}
-Um eine Datenbank in unser Projekt zweckmäßig einzurichten, musste ich mich in eine MYSQL-Einbindung mittels PHP einlesen, welche ich nun darstellen möchte.
-...
+\label{sec:SQL-PHP}
+Wie bereits oben erwähnt, lässt sich eine Datenbank mithilfe der Sprache PHP [\ref{sec:PHP}] ansprechen.
+Dies lässt sich über das Objekt \glqq mysqli\grqq{} umsetzen, welches die Verbindung zur Datenbank herstellt und wie folgt deklariert wird:
+
+\vspace{1em}
+\begin{lstlisting}[caption= SQL PHP Mysqli, label=lst:sql-php-mysqli]
+<?php
+$db = new mysqli(<MYSQL_HOST>, <MYSQL_BENUTZER>, <MYSQL_KENNWORT>, <MYSQL_DATENBANK>);
+?>
+\end{lstlisting}
+
+Dabei sind die in Großbuchstaben verfassten Variablen Platzhalter für die Verbindungsinformationen zu der Datenbank, mit der man sich verbinden möchten, mit der optionalen Angabe eines Schemas, welche man hinzufügt, wenn man an Tabellen arbeiten will.
+
+Um nun einen SQL-Befehl anzuwenden muss man diesen erstmal in SQL übersetzen und an die Datenbank schicken, was mit PHP in einer Zeile zu implementieren ist:
+
+\vspace{1em}
+\begin{lstlisting}[caption= SQL PHP Mysqli, label=lst:sql-php-mysqli]
+<?php
+$erg = $db->query("SELECT * FROM schueler WHERE name LIKE 'Robin'");
+?>
+\end{lstlisting}
+
+Als Ergebnis wird nun zunächst ein Array in der Variablen \glqq erg\grqq{} gespeichert, welches lediglich Daten darüber enthält, was alles von der Abfrage angesprochen wurde.
+
+\vspace{1em}
+\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[width=0.7\linewidth]{Bilder/sql-php-print-erg.png}
+	\captionof{figure}[Ausgabe des Arrays]{Ausgabe des Arrays}
+	\label{fig:arrayausgabe}
+\end{minipage}
+
+
+Dies kann man sich zu Nutze machen, indem man über eine if-Verzweigung abfragt, ob es überhaupt einen betroffenen Datensatz, sprich ein Ergebnis, gibt:
+
+\vspace{1em}
+\begin{lstlisting}[caption= SQL PHP NumRows, label=lst:sql-php-numrows]
+<?php
+if($erg->num_rows){
+echo 'Ergebnis vorhanden';
+}
+?>
+\end{lstlisting}
+
+Wenn also ein Ergebnis vorhanden ist, lässt sich das Array mit dem Befehl \glqq fetch all\grqq{} dahingehend übersetzen, dass die gewünschten Ergebnisse angezeigt werden.
+Natürlich ist dies nur bei einer \glqq Select-Abfrage\grqq{} sinnvoll, da ansonsten ja keine Datensätze zurückgegeben werden.
+
+\vspace{1em}
+\begin{lstlisting}[caption= SQL PHP Mysqli, label=lst:sql-php-mysqli]
+<?php
+$array = $erg->fetch_all(MYSQLI_ASSOC);
+?>
+\end{lstlisting}
+
+Nun sähe die Ausgabe dieses Arrays wie folgt aus:
+
+\vspace{1em}
+\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[width=0.7\linewidth]{Bilder/sql-php-print-daten.png}
+	\captionof{figure}[Ausgabe des Datensatzes]{Ausgabe des Datensatzes}
+	\label{fig:datenausgabe}
+\end{minipage}
+
+\subsubsection{Nutzung in unserem Projekt}
+Die Datenbanksprache SQL und die, mit ihr verwaltete MySQL Datenbank, spielen eine sehr bedeutende Rolle in unserem Projekt, da mit ihnen die Daten der Benutzer und der Files verwaltet werden, wodurch eine sortierte Ablage, mit möglicher Abfrage erst möglich wird.
+Mehr zu diesem Teil von unserem Projekt finden Sie in Kapitel 3 [siehe [\ref{sec:EngineII}]].
 
 \pagebreak
 
@@ -856,6 +1267,7 @@ Zunächt war geplant, die "upload.php"-Datei in die "eingabe.html" zu integriere
 
 \subsection{Engine II: Interface und Datenbank}
 \emph{Jakob}\\
+\label{sec:EngineII}
 Darstellung Interface und Datenbank...
 \pagebreak
 % ----------------------------------------------------------------------------------------------------------
