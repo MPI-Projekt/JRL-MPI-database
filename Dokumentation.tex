@@ -196,11 +196,11 @@ Dieses Kapitel soll sich primär mit uns beschäftigen.
 Damit, wie wir an die Projektarbeit herangetreten und auch wo wir auf Probleme mit derselben gestoßen sind.
 
 \subsection{Ursprüngliche Vorstellung und Konsequenzen}
+\label{sec:Vorstellung}
 \emph{Jakob}\\
-Wie bereits bei unseren Vorstellungen erwähnt [siehe [\ref{sec:Vorstellung}]], ist unsere Projektarbeit haupt- sächlich negativ durch unser Kommunikationsverhalten beeinflusst worden.
-Unser größtes Problem lag in der Organisation unserer Zusammenarbeit. Dies ist der Tatsache verschuldet gewesen, dass wir in der Schule meist nur unter strengen Regulierungen und Vorgaben arbeiten, weshalb so ein freies und selbständiges Arbeiten sehr ungewohnt für uns war und vielerorts neben den anderen Arbeiten, bei denen bei \glqq Nicht-Erfüllen\grqq{} direkte Sanktionen drohten, an Priorität zu verlieren schien.
-Aus diesem Grund war unsere Zusammenarbeit größtenteils von stark differenzierenden Arbeitshaltungen geprägt, welche sich dann auch auf die Aktivität und Harmonie unserer Kommunikation untereinander ausgeprägt haben.
-Dies begünstigte unseren fehlgeleiteten Ansatz [siehe [\ref{sec:Vorstellung}]] und führte auch in der späteren Projektarbeit immer wieder zu Einbrüchen unserer Produktivität, welche im Nachhinein als vermeidbar und gar unnötig einzustufen sind.
+Unsere Unerfahrenheit in der Projektarbeit hat uns zu einem überstürzten und unüberlegten Projekteinstieg getrieben, bei dem wir uns in Themen eingearbeitet haben, ohne uns einen genauen Plan zu erstellen.
+Dies führte zu einer eher mäßig koordinierten Arbeitsteilung, deren Teilung in absoluter Trennung bestand, wodurch bereits nach kurzer Zeit keiner mehr wusste, was seine Themen mit denen der Anderen, geschweige denn, mit unserem Projekt zu tun hatten.
+Jedoch unterdrückten wir, aus der naiven Vorstellung heraus, dass die Anderen schon wissen, was sie tun, und dass das schon alles noch Sinn ergeben wird, diese Zweifel und arbeiteten weiter, ohne uns über die Folgen dieser schlechten Kommunikation untereinander im Klaren zu sein.
 
 \subsection{Verspätete Planung}
 \emph{Lars}\\
@@ -335,7 +335,7 @@ Die Aufgaben des Servers in Bezug auf Client, Datei-System und Datenbank haben w
 \label{sec:Datenbank}
 Die Datenbank soll die Pfade zu den Dateien aufnehmen und den Abfragen antworten. Beinhalten sollte sie zunächst nur den Dateinamen, sowie weitere Attribute, welche in Tabelle [\ref{tab:PlanungClient}] aufgeführt sind. Zusätzlich soll zu jeder Datei noch der jeweilige  Pfad gespeichert werden, sodass ein Zugriff auf die Datei gewährleistet werden kann.
 
-
+\pagebreak
 \subsection{Zusammenarbeit und Kommunikation}
 \emph{Jakob}\\
 Wie bereits bei unseren Vorstellungen erwähnt [siehe [\ref{sec:Vorstellung}]], ist unsere Projektarbeit haupt- sächlich negativ durch unser Kommunikationsverhalten beeinflusst worden.
@@ -371,7 +371,8 @@ Xampp ist ein Softwarepaket bestehend aus Freeware. Xampp vereinfacht das Instel
 \emph{Lars}\\
 HTML ist die Abkürzung für \glqq Hypertext Markup Language\grqq, was zu deutsch \glqq Hypertext-Auszeichnungssprache\grqq{} heißt. Es ist eine Programmiersprache, mit der man den Aufbau von Internetseiten bestimmt. Solche HTML-Dokumente stellen die Grundlage für das World Wide Web dar und werden von Browsern dargestellt.\cite{HTML}\cite{Hypertext_Markup_Language} Sie bestehen in der Regel aus drei Teilen.\cite{HTML/Dokumentstruktur_und_Aufbau} 
 
-\vspace{1em}
+\pagebreak
+
 \begin{lstlisting}[caption= Beispiel für ein einfaches HTML-Dokument, label=lst:HTML]
 <html>
 	<head>
@@ -392,7 +393,7 @@ In unserem Fall stellt HTML die Grundlage für die optische Gestaltung des GUIs 
 Eine hilfreiche Technik, die auch bei uns ihren Einsatz gefunden hat, heißt Frames. Diese Technik wurde 1996 von Netscape eingeführt. Mit ihr kann man mehrere Dateien gleichzeitig auf dem Bildschirm anzeigen lassen.\cite{HTML/Frames} Sie wurde jedoch im Oktober 2014 mit HTML5\cite{HTML5} aus dem Standard entfernt, da sie entscheidende Nachteile aufweist. Aufgrund des Verwendungszweckes unserer Webseite benutzen wir Frames, obwohl empfohlen wird, Server-seitig andere Techniken zum Auslagern von Teilen der Seite zu benutzen.\cite{HTML/Frames} Die stärksten Argumente waren die simple Handhabung und die guten Gestaltungsmöglichkeiten dieser Technik. \\
 Im Folgenden Beispiel wird ein sogenanntes Frameset dargestellt, bei dem der Bildschirm, mit dem Attribut \glqq rows\grqq{} in zwei Zeilen aufgeteilt wird, wobei die obere 20\% der Pixel einnimmt und die untere den Rest, also 80\%. Alternativ kann man den Bildschirm auch in Spalten aufteilen, dies geschieht mit dem Attribut \glqq cols\grqq . Des Weiteren wird mit dem Attribut \glqq border\grqq{} die Breite des Randes zwischen den jeweiligen Frames angegeben.
 
-\vspace{1em}
+\pagebreak
 \begin{lstlisting}[caption= Beispiel für Frames in HTML, label=lst:HTML]
 <html>
 	<head>
@@ -409,7 +410,7 @@ Im Folgenden Beispiel wird ein sogenanntes Frameset dargestellt, bei dem der Bil
 \label{sec:Tabellen}
 Tabellen in HTML [\ref{sec:HTML}] bieten gute, einfache und vielseitige Möglichkeiten, Internetseiten zu strukturieren. Sie wurden im Januar 1997 mit HTML 3.2 ins Standardrepertoire von HTML aufgenommen.\cite{Hypertext_Markup_Language} \\
 Das Folgende Beispiel beinhaltet eine Tabelle mit zwei Zeilen und zwei Spalten. Tabellen in HTML werden Zeile für Zeile definiert. Eine Zeile beginnt mit $<$tr$>$ und wird mit $<$/tr$>$ beendet. Mithilfe der Befehle $<$td$>$ und $<$/td$>$ werden die Tabelleneinträge, also die Spalten in den jeweiligen Zeilen, definiert.
-
+\pagebreak
 \vspace{1em}
 \begin{lstlisting}[caption= Beispiel für Tabellen in HTML, label=lst:HTML]
 <html>
@@ -443,7 +444,8 @@ Das Folgende Beispiel beinhaltet eine Tabelle mit zwei Zeilen und zwei Spalten. 
 \subsubsection{Formulare}
 \label{sec:Formulare}
 Formulare sind ein Element von HTML, [\ref{sec:HTML}] das es ermöglicht Daten zu erfassen und über das Hypertext Transfer Protocol per XMLHttpRequest, HTTP-GET oder HTTP-POST zur Verarbeitung an einen Server zu senden.\cite{Webformular} In unserem Programm kam letzteres zum Einsatz. Man kann in HTML zwar Formulare definieren und erstellen, für eine Verarbeitung und Auswertung der Eingaben ist jedoch eine andere Programmiersprache, wie zum Beispiel Javascript [\ref{sec:JavaScript}] oder PHP [\ref{sec:PHP}] nötig.\cite{HTML/Formulare/Form} \\
-In unserem Fall haben wir Formulare in Form von Suchfiltern und einer Anmeldemaske auch als Möglichkeit zum Hochladen von Dateien eingesetzt.\\
+In unserem Fall haben wir Formulare in Form von Suchfiltern und einer Anmeldemaske auch als Möglichkeit zum Hochladen von Dateien eingesetzt.\pagebreak
+
 In dem folgenden Beispiel ist die Implementation eines Formulars in HTML dargestellt. Zu sehen ist ein Formular, welches ein Label, also den Text \glqq Suchgbegriff\grqq{} enthält. Die Zugehörigkeit des darauf folgenden Eingabefelds zum Label wird durch das Attribut \glqq name\grqq{} festgelegt. Das zweite \glqq input\grqq{} Statement erstellt den Bestätigungsknopf, den man drücken muss, um das Formular abzusenden. Beim Absenden des Formulars wird die Datei oder die Internetseite aufgerufen, die im Kopf des Formulars unter dem Attribut \glqq action\grqq{} steht.
 
 \vspace{1em}
@@ -469,6 +471,7 @@ In dem folgenden Beispiel ist die Implementation eines Formulars in HTML dargest
 \label{sec:JavaScript}
 Bei JavaScript handelt es sich um eine interpretierende Programmier- beziehungsweise Skriptsprache, die 1995 von Netscape entwickelt wurde.\cite{JavaScript}\cite{wiki/JavaScript} JavaScript ist sehr verbreitet, da sich in allen modernen Browsern Interpreter für die Sprache befinden. Es wird hauptsächlich Client-seitig verwendet und ermöglicht es, dynamischen Einfluss auf Webseiten zu nehmen.\cite{JavaScript-JS} Für unser Programm kam die Sprache besonders häufig aufgrund des einfachen Umgangs mit Variablen und Funktionen zum Einsatz.
 
+\pagebreak
 \subsection{PHP}
 \label{sec:PHP}
 \emph{Robin}\\
@@ -494,7 +497,7 @@ Auch der Apache HTTP Server, der in unserem Programm zum Einsatz kommt muss solc
 \subsection{Editoren und integrierte Entwicklungsumgebungen}
 \label{sec:Editoren}
 \emph{Lars}\\
-Editoren werden zum Schreiben von Texten, wie zum Beispiel Quellcodes, benutzt. Gute Editoren helfen das Programmieren zu vereinfachen, indem sie gewisse Schlüsselwörter, sowie Befehle, farblich hervorheben, eine Autovervollständigung, eine Such- und Ersetzfunktion anbieten und den Quellcode automatisch einrücken. Zusätzlich stellen sie eine Schnittstelle für Plugins dar.\cite{Texteditor} \\
+Editoren werden zum Schreiben von Texten, wie zum Beispiel Quellcodes, benutzt. Gute Editoren helfen das Programmieren zu vereinfachen, indem sie gewisse Schlüsselwörter, sowie Befehle, farblich hervorheben, eine Autovervollständigung, eine Such- und Ersetzfunktion anbieten und den Quellcode automatisch einrücken. Zusätzlich stellen sie eine Schnittstelle für Plugins dar.\cite{Texteditor}\\
 Neben Editoren gibt es auch integrierte Entwicklungsumgebungen. Diese bestehen aus einer Sammlung von Computerprogrammen, mit denen es möglich ist, Software ohne die Verwendung vieler einzelner Programme zu entwickeln. Durch sie werden nicht nur Tippfehler verhindert, sondern auch Arbeitsschritte und somit Zeit bei der Softwareentwicklung gespart.\cite{Integrierte_Entwicklungsumgebung}\cite{Medienbruch}
 Bei der Entwicklung unseres Programms kamen die Editoren und integrierten Entwicklungsumgebungen Eclipse [\ref{sec:Eclipse}] (genau genommen Eclipse Neon IDE), Notepad++ [\ref{sec:Notepad++}] und Texmaker [\ref{sec:Texmaker}] zum Einsatz.
 
@@ -516,10 +519,12 @@ Notepad ++ ist eine Freeware und ein Texteditor für Windows. In Notepad++ kann 
 TeXmaker ist ein Unicode-Texteditor für das Erstellen von LaTeX-Dokumenten. Dieser Editor richtet sich insbesondere an LaTeX-Anfänger, da durch Assistenten die Erstellung von Dokumenten vereinfacht wird. \cite{Texmaker}
 ...
 
+\pagebreak
 \subsection{GitHub}
 \label{sec:GitHub}
 \emph{Lars}\\
-Bei GitHub handelt es sich um eine kollaborative Versionsverwaltung, die im Februar 2008 erschien. GitHub funktioniert im Browser, wobei es auch eine Desktop Version gibt.\cite{wiki/GitHub} \\
+Bei GitHub handelt es sich um eine kollaborative Versionsverwaltung, die im Februar 2008 erschien. GitHub funktioniert im Browser, wobei es auch eine Desktop Version gibt.\cite{wiki/GitHub}
+
 Durch die Arbeit mit GitHub, wird das gemeinsame, nicht zwingend parallele, Arbeiten möglich. Der Vorteil gegenüber bekannteren Konkurrenten, wie zum Beispiel Dropbox, Google Drive oder Microsoft OneDrive ist, dass man in GitHub verschiedene Branches erstellen kann. Diese Branches sind so zu sagen asynchron laufende Entwicklungsstände. Wir haben für die Arbeiten an unserem Programm zwei Branches benutzt. Zunächst den Branch \glqq develope\grqq , in der wir entwickelt haben. Hier haben wir unsere noch nicht komplett stabilen Versionen hochgeladen, damit die anderen Gruppenmitglieder weiter Arbeiten konnten. In unserem \glqq master\grqq{} Branch wurde immer nur ein komplettes Programm hochgeladen, sodass man dort ein funktionstüchtiges Zwischenergebnis hatte. Ein weiterer Vorteil von GitHub gegenüber der Konkurrenz ist, dass man Quellcodes online öffnen und bearbeiten kann. Zusätzlich kann man auch sperren, dass eine Person alleine den \glqq master\grqq{} Branch überschreibt.
 
 \subsection{Dropzone}
@@ -529,7 +534,7 @@ Ursprünglich beschreibt der Begriff \glqq Dropzone\grqq{} einen geheimen Speich
 In unserem Fall ist die Dropzone jedoch ein Script, welches in JavaScript [\ref{sec:JavaScript}] geschrieben wurde. Dieses dient zur einfachen Gestaltung des Datei-Uploads mittels HTML. Es soll die optische Anpassung des Eingabefelds vereinfachen. \\
 Aufgrund ihrer Komplexität, die sich während unserer Arbeit heraus stellte, haben wir uns schlussendlich gegen die Dropzone und für einen herkömmlichen Datei-Upload mittels HTML-Formular [\ref{sec:Formulare}] entschieden.
 
-
+\pagebreak
 \subsection{Java-Servlet}
 \label{sec:Java-Servlet}
 \emph{Jakob}\\
@@ -546,7 +551,8 @@ Wie dies mit den restlichen Vorgängen bei der Bearbeitung eines HTML-Formulars 
 \end{minipage}
 \footnotetext{Quelle: \url{https://de.wikipedia.org/wiki/Servlet\#/media/File:Servlet.png}}
 
-Sowohl der Anfangs-, als auch der Endpunkt einer Datenverarbeitung mittels HTML-Formular besteht in dem Client, der mit dem Browser interagiert. Durch diese Interaktion sendet er ein Formular ab, welches daraufhin die gewünschte Aktion auslöst. Dazu muss der Aktionsname jedoch zunächst von einer XML-Datei dahingehend übersetzt werden, dass die entsprechende Initialisierung der ServletKlasse zur Bearbeitung dieser Aktion angesprochen wird.
+Sowohl der Anfangs-, als auch der Endpunkt einer Datenverarbeitung mittels HTML-Formular besteht in dem Client, der mit dem Browser interagiert. Durch diese Interaktion sendet er ein Formular ab, welches daraufhin die gewünschte Aktion auslöst. Dazu muss der Aktionsname jedoch zunächst von einer XML-Datei dahingehend übersetzt werden, dass die entsprechende Initialisierung der ServletKlasse zur Bearbeitung dieser Aktion angesprochen wird. \pagebreak
+
 Sobald dies geschehen ist, erhält die ServletKlasse die Anfrage vom Client, welche sie, entsprechend dem HTML-Formular, mit ihrer doPost- oder doGet-Methode bearbeitet, und schickt die Antwort wiederum dem Browser, welcher diese dem Client anzeigt.
 
 \subsubsection{Einrichtung in Eclipse}
@@ -614,6 +620,7 @@ So lässt sich beispielsweise mit der Java-Klasse PrintWriter ein HTML-Script in
 
 %\ref{lst:servlet-html}
 
+\pagebreak
 \vspace{1em}
 \begin{lstlisting}[caption=Servlet Beispielcode, label=lst:servlet-html]
 protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -707,6 +714,7 @@ Durch diese einfache Deklaration lässt sich ein JSON-Objekt auch problemlos in 
 </script>
 \end{lstlisting}
 
+\pagebreak
 oder hier in Java:
 \\
 \vspace{1em}
@@ -739,6 +747,7 @@ Dies lässt sich ähnlich, wie das JSON-Objekt, visualisieren:
 
 Bei der Deklaration eines JSON-Arrays in JSON sind nur zwei Unterschiede zu der eines JSON-Objekts zu beachten, welche zum einen in den äußeren Klammern, die bei einem JSON-Array nicht geschweift sondern eckig sind, und zum andern in dem Inhalt des Arrays bestehen, da in einem Array keine Name/Wert-Paare, sondern nur Werte gespeichert werden.
 
+\pagebreak
 Die Deklaration eines JSON-Arrays in JSON sähe also beispielsweise so aus:
 \\
 \vspace{1em}
@@ -857,7 +866,7 @@ Unter der Abkürzung DDL versteht man Statements, die dazu dienen das Datenbanks
 Dazu gehören die \glqq Create-\grqq{} und \glqq Drop-Befehle\grqq{}, die für das Erstellen und Löschen von Schemas und Tabellen in diesen zuständig sind.
 
 Die Syntax dieser Befehle ist, wie die der gesamten Sprache SQL sehr simpel und einzeilig gehalten.
-So sähe ein \glqq Create-Befehl\grqq{} zur Erstellung des Schemas \glqq schule\grqq{}, welches wir vorher in dem ER-Diagramm geplant hatten [siehe [\ref{sec:SQL-Entwurf}]], wie folgt aus:
+So sähe ein \glqq Create-Befehl\grqq{} zur Erstellung des Schemas \glqq schule\grqq{}, welches wir vorher in dem ER-Diagramm geplant hatten [siehe [\ref{fig:erdiagramm}]], wie folgt aus:
 \\
 \vspace{1em}
 \begin{lstlisting}[caption=SQL Create Schema, label=lst:sql-create-schema]
@@ -876,9 +885,9 @@ Vorausgesetzt für das erfolgreiche Erstellen einer Tabelle ist zunächst, dass 
 Wenn dies geschehen ist, dann ist das Erstellen einer solchen Tabelle ebenfalls über ein \glqq Create-Statement\grqq{} realisierbar jedoch sieht dieses bei einer Tabelle etwas komplexer aus, da in dem Statement die Namen und Datentypen der sogenannten \glqq columns\grqq{} (zu Deutsch: Spalten), wie auch der \glqq primary key\grqq{}, das ist das einzigartige Erkennungsmerkmal einer jeden Zeile der entsprechenden Tabelle, definiert werden müssen.\\
  
 
-So könnte der Befehl zur Erstellung der Tabelle \glqq schueler\grqq{}, aus unserem ER-Diagramm [siehe [\ref{sec:SQL-Entwurf}]], in der SQL-Syntax zum Beispiel wie folgt aussehen:
-\\
-\vspace{1em}
+So könnte der Befehl zur Erstellung der Tabelle \glqq schueler\grqq{}, aus unserem ER-Diagramm [siehe [\ref{fig:erdiagramm}]], in der SQL-Syntax zum Beispiel wie folgt aussehen:
+\pagebreak
+
 \begin{lstlisting}[caption= SQL Create Table, label=lst:sql-create-table]
 CREATE TABLE schueler (
 name VARCHAR(40) NOT NULL, 
@@ -926,6 +935,7 @@ Dies können wir ganz einfach, vorausgesetzt wir haben bereits eine solche Tabel
 	\label{tab:sql-klasse}
 \end{table}
 
+\pagebreak
 Wobei das Attribut \glqq bezeichnung\grqq{} der Primärschlüssel ist.
 Denn, wenn dies der Fall ist können wir unser \glqq Create-Statement\grqq{} der Tabelle \glqq schueler\grqq{} einfach dahingehend ändern, dass das Attribut \glqq klasse\grqq{} als Fremdschlüssel erkannt wird, sodass er auch aktualisiert wird, wenn Änderungen an der Entität vorgenommen werden, auf die er verweist.
 Diese Prävention erreicht man mit einem \glqq Constraint-Befehl\grqq{} erreicht:
@@ -1012,6 +1022,7 @@ Nun haben wir jeweils einen Datensatz in die vorher erstellten Tabellen eingefü
 	\label{tab:sql-schueler2}
 \end{table}
 
+\pagebreak
 Um auf diese Datensätze zugreifen zu können, kann man sich nun des \glqq Select-Statements\grqq{} bedienen, welches sich, wie die anderen Statements auch, vom syntaktischen Aufbau an der englischen Grammatik orientiert.
 Um also den Namen von dem Schüler \glqq Lars\grqq, welcher in der Tabelle \glqq schueler\grqq{} abgelegt wurde, ausgegeben zu bekommen, kann man sich folgendem \glqq Select-Statements\grqq{} bedienen:
 
@@ -1162,6 +1173,7 @@ echo 'Ergebnis vorhanden';
 ?>
 \end{lstlisting}
 
+\pagebreak
 Wenn also ein Ergebnis vorhanden ist, lässt sich das Array mit dem Befehl \glqq fetch all\grqq{} dahingehend übersetzen, dass die gewünschten Ergebnisse angezeigt werden.
 Natürlich ist dies nur bei einer \glqq Select-Abfrage\grqq{} sinnvoll, da ansonsten ja keine Datensätze zurückgegeben werden.
 
@@ -1232,6 +1244,7 @@ Bei der Verwendung unseres Programms muss sich der Benutzer zunächst anmelden. 
 \label{RealisierungHauptseite}
 Angefangen hat alles mit einem simplen Quellcode, zum Hochladen einer Datei per HTML. Dieser ist im Folgenden Dargestellt. (Listing \ref{lst:ersterUpload}) Er bestand lediglich aus einer Aufforderung, die Datei, welche der Benutzer hochladen möchte einzufügen, einem Eingabefeld und einem Knopf mit dem Namen \glqq Senden\grqq . Aus diesem Code lernten wir, besonders ich, wie das Hochladen von Dateien per HTML funktioniert. 
 
+\pagebreak
 \vspace{1em}
 \begin{lstlisting}[caption=Erste Version des Datei-Uploads, label=lst:ersterUpload]
 <html>
@@ -1349,6 +1362,7 @@ Insgesamt habe ich die Arbeitsstruktur, die durch den Lehrer vorgegeben war, als
 \subsection{Robin}
 ...
 
+\pagebreak
 \subsection{Jakob}
 Wie bereits eingangs mehrfach erwähnt, bestand die Schwierigkeit von unserem Projekt, meiner Meinung nach, nicht in der Thematik, sondern in der Arbeit miteinander. Dadurch, dass wir zu dritt an einem solchen Projekt, welches viel größer ist, als alles Andere, was wir bis dahin programmiert haben, gearbeitet haben, sind wir auf 2 Ebenen auf ganz neuem Terrain gewandert.
 Zum einen war natürlich die Thematik und die Art des Programmierens für uns absolut ungewohnt.
