@@ -195,15 +195,15 @@ Doch dazu mehr in der folgenden detaillierten Dokumentation unseres Kampfes mit 
 Dieses Kapitel soll sich primär mit uns beschäftigen.
 Damit, wie wir an die Projektarbeit herangetreten und auch wo wir auf Probleme mit derselben gestoßen sind.
 
-\subsection{ursprüngliche Vorstellung und Konsequenzen}
+\subsection{Ursprüngliche Vorstellung und Konsequenzen}
 \emph{Jakob}\\
 Unsere Unerfahrenheit in der Projektarbeit hat uns zu einem überstürzten und unüberlegten Projekteinstieg getrieben, bei dem wir uns in Themen eingearbeitet haben, ohne uns einen genauen Plan zu erstellen.
 Dies führte zu einer eher mäßig koordinierten Arbeitsteilung, deren Teilung in absoluter Trennung bestand, wodurch bereits nach kurzer Zeit keiner mehr wusste, was seine Themen mit denen der Anderen, geschweige denn, mit unserem Projekt zu tun hatten.
 Jedoch unterdrückten wir, aus der naiven Vorstellung heraus, dass die Anderen schon wissen, was sie tun, und dass das schon alles noch Sinn ergeben wird, diese Zweifel und arbeiteten weiter, ohne uns über die Folgen dieser schlechten Kommunikation untereinander im Klaren zu sein.
 
-\subsection{verspätete Planung}
+\subsection{Verspätete Planung}
 \emph{Lars}\\
-Zu spät haben wir gemerkt, dass unsere bisherige Arbeit weder zielführend, noch in irgendeiner Weise sinnvoll war, weshalb wir uns zusammengesetzt und intensiv beraten haben. Aus dieser Beratung entstand zum ersten Mal ein und realistischer Plan bezüglich des Aufbaus unseres Programms. Auch die Aufteilung der verschiedenen Arbeitsschritte zwischen den  drei Gruppenmitgliedern fand hier spezifisch statt.
+Zu spät haben wir gemerkt, dass unsere bisherige Arbeit weder zielführend, noch in irgendeiner Weise sinnvoll war. Deshalb wir uns erneut zusammengesetzt und intensiv beraten haben. Aus dieser Beratung entstand die Erkenntnis, dass es sinnvoll ist, einen Arbeitsplan zu entwickeln. Dieser Plan musste sich realistisch an unseren Fähigkeiten und der noch zur Verfügung stehenden Zeit orientieren. Auch die Aufteilung der verschiedenen Arbeitsschritte zwischen den  drei Gruppenmitgliedern fand hier genauer statt.
 
 \subsubsection{Aufteilung}
 \label{sec:Aufteilung}
@@ -217,12 +217,13 @@ Zu spät haben wir gemerkt, dass unsere bisherige Arbeit weder zielführend, noc
 \end{minipage}
 \vspace{1em}
 
-In Abbildung \ref{fig:plan1} wird die Aufteilung der verschiedenen Aufgaben dargestellt. Der Client [\ref{sec:Client / GUI}], welcher von Lars programmiert werden sollte, umfasst allgemein gesagt dass GUI, also die Benutzeroberfläche, und dessen Kommunikation mit dem Server. Dieser wiederum soll von Robin eingerichtet und so gestaltet werden, dass er Anfragen kategorisiert und je nach Art der Anfrage das Datei-System beziehungsweise die Datenbank anspricht. Die soeben erwähnte Datenbank wird von Jakob erstellt und soll zunächst nur die Referenzen zu den Dateien im Datei-System abspeichern und verwalten.\\
+In Abbildung \ref{fig:plan1} wird die Aufteilung der verschiedenen Aufgaben dargestellt. Der Client [\ref{sec:Client / GUI}], der von Lars programmiert wird, umfasst - vereinfacht gesagt - das GUI, also die Benutzeroberfläche, und dessen Kommunikation mit dem Server. Der Server wird von Robin eingerichtet. Anfragen sollen derart kategorisiert werden, dass Datei-System und Datenbank entweder getrennt oder gemeinsam angesprochen werden. Die Datenbank wird von Jakob erstellt und soll zunächst nur die Referenzen zu den Dateien im Datei-System abspeichern und verwalten.\\
 
-\subsubsection{Client / GUI}
+\subsubsection{Client}
 \label{sec:Client / GUI}
 
-Die Tabelle \ref{tab:PlanungClient} ist die digitalisierte Version des Tafelbilds, welches bei der oben beschriebenen, intensiven Beratung entstanden ist. Grün steht dabei dafür, dass diese Kriterien automatisch erkannt werden sollen, rot markierte sollen erfragt werden und das blau markierte Kriterium ist eine optionale Angabe. Hierbei ist zu beachten, dass bei der Suche alle Angaben optional sind, sodass man, wenn man eine Suche ohne Kriterien startet, alle vorhandenen Dateien als Ergebnis ausgegeben bekommt.
+Tabelle \ref{tab:PlanungClient} stellt das Ergebnis unserer Beratung bezüglich des Clients dar.
+Folgendes ist geplant: \emph{Typ} und \emph{Größe} (grün) sollen automatisch erkannt werden, \emph{Datei}, \emph{Name} und \emph{Datum} (rot) sollen erfragt werden können. \emph{Zusätzliche Informationen} (blau) sollen eine weitere Möglichkeit der Eingabe darstellen. Für den Fall, dass bei der Abfrage keine Kriterieneingabe erfolgt, werden alle vorhandenen Daten ausgegeben.
 
 \vspace{1em}
 \begin{table}[!h]
@@ -278,13 +279,13 @@ Die Tabelle \ref{tab:PlanungClient} ist die digitalisierte Version des Tafelbild
 			\\
 		\hline
 	\end{tabular}
-	\caption{Planung des GUIs und dessen Funktionen}
+	\caption{Planung des Clients}
 	\label{tab:PlanungClient}
 \end{table}
 
 \subsubsection{Server}
 \label{sec:Server}
-Auch die Aufgaben des Servers wurden in unserem Tafelbild aufgeführt. Diese werden in Tabelle \ref{tab:PlanungServer} dargestellt.
+Die Aufgaben des Servers in Bezug auf Client, Datei-System und Datenbank haben wir wie folgt definiert. (siehe Tabelle \ref{tab:PlanungServer})
 
 \vspace{1em}
 \begin{table}[!h]
@@ -325,13 +326,13 @@ Auch die Aufgaben des Servers wurden in unserem Tafelbild aufgeführt. Diese wer
 		\\
 		\hline
 	\end{tabular}
-	\caption{Planung des Servers}
+	\caption{Planung der Aufgaben des Servers}
 	\label{tab:PlanungServer}
 \end{table}
 
 \subsubsection{Datenbank}
 \label{sec:Datenbank}
-Die Datenbank, so nahmen wir es uns vor, soll Dateien aufnehmen und den Abfragen entsprechend antworten. Beinhalten sollte sie zunächst nur den Dateinamen, sowie weitere Attribute, welche in Tabelle [\ref{tab:PlanungClient}] aufgeführt sind. Zusätzlich soll zu jeder Datei noch der jeweilige  Pfad gespeichert werden, sodass ein Zugriff auf die Datei gewährleistet werden kann.
+Die Datenbank soll die Pfade zu den Dateien aufnehmen und den Abfragen antworten. Beinhalten sollte sie zunächst nur den Dateinamen, sowie weitere Attribute, welche in Tabelle [\ref{tab:PlanungClient}] aufgeführt sind. Zusätzlich soll zu jeder Datei noch der jeweilige  Pfad gespeichert werden, sodass ein Zugriff auf die Datei gewährleistet werden kann.
 
 
 \subsection{Zusammenarbeit und Kommunikation}
@@ -348,7 +349,8 @@ Dies begünstigte unseren fehlgeleiteten Ansatz [siehe [\ref{sec:Vorstellung}]] 
 
 \section{Kapitel: Grundlagen}
 \emph{Jakob \emph{\&} Lars}\\
-Im zweiten Kapitel dieser Dokumentation wird genauer auf die Themen eingegangen, in welche wir uns im Laufe des Projektkurses hineingearbeitet haben. Es wird nicht nur auf für das Projekt relevante Techniken, sondern auch auf solche, in die wir uns zwar eingearbeitet haben, sie jedoch nicht verwendet haben, eingegangen.
+Im zweiten Kapitel dieser Dokumentation wird genauer auf die Themen eingegangen, die wir uns im Laufe des Projektkurses erarbeitet haben. 
+Es wird sowohl auf Inhalte eingegangen, die in das Projekt eingegangen sind, als auch auf solche, die letztlich keine Verwendung gefunden haben.
 
 \subsection{LaTeX}
 \label{sec:LaTeX}
@@ -381,12 +383,12 @@ HTML ist die Abkürzung für \glqq Hypertext Markup Language\grqq, was zu deutsc
 </html>
 \end{lstlisting}
 
-Der erste Teil eines üblichen HTML-Dokuments ist die Dokumenttyp-Deklaration. In ihr werden Angaben zur verwendeten HTML-Version gegeben. Im \glqq head\grqq , welcher den zweiten Teil darstellt, werden  Kopfdaten, wie zum Beispiel der Titel der Seite oder andere, für den menschlichen Betrachter der Webseite zunächst nicht sichtbare, Informationen zur korrekten Darstellung des sichtbaren Teils der Webseite, angegeben.\cite{HTML/Kopfdaten} Anzuzeigende Inhalte werden in den \glqq body\grqq{}, den dritten Teil, geschrieben. Hier werden also sämtliche Texte, Verweise, Grafiken und so weiter eingefügt, die auf der Webseite sichtbar sein sollen.\cite{HTML/Dokumentstruktur_und_Aufbau} \\
+Der erste Teil eines üblichen HTML-Dokuments ist die Dokumenttyp-Deklaration. In ihr werden Angaben zur verwendeten HTML-Version gegeben. Im \glqq head\grqq , der den zweiten Teil bildet, werden  Kopfdaten angegeben. Diese können sichtbar, wie zum Beispiel der Titel der Seite, oder unsichtbar sein. Unsichtbare Kopfdaten dienen beispielsweise der korrekten Darstellung der Webseite.\cite{HTML/Kopfdaten} Anzuzeigende Inhalte werden in den dritten Teil,  den \glqq body\grqq , geschrieben. Hier werden sämtliche Texte, Verweise, Grafiken und/oder ähnliches, die auf der Webseite sichtbar sein sollen, eingefügt.\cite{HTML/Dokumentstruktur_und_Aufbau} \\
 In unserem Fall stellt HTML die Grundlage für die optische Gestaltung des GUIs dar.
 
 \subsubsection{Frames}
 \label{sec:Frames}
-Eine hilfreiche Technik, die auch bei uns ihren Einsatz gefunden hat, heißt Frames. Diese Technik wurde 1996 von Netscape eingeführt. Mit ihr kann man mehrere Dateien gleichzeitig auf dem Bildschirm anzeigen lassen.\cite{HTML/Frames} Sie wurde jedoch im Oktober 2014 mit HTML5\cite{HTML5} aus dem Standard entfernt, da sie entscheidende Nachteile aufweist. Aufgrund des Verwendungszweckes unserer Webseite benutzen wir Frames, obwohl empfohlen wird, Server-seitig andere Techniken zum Auslagern von Teilen der Seite zu benutzen.\cite{HTML/Frames} Die stärksten Argumente waren, die simple Handhabung und die guten Gestaltungsmöglichkeiten mit dieser Technik. \\
+Eine hilfreiche Technik, die auch bei uns ihren Einsatz gefunden hat, heißt Frames. Diese Technik wurde 1996 von Netscape eingeführt. Mit ihr kann man mehrere Dateien gleichzeitig auf dem Bildschirm anzeigen lassen.\cite{HTML/Frames} Sie wurde jedoch im Oktober 2014 mit HTML5\cite{HTML5} aus dem Standard entfernt, da sie entscheidende Nachteile aufweist. Aufgrund des Verwendungszweckes unserer Webseite benutzen wir Frames, obwohl empfohlen wird, Server-seitig andere Techniken zum Auslagern von Teilen der Seite zu benutzen.\cite{HTML/Frames} Die stärksten Argumente waren die simple Handhabung und die guten Gestaltungsmöglichkeiten dieser Technik. \\
 Im Folgenden Beispiel wird ein sogenanntes Frameset dargestellt, bei dem der Bildschirm, mit dem Attribut \glqq rows\grqq{} in zwei Zeilen aufgeteilt wird, wobei die obere 20\% der Pixel einnimmt und die untere den Rest, also 80\%. Alternativ kann man den Bildschirm auch in Spalten aufteilen, dies geschieht mit dem Attribut \glqq cols\grqq . Des Weiteren wird mit dem Attribut \glqq border\grqq{} die Breite des Randes zwischen den jeweiligen Frames angegeben.
 
 \vspace{1em}
@@ -440,7 +442,7 @@ Das Folgende Beispiel beinhaltet eine Tabelle mit zwei Zeilen und zwei Spalten. 
 \subsubsection{Formulare}
 \label{sec:Formulare}
 Formulare sind ein Element von HTML, [\ref{sec:HTML}] das es ermöglicht Daten zu erfassen und über das Hypertext Transfer Protocol per XMLHttpRequest, HTTP-GET oder HTTP-POST zur Verarbeitung an einen Server zu senden.\cite{Webformular} In unserem Programm kam letzteres zum Einsatz. Man kann in HTML zwar Formulare definieren und erstellen, für eine Verarbeitung und Auswertung der Eingaben ist jedoch eine andere Programmiersprache, wie zum Beispiel Javascript [\ref{sec:JavaScript}] oder PHP [\ref{sec:PHP}] nötig.\cite{HTML/Formulare/Form} \\
-In unserem Fall haben wir Formulare in Form von Anmeldeformularen, Suchfiltern und auch als Möglichkeit zum Hochladen von Dateien eingesetzt.\\
+In unserem Fall haben wir Formulare in Form von Suchfiltern und einer Anmeldemaske auch als Möglichkeit zum Hochladen von Dateien eingesetzt.\\
 In dem folgenden Beispiel ist die Implementation eines Formulars in HTML dargestellt. Zu sehen ist ein Formular, welches ein Label, also den Text \glqq Suchgbegriff\grqq{} enthält. Die Zugehörigkeit des darauf folgenden Eingabefelds zum Label wird durch das Attribut \glqq name\grqq{} festgelegt. Das zweite \glqq input\grqq{} Statement erstellt den Bestätigungsknopf, den man drücken muss, um das Formular abzusenden. Beim Absenden des Formulars wird die Datei oder die Internetseite aufgerufen, die im Kopf des Formulars unter dem Attribut \glqq action\grqq{} steht.
 
 \vspace{1em}
@@ -464,7 +466,7 @@ In dem folgenden Beispiel ist die Implementation eines Formulars in HTML dargest
 
 \subsubsection{JavaScript}
 \label{sec:JavaScript}
-Bei JavaScript handelt es sich um eine interpretierende Programmier- beziehungsweise Skriptsprache, die 1995 von Netscape entwickelt wurde.\cite{JavaScript}\cite{wiki/JavaScript} JavaScript ist sehr verbreitet, da sich in allen modernen Browsern Interpreter für die Sprache befinden. Es wird hauptsächlich Client-seitig verwendet und ermöglicht es, dynamischen Einfluss auf Webseiten zu nehmen.\cite{JavaScript-JS} Für unser Programm kam die Sprache besonders häufig aufgrund des, durch sie ermöglichten, einfachen Umgangs mit Variablen und Funktionen zum Einsatz.
+Bei JavaScript handelt es sich um eine interpretierende Programmier- beziehungsweise Skriptsprache, die 1995 von Netscape entwickelt wurde.\cite{JavaScript}\cite{wiki/JavaScript} JavaScript ist sehr verbreitet, da sich in allen modernen Browsern Interpreter für die Sprache befinden. Es wird hauptsächlich Client-seitig verwendet und ermöglicht es, dynamischen Einfluss auf Webseiten zu nehmen.\cite{JavaScript-JS} Für unser Programm kam die Sprache besonders häufig aufgrund des einfachen Umgangs mit Variablen und Funktionen zum Einsatz.
 
 \subsection{PHP}
 \label{sec:PHP}
@@ -487,11 +489,12 @@ Bei dem Apache HTTP Server handelt es sich um den seit 1996 verbreitetsten Webse
 Allgemein haben Webserver, sowie auch der Apache HTTP Server, die Hauptaufgabe, statische Dateien an Clients, wie zum Beispiel Webbrowser, zu übertragen. \cite{Webserver}\\
 Auch der Apache HTTP Server, der in unserem Programm zum Einsatz kommt muss solche Dateien, hauptsächlich HTML- und PHP-Dokumente, [\ref{sec:HTML}][\ref{sec:PHP}] verwalten und entsprechend zur Verfügung stellen. Wir benutzen den Apache HTTP Server, in Verbindung mit XAMPP, [\ref{sec:XAMPP}] da dieses die Installation, Konfiguration und Verwaltung des Servers erheblich vereinfacht.
 
+
 \subsection{Editoren und integrierte Entwicklungsumgebungen}
 \label{sec:Editoren}
 \emph{Lars}\\
-Editoren werden zum Schreiben von Texten, wie zum Quellcodes, benutzt. gute Editoren helfen das Programmieren zu vereinfachen, indem sie gewisse Schlüsselwörter, sowie Befehle, farblich hervorheben, eine Autovervollständigung, eine Such- und Ersetzfunktion und indem sie den Quellcode automatisch einrücken. Zusätzlich stellen sie eine Schnittstelle für Plugins dar.\cite{Texteditor} \\
-Neben Editoren gibt es auch integrierte Entwicklungsumgebungen. Diese bestehen aus einer Sammlung an Computerprogrammen, mit denen es möglich ist Software ohne die Verwendung vieler einzelner Programme zu entwickeln. Durch sie werden nicht nur Tippfehler verhindert, sondern auch Arbeitsschritte und somit Zeit bei der Softwareentwicklung gespart.\cite{Integrierte_Entwicklungsumgebung}\cite{Medienbruch}
+Editoren werden zum Schreiben von Texten, wie zum Beispiel Quellcodes, benutzt. Gute Editoren helfen das Programmieren zu vereinfachen, indem sie gewisse Schlüsselwörter, sowie Befehle, farblich hervorheben, eine Autovervollständigung, eine Such- und Ersetzfunktion anbieten und den Quellcode automatisch einrücken. Zusätzlich stellen sie eine Schnittstelle für Plugins dar.\cite{Texteditor} \\
+Neben Editoren gibt es auch integrierte Entwicklungsumgebungen. Diese bestehen aus einer Sammlung von Computerprogrammen, mit denen es möglich ist, Software ohne die Verwendung vieler einzelner Programme zu entwickeln. Durch sie werden nicht nur Tippfehler verhindert, sondern auch Arbeitsschritte und somit Zeit bei der Softwareentwicklung gespart.\cite{Integrierte_Entwicklungsumgebung}\cite{Medienbruch}
 Bei der Entwicklung unseres Programms kamen die Editoren und integrierten Entwicklungsumgebungen Eclipse [\ref{sec:Eclipse}] (genau genommen Eclipse Neon IDE), Notepad++ [\ref{sec:Notepad++}] und Texmaker [\ref{sec:Texmaker}] zum Einsatz.
 
 \subsubsection{Eclipse}
@@ -522,8 +525,8 @@ Durch die Arbeit mit GitHub, wird das gemeinsame, nicht zwingend parallele, Arbe
 \label{sec:Dropzone}
 \emph{Lars}\\
 Ursprünglich beschreibt der Begriff \glqq Dropzone\grqq{} einen geheimen Speicherort für maschinell gestohlene Daten, wie zum Beispiel Passwörter und Konto7daten.\cite{wiki/Dropzone} \\
-In unserem Fall ist die Dropzone jedoch ein Script, welches in JavaScript [\ref{sec:JavaScript}] geschrieben wurde. Dieses dient zur einfachen Gestaltung des Datei-Uploads mittels HTML. Es soll die optische Anpassung des Eingabefelds vereinfachen. 
-Aufgrund ihrer Komplexität, welche sich leider erst nach und nach herauskristallisierte, haben wir uns schlussendlich gegen die Dropzone und für einen herkömmlichen Datei-Upload mittels HTML-Formular [\ref{sec:Formulare}] entschieden.
+In unserem Fall ist die Dropzone jedoch ein Script, welches in JavaScript [\ref{sec:JavaScript}] geschrieben wurde. Dieses dient zur einfachen Gestaltung des Datei-Uploads mittels HTML. Es soll die optische Anpassung des Eingabefelds vereinfachen. \\
+Aufgrund ihrer Komplexität, die sich während unserer Arbeit heraus stellte, haben wir uns schlussendlich gegen die Dropzone und für einen herkömmlichen Datei-Upload mittels HTML-Formular [\ref{sec:Formulare}] entschieden.
 
 \subsection{Java-Servlet}
 \label{sec:Java-Servlet}
@@ -783,7 +786,7 @@ Um eine Datenbank in unser Projekt zweckmäßig einzurichten, musste ich mich in
 \section{Projekt}
 \label{sec:Projekt}
 \emph{Lars}\\
-In diesem Kapitel wird nun unser Projekt dargestellt, indem zunächst das Programm im Gesamten beschrieben wird, woraufhin die einzelnen Teile getrennt dargestellt werden.
+In diesem Kapitel wird nun unser Projekt dargestellt. Zunächst wird das Programm im Gesamten beschrieben. Anschließend werden die einzelnen Teile getrennt dargestellt.
 
 \subsection{Datei-Verwaltungs-Programm}
 \emph{Lars}\\
@@ -796,7 +799,7 @@ GUI ist die Abkürzung für \glqq Graphical User Interface\grqq , was zu Deutsch
 
 \subsubsection{Benutzererfahrung}
 \label{Benutzererfahrung}
-Bei der Verwendung unseres Programms muss sich der Benutzer zunächst anmelden. Das sich öffnende Anmeldefenster kann man in Abbildung \ref{fig:GUIAnmelden} sehen. Falls der Benutzer noch kein Benutzerkonto besitzt kann er sich auch ein solches erstellen. Nach einer Erfolgreichen Anmeldung wird der Benutzer auf die Hauptseite (siehe Abbildung \ref{fig:GUIHauptseite}), den Kern des Programms, weiter geleitet. Hier kann er auf der linke Seite Dateien hochladen, indem er sie entweder per Auswahlfenster öffnet oder per Drag and Drop dem Eingabefeld übergibt. Optional können den hochzuladenden Dateien Beschreibungen hinzufügt werden. Auf der rechten Seite kann der Benutzer seine Dateien, die er bereits hochgeladen hat verwalten. Dazu ist zum Zeitpunkt der Verfassung dieses Texts nur eine Suchfunktion vorhanden. Es werden noch eine Such-, Lösch- und Änderungsfunktion folgen.\\
+Bei der Verwendung unseres Programms muss sich der Benutzer zunächst anmelden. Das sich öffnende Anmeldefenster kann man in Abbildung \ref{fig:GUIAnmelden} sehen. Falls der Benutzer noch kein Benutzerkonto besitzt, kann er sich ein solches erstellen. Nach einer erfolgreichen Anmeldung wird der Benutzer auf die Hauptseite (siehe Abbildung \ref{fig:GUIHauptseite}), den Kern des Programms, weiter geleitet. Hier kann er auf der linke Seite Dateien hochladen, indem er sie entweder per Auswahlfenster öffnet oder per Drag and Drop dem Eingabefeld übergibt. Optional können den hochzuladenden Dateien Beschreibungen hinzufügt werden. Auf der rechten Seite kann der Benutzer seine Dateien, die er bereits hochgeladen hat verwalten. Dazu ist zum Zeitpunkt der Verfassung dieses Texts nur eine Suchfunktion vorhanden. Es werden noch eine Such-, Lösch- und Änderungsfunktion folgen.\\
 
 \vspace{1em}
 \begin{minipage}{\linewidth}
@@ -817,7 +820,7 @@ Bei der Verwendung unseres Programms muss sich der Benutzer zunächst anmelden. 
 
 \subsubsection{Realisierung der Hauptseite}
 \label{RealisierungHauptseite}
-Angefangen hat alles mit einem simplen Quellcode, zum Hochladen einer Datei per HTML. Dieser ist im Folgenden Dargestellt. (Listing \ref{lst:ersterUpload}) Er bestand lediglich aus einer Aufforderung, die Datei, welche der Benutzer hochladen möchte einzufügen, einem Eingabefeld und einem Knopf mit dem Namen \glqq Senden\grqq . Aus diesem Code lernten wir, besonders Ich, wie das Hochladen von Dateien per HTML funktioniert. 
+Angefangen hat alles mit einem simplen Quellcode, zum Hochladen einer Datei per HTML. Dieser ist im Folgenden Dargestellt. (Listing \ref{lst:ersterUpload}) Er bestand lediglich aus einer Aufforderung, die Datei, welche der Benutzer hochladen möchte einzufügen, einem Eingabefeld und einem Knopf mit dem Namen \glqq Senden\grqq . Aus diesem Code lernten wir, besonders ich, wie das Hochladen von Dateien per HTML funktioniert. 
 
 \vspace{1em}
 \begin{lstlisting}[caption=Erste Version des Datei-Uploads, label=lst:ersterUpload]
@@ -839,11 +842,11 @@ Angefangen hat alles mit einem simplen Quellcode, zum Hochladen einer Datei per 
 </html>
 \end{lstlisting}
 
-Nach Sammlung von Inspiration auf der Internetseite \url{https://jqueryui.com} wurde die Hauptseite [\ref{fig:GUIHauptseite}] entworfen und programmiert. Zunächst war die Idee, unterhalb der Eingabe und Abfrage das Suchergebnis ausgeben zu lassen. Dies stellte sich aber als eher unpraktisch heraus, weshalb wir beschlossen, das Frame [\ref{sec:Frames}], was zuvor nur die Abfrage enthielt, nun auch das Suchergebnis ausgeben zu lassen. Der Plan war nun also grob gesagt, mithilfe des Formulars [\ref{sec:Formulare}], das die Suchabfrage aufnimmt, auf ein PHP-Dokument [\ref{sec:PHP}] zu verweisen, welches schlussendlich das HTML-Dokument[\ref{sec:HTML}] mit dem Ergebnis aufruft. \\
+Nach Sammlung von Inspiration auf der Internetseite \url{https://jqueryui.com} wurde die Hauptseite [\ref{fig:GUIHauptseite}] entworfen und programmiert. Zunächst war die Idee, unterhalb der Eingabe und Abfrage das Suchergebnis zu platzieren. Dies stellte sich aber als eher unpraktisch heraus, weshalb wir beschlossen, das Frame [\ref{sec:Frames}], was zuvor nur die Abfrage enthielt, nun auch das Suchergebnis ausgeben zu lassen. Der Plan war nun also kurz gesagt, mithilfe des Formulars [\ref{sec:Formulare}], das die Suchabfrage aufnimmt, auf ein PHP-Dokument [\ref{sec:PHP}] zu verweisen, welches schlussendlich das HTML-Dokument[\ref{sec:HTML}] mit dem Ergebnis aufruft. \\
 
 \subsubsection{Realisierung der Anmeldung}
 \label{RealisierungAnmeldung}
-Mit der Zeit entstand die Idee der Gestaltung eines Anmeldeverfahrens. Dieses sollte aus einem Benutzernamen und einem Passwort bestehen. Als die Anmeldung funktionierte fiel uns auf, dass natürlich auch eine Registrierung notwendig sein wird. Auch sie besteht aus einem Feld, zur Eingabe eines Benutzernamens. Jedoch beinhaltet die Registrierung zwei Felder für die Eingabe des Passworts, um zu gewährleisten, dass sich der Benutzer dass richtige Passwort auch tatsächlich merkt oder zumindest notiert. Der Nachteil beim einmaligen Eintippen des Passworts bei der Registrierung ist, dass der Benutzer sich eventuell vertippen kann, sich also ein falsches Passwort merkt beziehungsweise notiert und somit später keinen Zugriff mehr auf seine Dateien erhält.
+Mit der Zeit entstand die Idee der Gestaltung eines Anmeldeverfahrens. Dieses sollte aus einem Benutzernamen und einem Passwort bestehen. Als die Anmeldung funktionierte fiel uns auf, dass natürlich auch eine Registrierung notwendig sein wird. Auch sie besteht aus einem Feld zur Eingabe eines Benutzernamens. Jedoch beinhaltet die Registrierung zwei Felder für die Eingabe des Passworts, um zu gewährleisten, dass sich der Benutzer dass richtige Passwort auch tatsächlich merkt oder zumindest notiert. Der Nachteil beim einmaligen Eintippen des Passworts bei der Registrierung ist, dass der Benutzer sich eventuell vertippen kann, sich also ein falsches Passwort merkt beziehungsweise notiert und somit später keinen Zugriff mehr auf seine Dateien erhält.
 
 \subsection{Engine I: Interface und Datei-System}
 \emph{Robin}\\
@@ -864,7 +867,9 @@ Darstellung Interface und Datenbank...
 Im Folgenden wird jeder von uns ein Fazit geben, indem er darstellt, was er aus dem Projekt gelernt hat, Dinge die ihm gefielen und so weiter.
 
 \subsection{Lars}
-Im Verlaufe des Projektes habe ich festgestellt, dass mir das Programmieren sehr viel Spaß macht und ich mich auch nach der Schule in Richtung IT orientieren werde. Ferner stellte ich fest, dass Teamarbeit nicht sehr leicht ist, insbesondere, wenn jedes Gruppenmitglied prinzipiell den Anderen gegenüber gleich gestellt ist, es also kurz gesagt keine festgelegte Gruppenleitung gibt. Mit der Zeit kristallisieren sich zwar Personen heraus, die die Leitung übernahmen, jedoch entstand dann das Problem, dass diese nicht über ausreichend Autorität verfügten, als dass sie die anderen Gruppenmitglieder hätten sanktionieren können, wenn diese ihre Aufgaben nicht erfüllten. Insgesamt empfand ich die Arbeitsatmosphäre als sehr angenehm, da uns sehr viele Freiheiten gelassen wurden und es keine festen Vorgaben gegeben hat, an die wir halten mussten.
+Im Verlaufe des Projektes ist mir deutlich geworden, dass mir das Programmieren sehr viel Spaß macht und ich mich auch nach der Schule in Richtung IT orientieren werde. \\
+Ferner habe ich festgestellt, dass Teamarbeit nicht leicht ist. Insbesondere, wenn jedes Gruppenmitglied den anderen im Team gleich gestellt ist, es also keine Gruppenleitung gibt. Mit der Zeit wurde zwar die Leitung übernommen. Jedoch entstand dann das Problem, dass diese Leitung nicht autorisiert war. Im Falle einer Autorisierung, zum Beispiel durch Wahl, hätte es die Möglichkeit gegeben, Leitungsaufgaben wie Delegieren, konsequent verfolgen zu können. \\
+Insgesamt habe ich die Arbeitsstruktur, die durch den Lehrer vorgegeben war, als sehr angenehm empfunden. Ich habe es sehr geschätzt, dass uns sehr viele Freiheiten gelassen wurden und dass es keine festen Vorgaben gegeben hat, an die wir halten mussten. Diese Arbeitsstruktur hat zu einer sonst guten Arbeitsatmosphäre beigetragen.
 
 \subsection{Robin}
 ...
