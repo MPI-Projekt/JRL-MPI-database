@@ -35,6 +35,6 @@ else{
 ?>
 <html>
 	<script>
-		//window.open("eingabe.html","_self")
+		window.open("eingabe.html","_self")
 	</script>
 </html>
