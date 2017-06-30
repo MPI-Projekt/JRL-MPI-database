@@ -1,35 +1,57 @@
+﻿----------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------------------------------
+
+
 
 JRL-Database-Management-Program
 
+
+
 ----------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------------
+
+
 
 ENTWICKLER:
 
+
+
 Lars Schmalbach
+
 Jakob Fleischer
+
 Robin Schlaak
+
+
 
 ----------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------------
+
+
 
 ZUM PROGRAMM:
 
-Dieses Programm arbeitet mit dem EasyPHP-Devserver17.
+
+
+Dieses Programm arbeitet mit XAMPP.
 Mithilfe der Server dieses Programms verwaltet unser Programm die Dateien, welche mithilfe 
 desselben abgelegt wurden über eine MySQL-Datenbank und sorgt somit für eine leichte 
 Ablage, wie auch Abfrage der Dateien.
 
+
+
 ----------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------------
+
+
 
 ZUR INSTALLATION:
 
+
+
 Die Installation des Programms ist in zwei Setup-Dateien aufgeteilt.
-Die erste leitet die Installation des erwähnten Devservers ein, bei der der 
-Standardinstallationspfad (nach ProgramFiles(x86)) gewählt werden muss.
+Die erste leitet die Installation von XAMPP ein, bei der der 
+Standardinstallationspfad (D:\xampp) gewählt werden muss.
 Nachdem diese Installation erfolgreich abgeschlossen ist es möglich die zweite Setup-Datei
 auszuführen, welche nun unser Programm in den Server integriert und eine Desktop-
 Verknüpfung erstellt.
@@ -40,25 +62,23 @@ Der Ordner mit den Setup.bat-Dateien darf in keinem Ordner liegen, in dem Rechte
 Änderung und Überschreibung von Dateien vonnöten sind, da die Installation sonst an
 der UAC von Windows scheitert.
 
+
+
 ----------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------------
+
+
 
 AKTUELLE VERSION:
 
 In der aktuellen Version ist die Desktop-Verknüpfung noch nicht dazu in der Lage selbstständig
-die Dateien zum Starten des dbservers und des httpservers zu finden und auszuführen,
-da der Devserver die Namen der entsprechenden Verzeichnisse bei jeder Installation um eine 
-andere zufällige Zahl ergänzt. Wir haben noch keine Methode gefunden diese Verzeichnisse trotzdem 
-zu finden.
+die Dateien zum Starten der Server zu finden und auszuführen.
+Es muss also manuell nachgeholfen werden. Die XAMPP Installationsdatei befindet sich unter https://drive.google.com/open?id=0B9EBrsy6Arv5SnN2bHJMQTRrSVU. Diese muss in dem "assets"-Ordner abgelegt werden. 
+Nach der Installation muss der gesamte Inhalt des "bin"-Ordners, welcher sich ebenfalls im "assets"-Ordner befindet, in den Pfad "D:\xampp\htdocs" kopiert oder am besten verschoben werden.
 
-Zusätzlich treten manchmal noch Probleme bei der Ausführung der JRL-Setup2.bat-Datei auf.
-Diese sind komischer Weise bei allen Rechnern auf denen der Setup getestet wurde,
-bis auf dem Laptop, auf dem dieser programmiert worden ist, vorgekommen.
-Eine fehlerhafte Installation erkennt man daran, dass der "bin" Ordner im Ordner "assets"
-nicht verschoben wurde.
-Wenn dies der Fall ist muss er manuell in  den "EasyPHP-Devserver-17\eds-www" Ordner des Devservers verschoben werden.
+Innerhalb des Programms selbst ist das Anzeigen des Ergebnisses noch fehlerhaft. 
 
-Des Weiteren ist im Programm selbst das Anzeigen des Ergebnisses noch fehlerhaft. 
+
 
 ----------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------------
