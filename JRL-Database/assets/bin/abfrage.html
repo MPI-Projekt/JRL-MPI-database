@@ -1,0 +1,68 @@
+<html>
+	<meta charset="utf-8">
+	<body bgcolor="#F5F5F5" text="#000000">
+		<u><font size="6"><p align="center">Abfrage</p></font></u><br><br>
+		Im Folgenden können Sie Suchkriterien angeben, um Ihre Dateien zu finden.<br>
+		Alle Angaben sind optional.<br><br>
+		<form action="suche.php" method="post">
+			<table><col width="200">
+				<tr>
+					<td>
+						<label for="Dateiname">Dateiname:</label>
+					</td>
+					<td>
+						<input type="text" id="dateiname" name="dateiname" value="" style="width:200px">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="dateityp">Dateityp:</label>
+					</td>
+					<td>
+						<script>
+							function get(){
+								$dateityp = document.getElementById("dateityp").value;
+							}
+						</script>
+						<select name="dateityp" id="dateityp" style="width:200px" onChange="get()">
+							<option value="" selected>Treffen Sie ihre Auswahl</option>
+							<option value="audio">Audiodaten</option>
+							<option value="image">Grafiken</option>
+							<option value="text">Text</option>
+							<option value="video">Videomaterial</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Die gesuchte Datei ist...<br>
+						<label for="groesser"></label>
+						<input type="radio" name="groesse" id="groesser" value="groesser" checked> Größer als
+						<br>
+						<label for="gleich"></label>
+						<input type="radio" name="groesse" id="gleich" value="gleich"> Gleich
+						<br>
+						<label for="kleiner"></label>
+						<input type="radio" name="groesse" id="kleiner" value="kleiner"> Kleiner als
+					</td>
+					<td>
+						<label for="Dateigroesse">Dateigröße in Megabyte:</label><br>
+						<input type="text" id="dateigroesse" name="dateigroesse" value="" style="width:200px">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="Beschreibung">Beschreibung:</label>
+					</td>
+					<td>
+						<input type="text" id="beschreibung" name="beschreibung" value="" style="width:200px">
+					</td>
+				</tr>
+			</table>
+						
+			<br><br>
+			<input type="reset" onclick="alert('Ihre Eingaben wurden zur&uuml;ckgesetzt.')">
+			<button type="submit">Suchen</button>
+		</form>
+	</body>
+</html>
