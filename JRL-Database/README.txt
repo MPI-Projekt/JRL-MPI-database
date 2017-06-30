@@ -47,16 +47,18 @@ AKTUELLE VERSION:
 
 In der aktuellen Version ist die Desktop-Verknüpfung noch nicht dazu in der Lage selbstständig
 die Dateien zum Starten des dbservers und des httpservers zu finden und auszuführen,
-da der devserver die Namen der entsprechenden Verzeichnisse bei jeder Installation um eine 
-andere Randomzahl ergänzt und wir noch keine Methode gefunden haben diese trotzdem 
+da der Devserver die Namen der entsprechenden Verzeichnisse bei jeder Installation um eine 
+andere zufällige Zahl ergänzt. Wir haben noch keine Methode gefunden diese Verzeichnisse trotzdem 
 zu finden.
 
-Desweiteren treten manchmal noch Probleme bei der Ausführung der JRL-Setup2.bat- Datei auf.
-Diese sind komischerweise bei allen Rechnern auf denen der Setup getestet wurde,
+Zusätzlich treten manchmal noch Probleme bei der Ausführung der JRL-Setup2.bat-Datei auf.
+Diese sind komischer Weise bei allen Rechnern auf denen der Setup getestet wurde,
 bis auf dem Laptop, auf dem dieser programmiert worden ist, vorgekommen.
-Eine fehlerhafte Installation erkennt man daran, dass der bin Ordner im Ordner assets
+Eine fehlerhafte Installation erkennt man daran, dass der "bin" Ordner im Ordner "assets"
 nicht verschoben wurde.
-Wenn dies der Fall ist muss er manuell in  den eds-www Ordner des Devservers verschoben werden.
+Wenn dies der Fall ist muss er manuell in  den "EasyPHP-Devserver-17\eds-www" Ordner des Devservers verschoben werden.
+
+Des Weiteren ist im Programm selbst das Anzeigen des Ergebnisses noch fehlerhaft. 
 
 ----------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------------
