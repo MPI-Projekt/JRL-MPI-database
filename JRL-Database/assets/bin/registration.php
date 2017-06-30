@@ -32,7 +32,7 @@ else{
 	$erg3 = $db->query("CREATE DATABASE `fs-".$benutzername."`");
 	
 	$db = new mysqli(MYSQL_HOST, MYSQL_BENUTZER, MYSQL_KENNWORT, 'fs-'.$benutzername);
-	$erg4 = $db->query(" CREATE TABLE `files` (`name` VARCHAR( 150 ) NOT NULL ,`type` enum('application','audio','example','image', 'message', 'model', 'multipart', 'text', 'video') NOT NULL, `size` DOUBLE NOT NULL ,
+	$erg4 = $db->query(" CREATE TABLE `files` (`name` VARCHAR( 150 ) NOT NULL ,`type` enum('application', 'audio', 'example', 'image', 'message', 'model', 'multipart', 'text', 'video') NOT NULL, `size` DOUBLE NOT NULL ,
 						`reference` VARCHAR( 200) NOT NULL PRIMARY KEY,`date` VARCHAR(40) NOT NULL ,`description` VARCHAR( 100 ) NULL) ENGINE = MYISAM");
 	header('location: home.html?id=1337');
 	}

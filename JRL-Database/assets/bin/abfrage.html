@@ -4,7 +4,7 @@
 		<u><font size="6"><p align="center">Abfrage</p></font></u><br><br>
 		Im Folgenden können Sie Suchkriterien angeben, um Ihre Dateien zu finden.<br>
 		Alle Angaben sind optional.<br><br>
-		<form action="suche.php" method="post">
+		<form method="post" action="suche.php">
 			<table><col width="200">
 				<tr>
 					<td>
@@ -25,8 +25,8 @@
 							}
 						</script>
 						<select name="dateityp" id="dateityp" style="width:200px" onChange="get()">
-							<option value="" selected>Treffen Sie ihre Auswahl</option>
-							<option value="audio">Audiodaten</option>
+							<option value="" selected>Treffen Sie eine Auswahl</option>
+							<option value="audio" >Audiodaten</option>
 							<option value="image">Grafiken</option>
 							<option value="text">Text</option>
 							<option value="video">Videomaterial</option>
@@ -37,13 +37,13 @@
 					<td>
 						Die gesuchte Datei ist...<br>
 						<label for="groesser"></label>
-						<input type="radio" name="groesse" id="groesser" value="groesser" checked> Größer als
+						<input type="radio" name="groesse" id="groesse" value="groesser" checked> Größer als
 						<br>
 						<label for="gleich"></label>
-						<input type="radio" name="groesse" id="gleich" value="gleich"> Gleich
+						<input type="radio" name="groesse" id="groesse" value="gleich"> Gleich
 						<br>
 						<label for="kleiner"></label>
-						<input type="radio" name="groesse" id="kleiner" value="kleiner"> Kleiner als
+						<input type="radio" name="groesse" id="groesse" value="kleiner"> Kleiner als
 					</td>
 					<td>
 						<label for="Dateigroesse">Dateigröße in Megabyte:</label><br>
