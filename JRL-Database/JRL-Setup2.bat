@@ -36,3 +36,8 @@ echo objShortcut.Save>>%temp%\MakeShortCut.vbs
 cscript //nologo %temp%\MakeShortCut.vbs 
 
 del %temp%\MakeShortCut.vbs
+
+cd D:\xampp\htdocs
+
+@echo off
+mkdir upload
