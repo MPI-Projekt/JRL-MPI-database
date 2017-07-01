@@ -72,9 +72,7 @@ der UAC von Windows scheitert.
 AKTUELLE VERSION:
 
 Die XAMPP Installationsdatei befindet sich unter https://drive.google.com/open?id=0B9EBrsy6Arv5SnN2bHJMQTRrSVU. Diese muss in dem "assets"-Ordner abgelegt werden. 
-Nach der Installation muss der gesamte Inhalt des "bin"-Ordners, welcher sich ebenfalls im "assets"-Ordner befindet, in den Pfad "D:\xampp\htdocs" kopiert oder am besten verschoben werden.
-Zusätzlich muss noch ein leerer Ordner "upload" in diesem Verzeichnis erstellt werden, da es auf 
-GitHub leider nicht möglich ist einen leeren Ordner zu speichern.
+Nach der Installation muss der "bin"-Ordner, welcher sich ebenfalls im "assets"-Ordner befindet, in den Pfad "D:\xampp\htdocs" kopiert oder am besten verschoben werden.
 
 Innerhalb des Programms selbst ist das Anzeigen des Ergebnisses noch fehlerhaft. 
 
