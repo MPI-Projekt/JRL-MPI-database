@@ -1,22 +1,12 @@
-for /d %%i in (%CD%\assets\bin) do move %%i "D:\xampp\htdocs"
+copy "%CD%\assets\bin" "D:\xampp\htdocs"
 
-REM @echo off &set
-REM set "zielpfad=%CD%\assets"
-REM set "progtitel=run-devserver"
-REM set "progdir=%ProgramFiles(x86)%\EasyPHP-Devserver-17\" 
-REM set "progexe=run-devserver.exe" 
-REM set "beschreibung=Verknüpfung" 
+path=%CD%
+D:\xampp\htdocs
 
-REM echo Set objShell=WScript.CreateObject("Wscript.Shell")>%temp%\MakeShortCut.vbs 
-REM echo Set objShortcut=objShell.CreateShortcut("%zielpfad%\%progtitel%.lnk")>>%temp%\MakeShortCut.vbs 
-REM echo objShortcut.TargetPath="%progdir%\%progexe%">>%temp%\MakeShortCut.vbs 
-REM echo objShortcut.Description="%beschreibung%">>%temp%\MakeShortCut.vbs 
-REM echo objShortcut.WorkingDirectory="%progdir%">>%temp%\MakeShortCut.vbs 
-REM echo objShortcut.Save>>%temp%\MakeShortCut.vbs 
+mkdir bilder
+mkdir upload
+copy "%path%assets\bin\bilder" "%CD%\bilder"
 
-REM cscript //nologo %temp%\MakeShortCut.vbs 
-
-REM del %temp%\MakeShortCut.vbs
 
 @echo off &set
 set "zielpfad=%userprofile%\Desktop"
@@ -36,8 +26,3 @@ echo objShortcut.Save>>%temp%\MakeShortCut.vbs
 cscript //nologo %temp%\MakeShortCut.vbs 
 
 del %temp%\MakeShortCut.vbs
-
-cd D:\xampp\htdocs
-
-@echo off
-mkdir upload
