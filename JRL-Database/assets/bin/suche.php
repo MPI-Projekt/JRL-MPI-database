@@ -117,7 +117,7 @@ echo '<html>';
 				    echo '<tr>';
 						    echo '<td>'.$row->name.'</td>';
 						    echo '<td>'.$row->type.'</td>';
-						    echo '<td>'.$row->size.'</td>';
+						    echo '<td>'.$row->size.' MB</td>';
 						    echo '<td>'.$row->reference.'</td>';
 						    echo '<td>'.$row->date.'</td>';
 						    echo '<td>'.$row->description.'</td>';
