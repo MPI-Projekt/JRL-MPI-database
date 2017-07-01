@@ -76,7 +76,7 @@ Die XAMPP Installationsdatei befindet sich unter https://drive.google.com/open?i
 
 AKTUELLE VERSION:
 
-Innerhalb des Programms selbst ist das Anzeigen des Ergebnisses noch fehlerhaft. 
+Innerhalb des Programms selbst ist das Auslesen des Ergebnisses noch fehlerhaft. Somit sieht der Benutzer ein falsches Ergebnis.
 
 
 ----------------------------------------------------------------------------------------------------------------------------
