@@ -55,12 +55,17 @@ Standardinstallationspfad (D:\xampp) gewählt werden muss.
 Nachdem diese Installation erfolgreich abgeschlossen ist es möglich die zweite Setup-Datei
 auszuführen, welche nun unser Programm in den Server integriert und eine Desktop-
 Verknüpfung erstellt.
+Es fehlt außerdem teilweise der "upload"-Ordner. Er muss, falls er fehlen sollte, noch manuelle zum "bin"-Ordner hinzugefügt werden.
 
 HINWEIS: 
+
+
 
 Der Ordner mit den Setup.bat-Dateien darf in keinem Ordner liegen, in dem Rechte zur
 Änderung und Überschreibung von Dateien vonnöten sind, da die Installation sonst an
 der UAC von Windows scheitert.
+
+
 
 
 
@@ -71,8 +76,10 @@ der UAC von Windows scheitert.
 
 AKTUELLE VERSION:
 
-Die XAMPP Installationsdatei befindet sich unter https://drive.google.com/open?id=0B9EBrsy6Arv5SnN2bHJMQTRrSVU. Diese muss in dem "assets"-Ordner abgelegt werden. 
-Nach der Installation muss der "bin"-Ordner, welcher sich ebenfalls im "assets"-Ordner befindet, in den Pfad "D:\xampp\htdocs" kopiert oder am besten verschoben werden.
+In der aktuellen Version ist die Desktop-Verknüpfung noch nicht dazu in der Lage selbstständig
+die Dateien zum Starten der Server zu finden und auszuführen.
+Es muss also manuell nachgeholfen werden. Die XAMPP Installationsdatei befindet sich unter https://drive.google.com/open?id=0B9EBrsy6Arv5SnN2bHJMQTRrSVU. Diese muss in dem "assets"-Ordner abgelegt werden. 
+Nach der Installation muss der gesamte Inhalt des "bin"-Ordners, welcher sich ebenfalls im "assets"-Ordner befindet, in den Pfad "D:\xampp\htdocs" kopiert oder am besten verschoben werden.
 
 Innerhalb des Programms selbst ist das Anzeigen des Ergebnisses noch fehlerhaft. 
 
