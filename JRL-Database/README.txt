@@ -55,7 +55,7 @@ Standardinstallationspfad (D:\xampp) gewählt werden muss.
 Nachdem diese Installation erfolgreich abgeschlossen ist es möglich die zweite Setup-Datei
 auszuführen, welche nun unser Programm in den Server integriert und eine Desktop-
 Verknüpfung erstellt.
-Es fehlt außerdem teilweise der "upload"-Ordner. Er muss, falls er fehlen sollte, noch manuelle zum "bin"-Ordner hinzugefügt werden.
+
 
 HINWEIS: 
 
