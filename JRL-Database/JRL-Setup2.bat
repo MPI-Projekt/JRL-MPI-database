@@ -1,10 +1,8 @@
 copy "%CD%\assets\bin" "D:\xampp\htdocs"
 
-path=%CD%
-D:\xampp\htdocs
+mkdir D:\xampp\htdocs\bilder
+mkdir D:\xampp\htdocs\upload
 
-mkdir bilder
-mkdir upload
 copy "%path%assets\bin\bilder" "%CD%\bilder"
 
 
