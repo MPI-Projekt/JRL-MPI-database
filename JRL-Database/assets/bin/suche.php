@@ -1,4 +1,6 @@
 <?php
+session_start();
+error_reporting(0);
 require('konfiguration.php');
     $db = new mysqli(
                      MYSQL_HOST, 
@@ -7,11 +9,11 @@ require('konfiguration.php');
                      MYSQL_DATENBANK
                     );
 				
-$dateiname = $_POST["dateiname"];	
-$dateigroesse = $_POST["dateigroesse"];
-$groesse = $_POST["groesse"];
-$beschreibung = $_POST["beschreibung"];
-$typ = $_POST["dateityp"];
+$dateiname = $_SESSION["dateiname"];	
+$dateigroesse = $_SESSION["dateigroesse"];
+$groesse = $_SESSION["groesse"];
+$beschreibung = $_SESSION["beschreibung"];
+$typ = $_SESSION["dateityp"];
 
  if($dateiname != "" && $dateigroesse != "" && $beschreibung != "" && $typ != ""){
 	 if($groesse == "groesser"){
@@ -100,35 +102,41 @@ echo '<html>';
 		echo '<meta charset="utf-8">';
 		echo '<body bgcolor="#F5F5F5" text="#000000">';
 			echo '<u><font size="6"><p align="center">Ergebnis</p></font></u>';
+			echo '<div align="center">';	
+			echo '<br><br>';
+			if($erg->num_rows){ 
 					
-			
-			 if($erg->num_rows){ 
-				    echo '<table>';
+				    echo '<table border="1">';
 				    echo '<tr>';
-				    echo '<th>Dateiname</th>';
-				    echo '<th>Dateityp</th>';
-				    echo '<th>Dateigröße</th>';
-				    echo '<th>Dateipfad</th>';
-				    echo '<th>Datum</th>';
-				    echo '<th>Beschreibung</th>';
+						echo '<th style="width:16%">Dateiname</th>';
+						echo '<th style="width:16%">Dateityp</th>';
+						echo '<th style="width:16%">Dateigröße</th>';
+						echo '<th style="width:16%">Dateipfad</th>';
+						echo '<th style="width:16%">Datum</th>';
+						echo '<th style="width:16%">Beschreibung</th>';
 				    echo '</tr>';
 					
 				    while($row = mysqli_fetch_object($erg)){
 				    echo '<tr>';
-						    echo '<td>'.$row->name.'</td>';
-						    echo '<td>'.$row->type.'</td>';
-						    echo '<td>'.$row->size.' MB</td>';
-						    echo '<td>'.$row->reference.'</td>';
-						    echo '<td>'.$row->date.'</td>';
-						    echo '<td>'.$row->description.'</td>';
-						    echo '</tr>';
+						echo '<td>'.$row->name.'</td>';
+						echo '<td>'.$row->type.'</td>';
+						echo '<td>'.$row->size.' MB</td>';
+						echo '<td>'.$row->reference.'</td>';
+						echo '<td>'.$row->date.'</td>';
+						echo '<td>'.$row->description.'</td>';
+					echo '</tr>';
 				    }
 				
 				
-				  echo '</table>';
-			 }else{
-				  echo 'Keine Dateien vorhanden.';
-			  }
-	 echo '</body>';
-	 echo '</html>';
+				echo '</table>';
+			}else{
+				echo 'Keine Dateien vorhanden.';
+			}
+			echo '<br><br><br>';
+			echo '<form target="_top" action="eingabeV2.html">';
+			echo '<button type="submit" style="width:15%">Zurück</button>';
+			echo '</form>';
+			echo '</div>';
+		echo '</body>';
+echo '</html>';
 ?>
