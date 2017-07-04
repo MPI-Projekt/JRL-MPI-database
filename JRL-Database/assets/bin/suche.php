@@ -100,6 +100,9 @@ else{
        
 echo '<html>';
 		echo '<meta charset="utf-8">';
+		echo '<head>';
+		echo '<link rel="icon" href="bilder/JRL-Database.ico">';
+		echo '</head>';
 		echo '<body bgcolor="#F5F5F5" text="#000000">';
 			echo '<u><font size="6"><p align="center">Ergebnis</p></font></u>';
 			echo '<div align="center">';	
