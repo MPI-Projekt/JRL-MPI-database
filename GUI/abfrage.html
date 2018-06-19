@@ -4,7 +4,7 @@
 		<u><font size="6"><p align="center">Abfrage</p></font></u><br><br>
 		Im Folgenden können Sie Suchkriterien angeben, um Ihre Dateien zu finden.<br>
 		Alle Angaben sind optional.<br><br>
-		<form method="post" action="suche.php">
+		<form method="post" action="ergebnis.php">
 			<table><col width="200">
 				<tr>
 					<td>
@@ -26,10 +26,10 @@
 						</script>
 						<select name="dateityp" id="dateityp" style="width:200px" onChange="get()">
 							<option value="" selected>Treffen Sie eine Auswahl</option>
-							<option value="audio" >Audiodaten</option>
-							<option value="image">Grafiken</option>
-							<option value="text">Text</option>
-							<option value="video">Videomaterial</option>
+							<option value="Audio" >Audiodaten</option>
+							<option value="Bild">Grafiken</option>
+							<option value="Textdokument">Text</option>
+							<option value="Video">Videomaterial</option>
 						</select>
 					</td>
 				</tr>
@@ -46,7 +46,12 @@
 						<input type="radio" name="groesse" id="groesse" value="kleiner"> Kleiner als
 					</td>
 					<td>
-						<label for="Dateigroesse">Dateigröße in Megabyte:</label><br>
+						<a title="Geben Sie an, ob Sie die Größe in Kilobyte oder Megabyte angeben möchten.">Angabe in:</a>
+						<a title="Kilobyte"><label for="KB"></label>
+						<input type="radio" name="byte" id="byte" value="KB" checked> KB </a>
+						<a title="Megabyte"><label for="MB"></label>
+						<input type="radio" name="byte" id="byte" value="MB"> MB </a>
+						<br>
 						<input type="text" id="dateigroesse" name="dateigroesse" value="" style="width:200px">
 					</td>
 				</tr>
