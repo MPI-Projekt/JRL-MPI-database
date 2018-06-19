@@ -1,7 +1,4 @@
 <html>
-	<head>
-		<link rel="icon" type="image/gif" href="bilder/loading.gif">
-	</head>
 	<body bgcolor="#F5F5F5" />
 </html>
 
@@ -9,24 +6,38 @@
 require ('konfiguration.php');
 $db = new mysqli(MYSQL_HOST, MYSQL_BENUTZER, MYSQL_KENNWORT, MYSQL_DATENBANK);
 
+ $folder = 'upload/';
+	
 	if (isset($_FILES['datei']['tmp_name'])) {
-		move_uploaded_file($_FILES['datei']['tmp_name'], 'upload/'.$_FILES['datei']['name']);
+		$dateityp = "".finfo_file( finfo_open( FILEINFO_MIME_TYPE ), $_FILES['datei']['tmp_name']);
+		//Verschieben vom tmp Ordner des Servers in den Upload Ordner
+		move_uploaded_file($_FILES['datei']['tmp_name'], $folder.$_FILES['datei']['name']);
 	 }
-$folder = 'upload/';
-$filename = pathinfo($_FILES['datei']['tmp_name'], PATHINFO_FILENAME);
-$extension = strtolower(pathinfo($_FILES['datei']['tmp_name'], PATHINFO_EXTENSION));
+	 
+$filename = $_FILES['datei']['name'];
 $filesize = $_FILES['datei']['size'];
-$filesize = $filesize*1000000;
-$path = pathinfo($_FILES['datei']['tmp_name'], PATHINFO_DIRNAME);
-$datum = date("F d Y H:i:s.", filemtime($filename));
-$dateityp = $_POST['dateityp'];
-$beschreibung = $_POST['beschreibung'];
-$type = $_FILES['datei']['typ'];
+$path = $_SERVER["DOCUMENT_ROOT"].'/'.$folder.$filename;
+$beschreibung = $_POST['beschreibung']."";
+$datum =  date("F d Y H:i:s.", filectime($filename));
 
+// Umwandlung des Dateityps für die Datenbank
+$datyp_anfang = substr($dateityp, 0, 4);
+$datyp_ende = substr($dateityp, -4, 4);
+if($datyp_anfang == "imag"){
+	$dateityp = 'Bild';
+} else if($datyp_anfang == "text" || ($datyp_anfang == "appl" && $datyp_ende == "pdf")){
+	$dateityp = 'Textdokument';
+} else if($datyp_anfang == "vide"){
+	$dateityp = 'Video';
+} else if($datyp_anfang == "audi" || $datyp_ende == "mpeg" || $datyp_ende == "peg3" || $datyp_ende == "eg-3" || $datyp_ende == "ream"){ // application/octet-stream muss differenziert werden!!!
+	$dateityp = 'Audio';
+}  else {
+	$dateityp = 'unbekannt';
+}
 
-
+// Alles in die Datenbank
 if($_POST['beschreibung'] != ""){
-$erg = $db->query("INSERT INTO `files` (`name`, `type`,`date`,`reference`,`size`,`description`) VALUES ('".$filename."', '" .$dateityp. "', '" .$datum."','" .$path."',".$filesize.",'".$beschreibung.")" );	 
+	$erg = $db->query("INSERT INTO `files` (`name`, `type`,`date`,`reference`,`size`,`description`) VALUES ('".$filename."', '" .$dateityp. "', '" .$datum."','" .$path."',".$filesize.",'".$beschreibung."')" );	 
 }
 else{
 	$erg = $db->query("INSERT INTO `files` (`name`, `type`,`date`,`reference`,`size`) VALUES ('".$filename."', '" .$dateityp. "', '" .$datum."','" .$path."',".$filesize.")" );	 
@@ -38,3 +49,5 @@ else{
 		window.open("eingabe.html","_self")
 	</script>
 </html>
+
+
