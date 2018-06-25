@@ -1,0 +1,80 @@
+<html>
+	<head>
+		<title>
+			Willkommen
+		</title>
+		<link rel="icon" type="image/gif" href="bilder/JRL-Database.ico">
+	</head>
+	<body bgcolor="#F5F5F5" text="#000000" align="center"><br>
+		<div align="center">
+			<font face="Comic Sans MS" size="7">
+				<u>
+					Willkommen
+				</u>
+			</font>
+			<br><br><br><br>
+			<script>
+				HTTP_GET_VARS=new Array();
+				strGET=document.location.search.substr(1,document.location.search.length);
+				if(strGET!=''){
+					gArr=strGET.split('&');
+					for(i=0;i<gArr.length;++i){
+						v='';vArr=gArr[i].split('=');
+						if(vArr.length>1){v=vArr[1];}
+						HTTP_GET_VARS[unescape(vArr[0])]=unescape(v);
+					}
+				}
+	
+				function GET(v){
+					if(!HTTP_GET_VARS[v]){return 'undefined';}
+					return HTTP_GET_VARS[v];
+				}
+				
+				if(GET('id') != 'undefined'){
+					if(GET('id') == '1337'){
+						document.write("<font color='#04B404'>");
+						document.write("Sie haben sich erfolgreich registriert. Bitte melden Sie sich nun mit Ihrem Konto an.");
+						document.write("</font>");
+					} else if(GET('id') == '1338'){
+						document.write("<font color='#FF0000'>");
+						document.write("Ein Fehler ist aufgetreten.");
+						document.write("</font>");
+					} else if(GET('id') == '1339'){
+						document.write("<font color='#FF0000'>");
+						document.write("Passwort ung\u00fcltig.");
+						document.write("</font>");
+					} else if(GET('id') == '1340'){
+						document.write("<font color='#FF0000'>");
+						document.write("Benutzername nicht vergeben.");
+						document.write("</font>");
+					}
+				}
+			</script>
+			<br><br>
+			<form action="anmeldung.php" method="post">
+				<table align="center">
+					<tr>
+						<td width="120">
+							<label for="benutzername">Benutzername:</label>
+							<br><br>
+							<label for="pw">Passwort:</label>
+						</td>
+						<td width="220">
+							<input type="text" id="benutzername" name="benutzername" value="" required>
+							<br><br>
+							<input type="password" id="pw" name="pw" value="" required>
+						</td>
+						<td>
+							<input type="image" src="bilder/anmelden.jpg" width="50" alt="Anmelden">
+						</td>
+					</tr>
+				</table>
+			</form>
+			<br><br>
+			Zum ersten Mal hier?
+			<a href="registration.html">
+				Hier klicken!
+			</a>
+		</div>
+	</body>
+</html>
