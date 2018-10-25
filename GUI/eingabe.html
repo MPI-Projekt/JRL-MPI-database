@@ -1,6 +1,6 @@
 <html>
 	<body bgcolor="#F5F5F5" text="#000000">
-		<script type="text/javascript">
+		<script type="text/javascript"> 
 			function fileChange(){
 				//FileList Objekt aus dem Input Element mit der ID "datei"
 				var fileList = document.getElementById("datei").files;
@@ -39,6 +39,7 @@
 			
 				//Fügt dem formData Objekt unser File Objekt hinzu
 				formData.append("datei", file);
+				
 			
 				client.onerror = function(e) {
 					alert("onError");
@@ -54,7 +55,7 @@
 					document.getElementById("progress").value = p;            
 					document.getElementById("prozent").innerHTML = p + "%";
 				};
-			
+				//formData.append("date", file.DateCreated);
 				client.open("POST", "upload.php");
 				client.send(formData);
 			}
