@@ -9,12 +9,12 @@ require('konfiguration.php');
                      MYSQL_DATENBANK
                     );
 				
-$dateiname = $_SESSION["dateiname"];
-$dateigroesse = $_SESSION["dateigroesse"];
-$groesse = $_SESSION["groesse"];
-$beschreibung = $_SESSION["beschreibung"];
-$typ = $_SESSION["dateityp"];
-$byte = $_SESSION["byte"];
+$dateiname = $_POST["dateiname"];
+$dateigroesse = $_POST["dateigroesse"];
+$groesse = $_POST["groesse"];
+$beschreibung = $_POST["beschreibung"];
+$typ = $_POST["dateityp"];
+$byte = $_POST["byte"];
 
 if($groesse == "groesser"){
 	$groesse = ">";

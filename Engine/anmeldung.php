@@ -9,7 +9,7 @@
 	);
 
 	if($db->connect_errno){
-		header('location: home.html?id=1338');
+		header('location: home.html?id=1339');
 	} else {
 		$benutzername = $_POST["benutzername"];	
 		$passwort = $_POST["pw"];
@@ -27,7 +27,7 @@
 		} else if($erg2->num_rows) {
 			header('location: home.html?id=1339');
 		} else {
-			header('location: home.html?id=1340');
+			header('location: home.html?id=1339');
 		}
 	}
 ?>
